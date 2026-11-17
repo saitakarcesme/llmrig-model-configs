@@ -1,0 +1,403 @@
+{
+  "model": "clef",
+  "summary": [
+    {
+      "input_tokens": 219,
+      "median_ms": 437.2386519680731
+    },
+    {
+      "input_tokens": 580,
+      "median_ms": 874.3613149854355
+    },
+    {
+      "input_tokens": 1840,
+      "median_ms": 2181.8217409891076
+    }
+  ],
+  "rows": [
+    {
+      "repeats": 0,
+      "trial": 0,
+      "wall_ms": 442.2900670324452,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9406,
+            "probabilities": {
+              "billing": 0.0594,
+              "technical": 0.9406
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9893
+          }
+        },
+        "usage": {
+          "input_tokens": 219,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 435.6952700181864,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "repeats": 0,
+      "trial": 1,
+      "wall_ms": 437.2386519680731,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9406,
+            "probabilities": {
+              "billing": 0.0594,
+              "technical": 0.9406
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9893
+          }
+        },
+        "usage": {
+          "input_tokens": 219,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 435.86278200382367,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "repeats": 0,
+      "trial": 2,
+      "wall_ms": 437.0217460091226,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9406,
+            "probabilities": {
+              "billing": 0.0594,
+              "technical": 0.9406
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9893
+          }
+        },
+        "usage": {
+          "input_tokens": 219,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 435.7313940417953,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "repeats": 0,
+      "trial": 3,
+      "wall_ms": 437.47946800431237,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9406,
+            "probabilities": {
+              "billing": 0.0594,
+              "technical": 0.9406
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9893
+          }
+        },
+        "usage": {
+          "input_tokens": 219,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 436.1525349668227,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "repeats": 40,
+      "trial": 0,
+      "wall_ms": 872.8841480333358,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9748,
+            "probabilities": {
+              "billing": 0.0252,
+              "technical": 0.9748
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9899
+          }
+        },
+        "usage": {
+          "input_tokens": 580,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 871.5454330085777,
+          "precision": "nf4",
+          "peak_vram_mb": 17584.896484375
+        }
+      }
+    },
+    {
+      "repeats": 40,
+      "trial": 1,
+      "wall_ms": 874.2494829930365,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9748,
+            "probabilities": {
+              "billing": 0.0252,
+              "technical": 0.9748
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9899
+          }
+        },
+        "usage": {
+          "input_tokens": 580,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 872.894414991606,
+          "precision": "nf4",
+          "peak_vram_mb": 17584.896484375
+        }
+      }
+    },
+    {
+      "repeats": 40,
+      "trial": 2,
+      "wall_ms": 874.3613149854355,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9748,
+            "probabilities": {
+              "billing": 0.0252,
+              "technical": 0.9748
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9899
+          }
+        },
+        "usage": {
+          "input_tokens": 580,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 873.1313369935378,
+          "precision": "nf4",
+          "peak_vram_mb": 17584.896484375
+        }
+      }
+    },
+    {
+      "repeats": 40,
+      "trial": 3,
+      "wall_ms": 874.484857020434,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9748,
+            "probabilities": {
+              "billing": 0.0252,
+              "technical": 0.9748
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9899
+          }
+        },
+        "usage": {
+          "input_tokens": 580,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 873.0594569933601,
+          "precision": "nf4",
+          "peak_vram_mb": 17584.896484375
+        }
+      }
+    },
+    {
+      "repeats": 180,
+      "trial": 0,
+      "wall_ms": 2224.9353550141677,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9759,
+            "probabilities": {
+              "billing": 0.0241,
+              "technical": 0.9759
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9907
+          }
+        },
+        "usage": {
+          "input_tokens": 1840,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 2223.4957549953833,
+          "precision": "nf4",
+          "peak_vram_mb": 17920.89404296875
+        }
+      }
+    },
+    {
+      "repeats": 180,
+      "trial": 1,
+      "wall_ms": 2181.8217409891076,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9759,
+            "probabilities": {
+              "billing": 0.0241,
+              "technical": 0.9759
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9907
+          }
+        },
+        "usage": {
+          "input_tokens": 1840,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 2180.316928017419,
+          "precision": "nf4",
+          "peak_vram_mb": 17920.89404296875
+        }
+      }
+    },
+    {
+      "repeats": 180,
+      "trial": 2,
+      "wall_ms": 2180.260776018258,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9759,
+            "probabilities": {
+              "billing": 0.0241,
+              "technical": 0.9759
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9907
+          }
+        },
+        "usage": {
+          "input_tokens": 1840,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 2178.8675200077705,
+          "precision": "nf4",
+          "peak_vram_mb": 17920.89404296875
+        }
+      }
+    },
+    {
+      "repeats": 180,
+      "trial": 3,
+      "wall_ms": 2184.125686995685,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9759,
+            "probabilities": {
+              "billing": 0.0241,
+              "technical": 0.9759
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9907
+          }
+        },
+        "usage": {
+          "input_tokens": 1840,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 2182.7903230441734,
+          "precision": "nf4",
+          "peak_vram_mb": 17920.89404296875
+        }
+      }
+    }
+  ]
+}

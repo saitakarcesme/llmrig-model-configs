@@ -1,0 +1,69 @@
+{
+  "task": "atomic",
+  "baseline": {
+    "tests": 5,
+    "failures": 1,
+    "errors": 1,
+    "passed": false,
+    "return_code": 1
+  },
+  "acceptance": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "return_code": 0
+  },
+  "scope_ok": true,
+  "passed": true,
+  "pi_return_code": 0,
+  "timeout": false,
+  "wall_seconds": 192.31366187799722,
+  "changed_existing_files": [
+    "common.py"
+  ],
+  "new_test_files": [
+    "test_atomic_json.py"
+  ],
+  "tool_calls": [
+    "read",
+    "bash",
+    "read",
+    "read",
+    "read",
+    "read",
+    "read",
+    "read",
+    "bash",
+    "write",
+    "write",
+    "bash",
+    "bash",
+    "bash",
+    "read",
+    "bash"
+  ],
+  "api_requests": 10,
+  "timing_receipts": 0,
+  "weighted_decode_tps": 118.48227831401273,
+  "per_request_decode_tps": [
+    171.57646171737213,
+    181.15619104492322,
+    175.36063617250653,
+    111.48922823501084,
+    132.1392924741583,
+    153.02404290494488,
+    147.1904104895134,
+    110.7203325197802,
+    110.10601345982437,
+    106.45438881799602
+  ],
+  "decode_seconds": 0.0,
+  "prompt_seconds": 0.0,
+  "generated_tokens": 19233,
+  "prompt_tokens_evaluated": 0,
+  "cached_prompt_tokens": 0,
+  "tokens_per_wall_second": 100.00849555972427,
+  "reasoning_effort": "high",
+  "scope": "One first attempt per task; test criteria fixed before generation. Not local.ai benchmark scores."
+}

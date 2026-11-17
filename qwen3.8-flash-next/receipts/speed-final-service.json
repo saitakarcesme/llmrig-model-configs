@@ -1,0 +1,83 @@
+{
+  "unix": 1791354278.3355079,
+  "health": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true,
+    "speculation": {
+      "mode": "mtp",
+      "draft_tokens": 4,
+      "draft_device": 1
+    }
+  },
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "flashnext",
+        "object": "model",
+        "owned_by": "local",
+        "context_length": 65536
+      }
+    ]
+  },
+  "metrics": {
+    "counters": {
+      "expert_requests": 142249,
+      "disk_reads": 25184,
+      "disk_bytes": 46902983808,
+      "io_seconds": 70.01345623261295,
+      "prefill_cache_admissions": 12247,
+      "table_cache_hits": 114433,
+      "table_expert_updates": 27816,
+      "table_layer_states": 96,
+      "fused_moe_calls": 2640,
+      "masked_experts": 0,
+      "gpu_hits": 114433,
+      "host_hits": 2632
+    },
+    "gpu_cache_bytes": [
+      10736805180,
+      18605495880
+    ],
+    "host_cache_bytes": 1609123968,
+    "gpu_caps": [
+      10737418240,
+      21474836480
+    ],
+    "host_cap": 1610612736,
+    "recurrent_cache": {
+      "bytes": 232759328,
+      "capacity_bytes": 4294967296,
+      "checkpoints": 2,
+      "metrics": {
+        "stash_evictions": 0,
+        "stash_evictions_stranded": 0,
+        "stash_evictions_live_kv": 0,
+        "stash_pruned": 0
+      }
+    }
+  },
+  "container": {
+    "id": "f69cdaa40cec6b2bbe5ec95eeb4e5a4dfab6e63df4f34a25e9089b793ed40fdc",
+    "image": "ghcr.io/0xsero/sglang-exl3@sha256:84f75f3424c99a3d63392a4e0348292bdeba9cf7efba2ff1aa9b85c8fc0131e8",
+    "status": "running",
+    "memory_limit": 21474836480,
+    "memory_swap_limit": 21474836480,
+    "restart_policy": {
+      "Name": "unless-stopped",
+      "MaximumRetryCount": 0
+    }
+  },
+  "container_swap_bytes": 0,
+  "gpu": [
+    "0, NVIDIA GeForce RTX 3090, 20853 MiB, 24576 MiB",
+    "1, NVIDIA GeForce RTX 3090, 19628 MiB, 24576 MiB"
+  ]
+}

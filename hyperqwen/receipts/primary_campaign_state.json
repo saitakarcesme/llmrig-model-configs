@@ -1,0 +1,13 @@
+{
+  "stage": "complete",
+  "updated_at": "2026-10-05T00:41:50.220336+00:00",
+  "started_epoch": 1791157908.076437,
+  "completed_arms": [
+    "hyper-off",
+    "hyper-mtp",
+    "hyper-dflash7",
+    "hyper-dflash15",
+    "hyper-dflash7-tp2"
+  ],
+  "restore_return_code": 0
+}

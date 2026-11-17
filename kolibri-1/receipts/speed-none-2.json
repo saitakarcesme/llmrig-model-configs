@@ -1,0 +1,29 @@
+{
+  "label": "speed-none-2",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 512,
+    "prompt_tokens": 65,
+    "total_tokens": 577,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 65,
+    "prompt_ms": 89.802,
+    "prompt_per_token_ms": 1.3815692307692309,
+    "prompt_per_second": 723.8146143738446,
+    "predicted_n": 512,
+    "predicted_ms": 4362.839,
+    "predicted_per_token_ms": 8.537845401174168,
+    "predicted_per_second": 117.12556892427155
+  },
+  "ttft_seconds": 0.10475339600816369,
+  "total_seconds": 4.467535819974728,
+  "finish_reason": "length",
+  "answer": "# A Detailed Tutorial on Implementing an LRU Cache in Python\n\n## 1. Introduction to Caching\n\nCaching is a technique used to store frequently accessed data in a fast-access location so that repeated requests do not need to recompute or re-fetch the data. An **LRU (Least Recently Used) Cache** is a type of cache that evicts the least recently used item when its capacity is exceeded.\n\nThink of a bookshelf with limited space: every time you read a book, you move it to the front. When the shelf is full and you want to add a new book, you remove the book that has been sitting at the back the longest, i.e., the one you haven't read in a while.\n\n## 2. Why Use an LRU Cache?\n\nLRU caches are useful in many scenarios:\n\n- **Web applications**: caching API responses to reduce database load.\n- **Compilers**: caching intermediate results of computations.\n- **Operating systems**: managing memory by keeping frequently used pages.\n- **Programming challenges**: implementing an efficient data structure for interviews.\n\nThe goal is to achieve **O(1) average time complexity** for `get` and `put` operations.\n\n## 3. The Naive Approach: Using `functools.lru_cache`\n\nPython's standard library provides a ready-made decorator:\n\n```python\nfrom functools import lru_cache\n\n@lru_cache(maxsize=128)\ndef expensive_function(x):\n    # Simulate heavy computation\n    return x * x\n\nprint(expensive_function(5))  # 25\nprint(expensive_function(5))  # 25 (cached)\n```\n\nThis is great for simple cases, but to understand how an LRU cache works under the hood, we should implement our own.\n\n## 4. Understanding the Data Structures\n\nTo achieve O(1) operations, we need to combine two data structures:\n\n1. **Hash Map (Dictionary in Python)**: To look up values by key in O(1).\n2. **Doubly Linked List (DLL)**: To maintain the order of usage. The most recently used item is at the front, and the least recently used is at the back.\n\nThe hash map will store references to nodes in the DLL, allowing us to quickly find a node when a key is accessed or updated.\n\n## 5. Designing the Node Class\n\nEach node in the doubly linked list will hold:\n\n- `key`: The key associated with the value.\n- `value`: The value stored.\n-",
+  "reasoning_characters": 0,
+  "tool_deltas": []
+}

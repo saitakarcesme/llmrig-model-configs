@@ -1,0 +1,14 @@
+[
+  {
+    "case": "arithmetic",
+    "passed": true
+  },
+  {
+    "case": "json",
+    "passed": true
+  },
+  {
+    "case": "german",
+    "passed": true
+  }
+]

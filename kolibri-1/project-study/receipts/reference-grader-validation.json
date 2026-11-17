@@ -1,0 +1,30 @@
+[
+  {
+    "task": "paths",
+    "return_code": 0,
+    "grade": [
+      "GRADE_JSON {\"tests\": 4, \"failures\": 0, \"errors\": 0, \"passed\": true}"
+    ]
+  },
+  {
+    "task": "inflate",
+    "return_code": 0,
+    "grade": [
+      "GRADE_JSON {\"tests\": 8, \"failures\": 0, \"errors\": 0, \"passed\": true}"
+    ]
+  },
+  {
+    "task": "atomic",
+    "return_code": 0,
+    "grade": [
+      "GRADE_JSON {\"tests\": 5, \"failures\": 0, \"errors\": 0, \"passed\": true}"
+    ]
+  },
+  {
+    "task": "filters",
+    "return_code": 0,
+    "grade": [
+      "GRADE_JSON {\"tests\": 6, \"failures\": 0, \"errors\": 0, \"passed\": true}"
+    ]
+  }
+]

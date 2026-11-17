@@ -1,0 +1,100 @@
+{
+  "name": "whisper-tr",
+  "status": 200,
+  "elapsed_seconds": 6.803322228952311,
+  "body": {
+    "text": "Mitokondri hücrede enerji üretir. Bugün biyoloji dersinde hücre yapısını öğreniyoruz.",
+    "language": "tr",
+    "duration": 5.83675,
+    "segments": [
+      {
+        "id": 1,
+        "start": 0.0,
+        "end": 2.24,
+        "text": " Mitokondri hücrede enerji üretir.",
+        "avg_logprob": -0.0723198749538925,
+        "no_speech_prob": 0.0013980865478515625
+      },
+      {
+        "id": 2,
+        "start": 2.6,
+        "end": 5.6,
+        "text": " Bugün biyoloji dersinde hücre yapısını öğreniyoruz.",
+        "avg_logprob": -0.0723198749538925,
+        "no_speech_prob": 0.0013980865478515625
+      }
+    ],
+    "model": "whisper-large-v3",
+    "processing_seconds": 4.23812261398416
+  },
+  "memory_samples": [
+    {
+      "time": 1793343221.015861,
+      "available_ram_mib": 5509,
+      "swap_used_mib": 18129,
+      "gpus": [
+        [
+          0,
+          22546,
+          1623
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ]
+    },
+    {
+      "time": 1793343223.038575,
+      "available_ram_mib": 9152,
+      "swap_used_mib": 18128,
+      "gpus": [
+        [
+          0,
+          22546,
+          1623
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343225.0691063,
+      "available_ram_mib": 6694,
+      "swap_used_mib": 18127,
+      "gpus": [
+        [
+          0,
+          22546,
+          1623
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ]
+    },
+    {
+      "time": 1793343227.0971634,
+      "available_ram_mib": 7341,
+      "swap_used_mib": 18127,
+      "gpus": [
+        [
+          0,
+          22546,
+          1623
+        ],
+        [
+          1,
+          2428,
+          21749
+        ]
+      ]
+    }
+  ]
+}

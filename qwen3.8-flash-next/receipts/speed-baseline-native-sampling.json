@@ -1,0 +1,464 @@
+{
+  "health": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true
+  },
+  "manifest": {
+    "runtime": "/home/isa/Experiments/qwen38-flash-next-b70-fit/runtime-baseline-4bf20b6",
+    "source_sha256": {
+      "agent_eval.py": "8fe83747c14e7be895e2540a2bfcb575304a1a6d3b232df3863d43b9ad0d9b0c",
+      "check_api.py": "d9f2e506760d369e348b68d15111f0527aec7ae302e7eba4881399b8362770da",
+      "check_disk_experts.py": "9765410ca75eb8f298903b2c902ea0ac7c942a5711928ae63af11bde029ec165",
+      "check_fixtures.py": "1d62d157a51dcb7e85d0654d2b701ca98ade64e20fdcd7d7b5e2ee4ea0a2b0c7",
+      "check_moe_layer.py": "7e874ce993fa0bb2885a895fdd5e4914629a1139d539519abf3908d84e75f899",
+      "check_vision_positions.py": "e3c26d99d393764e532a330dc84fee50807675efc50948fe93da768824788676",
+      "eval_fixtures.py": "bbbfb187e13fad536d9dccacdc200c2a7c21272068f337a20ddccba517494e27",
+      "eval_summary.py": "f23869debc622d1ec733f75382eaf253c70fbe5399fe5d39d5a549aac4fbbbdc",
+      "fused_disk.py": "9c61e9f9dece8f0877c5acbd94411d572c62cd492c6856836b5b5577d12c871d",
+      "hardware_monitor.py": "b32e27344e2e49280fca4dcdad0df5defeb94152c76eb81631e68e02fee6da49",
+      "native_disk.py": "63feeda591907b5deedafc84477e104df16f40e651c037fdd65069a11c545e8c",
+      "server.py": "69379d00d454e36303f4da247700f0693c94cf98cea6ecf14012daac0145e63f",
+      "smoke_native.py": "72e471435a03ba6f6a291fa2b4bba9dc89ad2f688855af8ec423a12c22d8f09f",
+      "vision_positions.py": "d54e2375be1404ec7fa62c566bc3d3ae9031359385c01f06030d90a3c104ba85"
+    },
+    "environment": [
+      "FLASHNEXT_FUSED_DECODE=1",
+      "EXLLAMA_NO_P2P_COPY=1",
+      "FLASHNEXT_CHUNK=4096",
+      "FLASHNEXT_SPEC_MODE=off",
+      "FLASHNEXT_NGRAM_MATCH_MIN=3",
+      "FLASHNEXT_RECURRENT_CACHE_MB=4096",
+      "FLASHNEXT_GPU_CACHE=10,20",
+      "FLASHNEXT_HOST_CACHE=1.5",
+      "FLASHNEXT_FUSED_PREFILL=1",
+      "FLASHNEXT_CONTEXT=65536",
+      "FLASHNEXT_DRAFT_TOKENS=4",
+      "FLASHNEXT_DRAFT_DEVICE=1",
+      "FLASHNEXT_TABLE_CACHE=1",
+      "FLASHNEXT_VISION_DEVICE=0"
+    ]
+  },
+  "rows": [
+    {
+      "case": "thinking",
+      "repeat": 0,
+      "client_seconds": 52.732478496967815,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-e049c4cbf3aa49d7bbb63179a6df949f",
+        "object": "chat.completion",
+        "created": 1791351929,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice-to-bank-transaction reconciliation. This is a complex system design question that touches on:\n\n1. Browser automation (Playwright/Selenium)\n2. Financial reconciliation logic\n3. Duplicate detection\n4. Retry strategies\n5. Audit logging\n6. Tradeoffs analysis\n\nLet me think about what makes this hard:\n- Browser automation is inherently flaky (DOM changes, timing issues, session timeouts)\n- Financial data requires idempotency (you can't double-reconcile)\n- Bank transaction APIs vs scraping banking portals\n- Matching algorithms (exact, fuzzy, multi-criteria)\n- The reconciliation itself is a complex matching problem\n- Audit trails must be tamper-evident and complete\n\nI should structure this as:\n1. Architecture overview\n2. Component breakdown\n3. Reconciliation matching logic\n4. Duplicate/retry handling\n5. Audit log design\n6. Pseudocode\n7. Tradeoffs analysis\n\nLet me think about the tradeoffs carefully:\n- Browser automation vs API: APIs are more reliable but may not exist for all banks\n- Exact matching vs fuzzy matching: false positives vs false negatives\n- Synchronous"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {},
+        "gpu_cache_bytes": [
+          0,
+          0
+        ],
+        "host_cache_bytes": 0,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 130726,
+          "disk_reads": 11976,
+          "disk_bytes": 22304246112,
+          "io_seconds": 32.28696767706424,
+          "prefill_cache_admissions": 7846,
+          "fused_moe_calls": 12335,
+          "masked_experts": 0,
+          "gpu_hits": 118746,
+          "host_hits": 4
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          11247106068
+        ],
+        "host_cache_bytes": 320334864,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "thinking",
+      "repeat": 1,
+      "client_seconds": 11.773267190088518,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-ed331dfc51c54985a6674fb1356d5ef9",
+        "object": "chat.completion",
+        "created": 1791351982,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "# Browser Automation Workflow: Invoice",
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice reconciliation with bank transactions. This is a complex system design question that touches on:\n\n1. Browser automation (for scraping bank portals or invoice systems)\n2. Financial reconciliation logic (matching invoices to transactions)\n3. Duplicate detection and handling\n4. Retry mechanisms (for flaky web automation)\n5. Audit logging (for compliance)\n6. Tradeoffs in the design\n\nLet me think about what makes this challenging:\n- Bank portals are notoriously inconsistent, change layouts, have CAPTCHAs, session timeouts\n- Financial data requires precision (decimal arithmetic, not floats)\n- Duplicates can come from retries, re-submissions, or genuine duplicates in the source\n- Audit logs must be tamper-evident for compliance\n- Reconciliation logic itself is fuzzy (amounts may differ by rounding, descriptions vary, partial payments)\n\nI'll structure this as:\n1. Architecture overview\n2. Component breakdown with pseudocode\n3. Tradeoffs discussion\n4. Edge cases\n\nLet me make this thorough and production-grade in thinking, with clear pseudocode that's language-agnostic but Python-like for readability."
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 130726,
+          "disk_reads": 11976,
+          "disk_bytes": 22304246112,
+          "io_seconds": 32.28696767706424,
+          "prefill_cache_admissions": 7846,
+          "fused_moe_calls": 12335,
+          "masked_experts": 0,
+          "gpu_hits": 118746,
+          "host_hits": 4
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          11247106068
+        ],
+        "host_cache_bytes": 320334864,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 261462,
+          "disk_reads": 12885,
+          "disk_bytes": 23997178620,
+          "io_seconds": 33.776135928346775,
+          "prefill_cache_admissions": 7858,
+          "fused_moe_calls": 24670,
+          "masked_experts": 0,
+          "gpu_hits": 248094,
+          "host_hits": 483
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12077741820
+        ],
+        "host_cache_bytes": 1150970616,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "thinking",
+      "repeat": 2,
+      "client_seconds": 10.89813815697562,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-282776ac6be64b1eba78c074d5ba8d0b",
+        "object": "chat.completion",
+        "created": 1791351994,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice reconciliation with bank transactions. This is a system design question that touches on:\n\n1. Browser automation (Playwright/Puppeteer/Cypress-like patterns)\n2. Financial reconciliation logic (matching invoices to bank transactions)\n3. Duplicate detection and handling\n4. Retry mechanisms with exponential backoff\n5. Audit logging\n\nI need to think about:\n- The overall architecture (components, data flow)\n- Why browser automation is needed (likely for legacy banking portals without APIs)\n- Tradeoffs: browser automation vs API, idempotency, consistency, error handling\n- Concrete pseudocode that shows the workflow\n- Audit trail requirements (who, what, when, why)\n\nLet me structure this as a thorough technical design document with clear sections, tradeoffs analysis, and meaningful pseudocode. I'll use a Python-like pseudocode with type hints for clarity.\n\nKey tradeoffs to discuss:\n- Browser automation fragility vs no-API availability\n- Eventually consistent vs strongly consistent reconciliation\n- Idempotency vs performance\n- Audit log granularity vs storage cost\n- Retry strategy: fixed vs exponential backoff vs circuit breaker\n- Duplicate detection: exact match vs"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 261462,
+          "disk_reads": 12885,
+          "disk_bytes": 23997178620,
+          "io_seconds": 33.776135928346775,
+          "prefill_cache_admissions": 7858,
+          "fused_moe_calls": 24670,
+          "masked_experts": 0,
+          "gpu_hits": 248094,
+          "host_hits": 483
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12077741820
+        ],
+        "host_cache_bytes": 1150970616,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 392188,
+          "disk_reads": 13403,
+          "disk_bytes": 24961908036,
+          "io_seconds": 34.619758330401964,
+          "prefill_cache_admissions": 7860,
+          "fused_moe_calls": 37005,
+          "masked_experts": 0,
+          "gpu_hits": 377685,
+          "host_hits": 1100
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12537757584
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "thinking",
+      "repeat": 3,
+      "client_seconds": 11.092231930000708,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-6e3d936b799c4ae7868d46aca45b4ed3",
+        "object": "chat.completion",
+        "created": 1791352005,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "# Browser Automation Workflow: Invoice-to-Bank Reconciliation\n\n## 1. System Overview\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice reconciliation with bank transactions. This is a software architecture/system design question that requires:\n\n1. Understanding the domain: invoice reconciliation involves matching invoices (from supplier portals) with bank transactions (from banking portals)\n2. Browser automation challenges: flaky selectors, anti-bot detection, session management, rate limiting\n3. Handling duplicates: idempotency, deduplication strategies\n4. Retry logic: exponential backoff, circuit breakers, dead letter queues\n5. Audit logging: immutable records, traceability, compliance\n\nLet me think about the tradeoffs:\n- Browser automation vs API: more realistic but fragile, slower, harder to maintain\n- Headless vs headed: detection risk vs resource usage\n- Synchronous vs async reconciliation: latency vs throughput\n- Eventual consistency vs strong consistency: complexity vs correctness\n- In-memory vs persistent state for dedup: speed vs durability\n\nI'll structure this as a comprehensive technical design document with pseudocode, covering architecture, workflow stages, tradeoffs, and implementation details."
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 392188,
+          "disk_reads": 13403,
+          "disk_bytes": 24961908036,
+          "io_seconds": 34.619758330401964,
+          "prefill_cache_admissions": 7860,
+          "fused_moe_calls": 37005,
+          "masked_experts": 0,
+          "gpu_hits": 377685,
+          "host_hits": 1100
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12537757584
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 522921,
+          "disk_reads": 14152,
+          "disk_bytes": 26356854624,
+          "io_seconds": 35.998855222482234,
+          "prefill_cache_admissions": 7861,
+          "fused_moe_calls": 49340,
+          "masked_experts": 0,
+          "gpu_hits": 507103,
+          "host_hits": 1666
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          13167252840
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    }
+  ]
+}

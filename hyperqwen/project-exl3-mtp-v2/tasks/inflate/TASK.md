@@ -1,0 +1,2 @@
+Harden the production compressed-block decoder compact_search.inflate without changing valid results. Enforce a MAX_COMPRESSED constant of 1 MiB in addition to the existing 32 MiB inflated bound. Reject corrupt or truncated zlib, trailing garbage, concatenated streams, wrong SHA256, invalid JSON and either exceeded bound with ValueError. Check the compressed bound before decoding, and keep inflation bounded throughout. Unicode JSON must still round-trip. Do not relax existing validation. Add your own regression tests and run them.
+Editable existing files: compact_search.py

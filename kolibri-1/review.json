@@ -1,0 +1,7 @@
+{
+  "listening_port": 8012,
+  "context_shift_enabled": false,
+  "short_speed_efforts": ["none", "high"],
+  "long_gate_uses_pi": false,
+  "long_gate_compares_all_three_markers": true
+}

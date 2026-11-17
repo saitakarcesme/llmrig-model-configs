@@ -1,0 +1,19 @@
+{
+  "scope": "Aggregate across all four HyperQwen Pi project tasks. Native first-to-last-token decode timing, excluding all recorded speed and math runs. The discarded 64-token warmup is bounded between zero and its full native engine elapsed time.",
+  "project_completion_tokens": 126892,
+  "project_api_requests": 75,
+  "validated_total_request_count": 141,
+  "prior_recorded_decode_seconds": 155.75702082522912,
+  "native_total_decode_seconds": 965.1478372755228,
+  "project_decode_seconds_range": [
+    808.8908164502936,
+    809.3908164502936
+  ],
+  "decode_tps_range": [
+    156.6820347136816,
+    156.778884641711
+  ],
+  "warmup_elapsed_upper_bound_seconds": 0.5,
+  "api_output_tps_including_ttft": 126.56883555734673,
+  "invalid_raw_proxy_fields": "The first project proxy missed delta.reasoning; its original observed_decode_tps and weighted_decode_tps fields are invalid for this arm. Standalone speed and quality clients handled both reasoning fields."
+}

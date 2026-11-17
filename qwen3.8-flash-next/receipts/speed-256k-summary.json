@@ -1,0 +1,172 @@
+{
+  "benchmarks": [
+    {
+      "benchmark": "receipts/speed-mtp4-256k-coding.json",
+      "health": {
+        "status": "ready",
+        "model": "flashnext",
+        "context": 262144,
+        "busy": false,
+        "vision_mrope": true,
+        "prefill_chunk_tokens": 8192,
+        "vision_device": 1,
+        "recurrent_cache_mb": 4096,
+        "default_thinking": true,
+        "speculation": {
+          "mode": "mtp",
+          "draft_tokens": 4,
+          "draft_device": 1
+        }
+      },
+      "summary": [
+        {
+          "case": "coding",
+          "first_decode_tokens_per_second": 8.628248571372138,
+          "warm_median_decode_tokens_per_second": 18.152568504239646,
+          "warm_trials": 2,
+          "warm_median_client_seconds": 20.75494803802576,
+          "warm_median_end_to_end_output_tokens_per_second": 12.354829274842942
+        }
+      ],
+      "trials": [
+        {
+          "case": "coding",
+          "repeat": 0,
+          "input_tokens": 261062,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 8.628248571372138,
+          "decode_seconds": 29.669984340667725,
+          "end_to_end_output_tokens_per_second": 0.475680480808994,
+          "prefill_seconds": 508.14872789382935,
+          "cached_tokens": 0,
+          "client_seconds": 538.1763816850726,
+          "accepted_draft_tokens": 198,
+          "rejected_draft_tokens": 34,
+          "id": "chatcmpl-ce4b3647d01b4edca0be41abc89d643c"
+        },
+        {
+          "case": "coding",
+          "repeat": 1,
+          "input_tokens": 261062,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 18.890737377377068,
+          "decode_seconds": 13.551614999771118,
+          "end_to_end_output_tokens_per_second": 12.857123660401514,
+          "prefill_seconds": 5.963220119476318,
+          "cached_tokens": 260864,
+          "client_seconds": 19.911140840034932,
+          "accepted_draft_tokens": 197,
+          "rejected_draft_tokens": 39,
+          "id": "chatcmpl-171cd13ea23544babb3ff0c514029da3"
+        },
+        {
+          "case": "coding",
+          "repeat": 2,
+          "input_tokens": 261062,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 17.414399631102228,
+          "decode_seconds": 14.700478076934814,
+          "end_to_end_output_tokens_per_second": 11.852534889284367,
+          "prefill_seconds": 6.516535758972168,
+          "cached_tokens": 260864,
+          "client_seconds": 21.598755236016586,
+          "accepted_draft_tokens": 197,
+          "rejected_draft_tokens": 39,
+          "id": "chatcmpl-47675664bcd340f28f3ce89a495e4b5d"
+        }
+      ]
+    },
+    {
+      "benchmark": "receipts/speed-mtp4-256k-thinking-native.json",
+      "health": {
+        "status": "ready",
+        "model": "flashnext",
+        "context": 262144,
+        "busy": false,
+        "vision_mrope": true,
+        "prefill_chunk_tokens": 8192,
+        "vision_device": 1,
+        "recurrent_cache_mb": 4096,
+        "default_thinking": true,
+        "speculation": {
+          "mode": "mtp",
+          "draft_tokens": 4,
+          "draft_device": 1
+        }
+      },
+      "summary": [
+        {
+          "case": "thinking",
+          "first_decode_tokens_per_second": 10.228024665677738,
+          "warm_median_decode_tokens_per_second": 11.95544960821735,
+          "warm_trials": 3,
+          "warm_median_client_seconds": 28.080791631015018,
+          "warm_median_end_to_end_output_tokens_per_second": 9.11655210308423
+        }
+      ],
+      "trials": [
+        {
+          "case": "thinking",
+          "repeat": 0,
+          "input_tokens": 261086,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 10.228024665677738,
+          "decode_seconds": 25.029270887374878,
+          "end_to_end_output_tokens_per_second": 0.5310471290811335,
+          "prefill_seconds": 456.5512692928314,
+          "cached_tokens": 0,
+          "client_seconds": 482.0664419049863,
+          "accepted_draft_tokens": 180,
+          "rejected_draft_tokens": 124,
+          "id": "chatcmpl-8bf5262a6e34413089720a3588ecdcc4"
+        },
+        {
+          "case": "thinking",
+          "repeat": 1,
+          "input_tokens": 261086,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 11.95544960821735,
+          "decode_seconds": 21.412829160690308,
+          "end_to_end_output_tokens_per_second": 9.11655210308423,
+          "prefill_seconds": 6.12399435043335,
+          "cached_tokens": 260864,
+          "client_seconds": 28.080791631015018,
+          "accepted_draft_tokens": 184,
+          "rejected_draft_tokens": 104,
+          "id": "chatcmpl-caec576e058740118b610f2f84925394"
+        },
+        {
+          "case": "thinking",
+          "repeat": 2,
+          "input_tokens": 261086,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 10.964898659158582,
+          "decode_seconds": 23.34722900390625,
+          "end_to_end_output_tokens_per_second": 8.6186154922987,
+          "prefill_seconds": 5.96476674079895,
+          "cached_tokens": 260864,
+          "client_seconds": 29.703146663028747,
+          "accepted_draft_tokens": 176,
+          "rejected_draft_tokens": 144,
+          "id": "chatcmpl-c9db4bcad5754ce1aa5a0e772824b94e"
+        },
+        {
+          "case": "thinking",
+          "repeat": 3,
+          "input_tokens": 261086,
+          "output_tokens": 256,
+          "decode_tokens_per_second": 14.295937954877243,
+          "decode_seconds": 17.907184600830078,
+          "end_to_end_output_tokens_per_second": 10.305404361329678,
+          "prefill_seconds": 6.544729709625244,
+          "cached_tokens": 260864,
+          "client_seconds": 24.841334801050834,
+          "accepted_draft_tokens": 182,
+          "rejected_draft_tokens": 114,
+          "id": "chatcmpl-65e7b7d9384c4c4c90473a2cb6b95e8f"
+        }
+      ]
+    }
+  ],
+  "timing": "decode throughput = output/native decode_seconds; end-to-end output throughput = output/client_seconds including prompt processing; first run separated from repeats"
+}

@@ -1,0 +1,29 @@
+{
+  "label": "warmup-none",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 65,
+    "total_tokens": 129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 65,
+    "prompt_ms": 100.131,
+    "prompt_per_token_ms": 1.540476923076923,
+    "prompt_per_second": 649.1496140056526,
+    "predicted_n": 64,
+    "predicted_ms": 591.868,
+    "predicted_per_token_ms": 9.394730158730159,
+    "predicted_per_second": 106.44265275365453
+  },
+  "ttft_seconds": 0.10670619399752468,
+  "total_seconds": 0.6984759100014344,
+  "finish_reason": "length",
+  "answer": "# A Detailed Tutorial on Implementing an LRU Cache in Python\n\n## 1. Introduction to Caching\n\nCaching is a technique used to store frequently accessed data in a fast-access location so that repeated requests do not need to recompute or re-fetch the data. An **LRU (Least Recently Used)",
+  "reasoning_characters": 0,
+  "tool_deltas": []
+}

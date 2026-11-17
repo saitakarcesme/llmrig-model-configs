@@ -1,0 +1,42 @@
+{
+  "status": 200,
+  "elapsed_seconds": 0.47457392897922546,
+  "body": {
+    "files": [
+      "image-128.png",
+      "image-175.png",
+      "page-3.svg",
+      "image-182.png",
+      "image-200.png",
+      "image-183.png",
+      "image-201.png",
+      "page-4.svg",
+      "objects.json"
+    ],
+    "pages": [
+      3,
+      4
+    ]
+  },
+  "samples": [
+    {
+      "time": 1793343657.8150897,
+      "available_ram_mib": 9769,
+      "swap_used_mib": 16707,
+      "gpus": [
+        [
+          0,
+          22728,
+          1441
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    }
+  ]
+}

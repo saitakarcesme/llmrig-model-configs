@@ -1,0 +1,275 @@
+{
+  "task": "computer_use",
+  "context_capacity_tokens": 2048,
+  "initial_text_prompt_tokens": 656,
+  "context_material": "synthetic repository excerpts",
+  "status": "failed",
+  "seconds": 58.63240018405486,
+  "error": "Task context budget exhausted",
+  "trace": [
+    {
+      "step": 0,
+      "response": {
+        "id": "chatcmpl-1086f4f0bc224307a3f23577c09c291b",
+        "object": "chat.completion",
+        "created": 1791327930,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll start by taking a screenshot to see the current state of the screen.",
+              "tool_calls": [
+                {
+                  "id": "call_721cfb6160764d5d",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 656,
+          "completion_tokens": 33,
+          "total_tokens": 689
+        }
+      },
+      "seconds_elapsed": 9.830576887005009
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-main-v2/2048-computer_use/screen-000.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "id": "chatcmpl-28ffc9ea65054244be21bab520506bb1",
+        "object": "chat.completion",
+        "created": 1791327941,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll filter unpaid invoices first by clicking \"Unpaid only\".",
+              "tool_calls": [
+                {
+                  "id": "call_add514c1bdd44272",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 145, \"y\": 188}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1513,
+          "completion_tokens": 55,
+          "total_tokens": 1568
+        }
+      },
+      "seconds_elapsed": 23.748743121977895
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 145,
+        "y": 188
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 2,
+      "response": {
+        "id": "chatcmpl-7caf19b5c4dc4eadbc5d997781ed81b7",
+        "object": "chat.completion",
+        "created": 1791327954,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_5053b1df8d9946d3",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1588,
+          "completion_tokens": 16,
+          "total_tokens": 1604
+        }
+      },
+      "seconds_elapsed": 28.300830573076382
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-main-v2/2048-computer_use/screen-001.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "id": "chatcmpl-1ea7549694454df8a6b34f9ca55f336a",
+        "object": "chat.completion",
+        "created": 1791327958,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The unpaid filter didn't take effect yet. Let me click it again.",
+              "tool_calls": [
+                {
+                  "id": "call_8d99947f4e414408",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 145, \"y\": 188}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1694,
+          "completion_tokens": 57,
+          "total_tokens": 1751
+        }
+      },
+      "seconds_elapsed": 40.98618998308666
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 145,
+        "y": 188
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 4,
+      "response": {
+        "id": "chatcmpl-35e3f0065c93423dbc77fb5c251f12bb",
+        "object": "chat.completion",
+        "created": 1791327971,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_27c0f15da4ba42f6",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1771,
+          "completion_tokens": 16,
+          "total_tokens": 1787
+        }
+      },
+      "seconds_elapsed": 44.21699448407162
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-main-v2/2048-computer_use/screen-002.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 5,
+      "response": {
+        "id": "chatcmpl-950ef1e1b35f4b3eafc0752f0b135f6f",
+        "object": "chat.completion",
+        "created": 1791327974,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The \"Unpaid only\" toggle is still OFF. Let me try clicking directly on the button text.",
+              "tool_calls": [
+                {
+                  "id": "call_a4606c6af9e0461c",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 146, \"y\": 189}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1877,
+          "completion_tokens": 63,
+          "total_tokens": 1940
+        }
+      },
+      "seconds_elapsed": 58.44817001908086
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 146,
+        "y": 189
+      },
+      "result": "Clicked"
+    }
+  ],
+  "agent_verified": false,
+  "enable_thinking": false,
+  "note": "Computer use executes screenshot-driven mouse/keyboard actions in an isolated Chromium fixture, not an OS desktop app."
+}

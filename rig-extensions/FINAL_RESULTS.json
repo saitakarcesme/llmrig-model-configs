@@ -1,0 +1,416 @@
+{
+  "timestamp": 1793343862.6185331,
+  "tests": [
+    {
+      "test": "public-ocr",
+      "http": 200,
+      "elapsed_seconds": 39.20082734897733,
+      "worker_processing_seconds": 11.46291937190108,
+      "worker_gpu1_max_used_mib": 2218,
+      "worker_gpu1_min_free_mib": 21959,
+      "worker_min_host_available_mib": 10519,
+      "after": {
+        "time": 1793343476.3357496,
+        "available_ram_mib": 8434,
+        "swap_used_mib": 15097,
+        "gpus": [
+          [
+            0,
+            22728,
+            1441
+          ],
+          [
+            1,
+            21914,
+            2263
+          ]
+        ],
+        "media_worker_active": false,
+        "secondary_running": true
+      }
+    },
+    {
+      "test": "public-whisper",
+      "http": 200,
+      "elapsed_seconds": 28.067089052987285,
+      "worker_processing_seconds": 4.227521597058512,
+      "worker_gpu1_max_used_mib": 2428,
+      "worker_gpu1_min_free_mib": 21749,
+      "worker_min_host_available_mib": 9667,
+      "after": {
+        "time": 1793343504.4576256,
+        "available_ram_mib": 8354,
+        "swap_used_mib": 15091,
+        "gpus": [
+          [
+            0,
+            22778,
+            1391
+          ],
+          [
+            1,
+            21914,
+            2263
+          ]
+        ],
+        "media_worker_active": false,
+        "secondary_running": true
+      }
+    },
+    {
+      "test": "public-buzz",
+      "http": 200,
+      "elapsed_seconds": 153.24273018701933,
+      "worker_processing_seconds": 2.64452779002022,
+      "worker_gpu1_max_used_mib": 2428,
+      "worker_gpu1_min_free_mib": 21749,
+      "worker_min_host_available_mib": 12669,
+      "after": {
+        "time": 1793343657.7538867,
+        "available_ram_mib": 9777,
+        "swap_used_mib": 16715,
+        "gpus": [
+          [
+            0,
+            22728,
+            1441
+          ],
+          [
+            1,
+            21914,
+            2263
+          ]
+        ],
+        "media_worker_active": false,
+        "secondary_running": true
+      }
+    },
+    {
+      "test": "public-native",
+      "http": 200,
+      "elapsed_seconds": 0.47457392897922546,
+      "worker_processing_seconds": null,
+      "worker_gpu1_max_used_mib": null,
+      "worker_gpu1_min_free_mib": null,
+      "worker_min_host_available_mib": null,
+      "after": {
+        "time": 1793343658.2866497,
+        "available_ram_mib": 9713,
+        "swap_used_mib": 16670,
+        "gpus": [
+          [
+            0,
+            22728,
+            1441
+          ],
+          [
+            1,
+            21914,
+            2263
+          ]
+        ],
+        "media_worker_active": false,
+        "secondary_running": true
+      }
+    },
+    {
+      "test": "sampled-0",
+      "http": 200,
+      "elapsed_seconds": 80.75073039496783,
+      "worker_processing_seconds": null,
+      "worker_gpu1_max_used_mib": null,
+      "worker_gpu1_min_free_mib": null,
+      "worker_min_host_available_mib": null,
+      "after": {
+        "time": 1793343775.3735192,
+        "available_ram_mib": 10696,
+        "swap_used_mib": 16721,
+        "gpus": [
+          [
+            0,
+            22728,
+            1441
+          ],
+          [
+            1,
+            21914,
+            2263
+          ]
+        ],
+        "media_worker_active": false,
+        "secondary_running": true
+      }
+    },
+    {
+      "test": "sampled-1.5",
+      "http": 200,
+      "elapsed_seconds": 22.44741945003625,
+      "worker_processing_seconds": null,
+      "worker_gpu1_max_used_mib": null,
+      "worker_gpu1_min_free_mib": null,
+      "worker_min_host_available_mib": null,
+      "after": {
+        "time": 1793343820.0661433,
+        "available_ram_mib": 10882,
+        "swap_used_mib": 17020,
+        "gpus": [
+          [
+            0,
+            22728,
+            1441
+          ],
+          [
+            1,
+            21914,
+            2263
+          ]
+        ],
+        "media_worker_active": false,
+        "secondary_running": true
+      }
+    }
+  ],
+  "final_props": {
+    "backend": "elpis",
+    "schema_version": 1,
+    "sampled_at": 1793343862.6511414,
+    "gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 3090",
+        "total_mib": 24576,
+        "used_mib": 22728,
+        "free_mib": 1441
+      },
+      {
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 3090",
+        "total_mib": 24576,
+        "used_mib": 21914,
+        "free_mib": 2263
+      }
+    ],
+    "gpu_memory_error": null,
+    "gpu_memory_sampled_at": 1793343862.6510177,
+    "host_memory": {
+      "total_mib": 31868.64453125,
+      "available_mib": 10549.61328125,
+      "swap_used_mib": 16748.62109375
+    },
+    "slots": [
+      {
+        "id": 0,
+        "gpu_index": 0,
+        "model": "qwen3.8-27b",
+        "context_limit": 262144,
+        "healthy": true,
+        "busy": false,
+        "gpu_lease_held": false,
+        "available": true,
+        "context_tokens_in_use": null
+      },
+      {
+        "id": 1,
+        "gpu_index": 1,
+        "model": "qwen3.8-27b",
+        "context_limit": 262144,
+        "healthy": true,
+        "busy": false,
+        "gpu_lease_held": false,
+        "available": true,
+        "context_tokens_in_use": null
+      }
+    ],
+    "extensions": {
+      "health_path": "/extensions/health",
+      "embedding_device": "cpu",
+      "embedding_memory_limit_mib": 2048,
+      "media_worker_memory_limit_mib": 6144,
+      "media_gpu_index": 1
+    },
+    "text_sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "presence_penalty": 0,
+      "stochastic_sampling": false
+    },
+    "vision": {
+      "model": "qwen3.8-27b",
+      "context_limit": 65536,
+      "gpu_index": 1,
+      "shares_secondary_text_slot": true
+    },
+    "limits": {
+      "chat_body_bytes": 33554432,
+      "pdf_file_bytes": 104857600
+    },
+    "notes": [
+      "Free GPU memory is a snapshot, not an allocation guarantee.",
+      "Each text slot has its own context limit; limits are not additive for one request.",
+      "Live context occupancy is not exposed by this backend (null).",
+      "PDF and vision temporarily reserve the secondary GPU."
+    ]
+  },
+  "doctor": {
+    "checks": [
+      {
+        "name": "router:11446",
+        "passed": true,
+        "details": {
+          "state": "ready",
+          "backend": "elpis",
+          "context": 262144,
+          "lanes": [
+            {
+              "port": 18020,
+              "healthy": true,
+              "busy": false,
+              "completed": 3
+            },
+            {
+              "port": 18021,
+              "healthy": true,
+              "busy": false,
+              "completed": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "router:11445",
+        "passed": true,
+        "details": {
+          "state": "ready",
+          "backend": "elpis",
+          "context": 262144,
+          "lanes": [
+            {
+              "port": 18020,
+              "healthy": true,
+              "busy": false,
+              "completed": 3
+            },
+            {
+              "port": 18021,
+              "healthy": true,
+              "busy": false,
+              "completed": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "router:11434",
+        "passed": true,
+        "details": {
+          "state": "ready",
+          "backend": "elpis",
+          "context": 262144,
+          "lanes": [
+            {
+              "port": 18020,
+              "healthy": true,
+              "busy": false,
+              "completed": 3
+            },
+            {
+              "port": 18021,
+              "healthy": true,
+              "busy": false,
+              "completed": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "engine:18020",
+        "passed": true,
+        "details": [
+          {
+            "id": "qwen3.8-27b",
+            "object": "model",
+            "created": 1793343843,
+            "owned_by": "local",
+            "max_model_len": 262144
+          }
+        ]
+      },
+      {
+        "name": "engine:18021",
+        "passed": true,
+        "details": [
+          {
+            "id": "qwen3.8-27b",
+            "object": "model",
+            "created": 1793343843,
+            "owned_by": "local",
+            "max_model_len": 262144
+          }
+        ]
+      },
+      {
+        "name": "llmrig-elpis",
+        "passed": true,
+        "details": "active"
+      },
+      {
+        "name": "contest-forge-worker",
+        "passed": true,
+        "details": "active"
+      },
+      {
+        "name": "contest-forge-scanner",
+        "passed": true,
+        "details": "active"
+      },
+      {
+        "name": "previous-engine-stopped",
+        "passed": true,
+        "details": "inactive"
+      },
+      {
+        "name": "llmrig-elpis-lane0",
+        "passed": true,
+        "details": "running false 0"
+      },
+      {
+        "name": "llmrig-elpis-lane1",
+        "passed": true,
+        "details": "running false 0"
+      },
+      {
+        "name": "contest-settings",
+        "passed": true,
+        "details": {
+          "model": "qwen3.8-27b",
+          "timeout": 7200,
+          "output_budget": 8192,
+          "parallel_jobs": 2
+        }
+      }
+    ],
+    "passed": true
+  },
+  "worker_image_id": "sha256:9c3101bb05f530b636308b5649a02eaa2bac66d1a10c19b37ee8e5576b38ff27",
+  "source_hashes": {
+    "/home/isa/Projects/llmrig/recipes/elpis-dual-262k/router.py": "56d197ddcee93cfe735831d6a48de7e77b9eaf4d78e3c2f58208bb72d333a17a",
+    "/home/isa/Projects/llmrig/recipes/elpis-dual-262k/router.json": "787e8d23eaaabb0a85a63df1e49301fc14dc98e3d32c148f304a86ac7a7d4169",
+    "/home/isa/Projects/llmrig/extensions/app.py": "faddb1e16365c9b50aaa5fd4cd307d6f762415433a126dee4ce7341708b37a67",
+    "/home/isa/Experiments/rig-extensions-20261030/worker.py": "d097a8b2b09d72e08714299795fd7b4ddb6cd112950c333c5c31dd3d05818b26",
+    "/home/isa/Experiments/rig-extensions-20261030/Dockerfile": "d1f507fd257a98c4d1a9f8432d28a3be7454698e97bada746650eece4fb807eb"
+  },
+  "models": {
+    "paddleocr-vl-1.6": {
+      "repo": "PaddlePaddle/PaddleOCR-VL-1.6",
+      "revision": "c5630abae1d940eafe0697512a0325494b02ab42"
+    },
+    "whisper-large-v3": {
+      "repo": "Systran/faster-whisper-large-v3",
+      "revision": "edaa852ec7e145841d8ffdb056a99866b5f0a478"
+    },
+    "buzz-turkish-hf": {
+      "repo": "BuzzASR/turkish",
+      "revision": "928b47596e31776dab9daf1e606ecf76234b9ecd"
+    }
+  }
+}

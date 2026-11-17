@@ -1,0 +1,1017 @@
+{
+  "health": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true,
+    "speculation": {
+      "mode": "ngram",
+      "draft_tokens": 4
+    }
+  },
+  "rows": [
+    {
+      "case": "coding",
+      "repeat": 0,
+      "client_seconds": 60.347964646993205,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement a complete Python SQLite task queue with enqueue, atomic claim, retry with exponential backoff, stale lease recovery and unit tests. Return only code. Include error handling and no placeholders."
+          }
+        ],
+        "enable_thinking": false,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-37d95490b9844e63b6aa7383ee59a0e3",
+        "object": "chat.completion",
+        "created": 1791350707,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```python\nimport sqlite3\nimport threading\nimport time\nimport uuid\nimport json\nimport logging\nfrom typing import Optional, Dict, Any, List, Callable\nfrom dataclasses import dataclass, field\nfrom enum import Enum\nimport os\n\n# Configure logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\n\n\nclass TaskStatus(Enum):\n    PENDING = \"pending\"\n    RUNNING = \"running\"\n    COMPLETED = \"completed\"\n    FAILED = \"failed\"\n    DEAD = \"dead\"\n\n\n@dataclass\nclass Task:\n    id: str\n    name: str\n    payload: Dict[str, Any]\n    status: TaskStatus\n    attempts: int\n    max_attempts: int\n    created_at: float\n    updated_at: float\n    claimed_at: Optional[float] = None\n    lease_expires_at: Optional[float] = None\n    last_error: Optional[str] = None\n    next_retry_at: Optional[float] = None\n\n    def to_dict(self) -> Dict[str, Any]:\n        return {\n            \"id\": self.id,\n            \"name\": self.name,\n            \"payload\": self.payload,\n            \""
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 256,
+          "total_tokens": 305
+        }
+      },
+      "metrics_before": {
+        "counters": {},
+        "gpu_cache_bytes": [
+          0,
+          0
+        ],
+        "host_cache_bytes": 0,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 136208,
+          "disk_reads": 12808,
+          "disk_bytes": 23853772896,
+          "io_seconds": 37.55105713009834,
+          "prefill_cache_admissions": 5833,
+          "table_cache_hits": 123356,
+          "table_expert_updates": 12852,
+          "table_layer_states": 96,
+          "fused_moe_calls": 11519,
+          "masked_experts": 0,
+          "gpu_hits": 123356,
+          "host_hits": 44
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          11856114792
+        ],
+        "host_cache_bytes": 1260852924,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "coding",
+      "repeat": 1,
+      "client_seconds": 9.052704630070366,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement a complete Python SQLite task queue with enqueue, atomic claim, retry with exponential backoff, stale lease recovery and unit tests. Return only code. Include error handling and no placeholders."
+          }
+        ],
+        "enable_thinking": false,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-a070c17d8af4445a9d73d4996dea16ea",
+        "object": "chat.completion",
+        "created": 1791350767,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```python\nimport sqlite3\nimport threading\nimport time\nimport uuid\nimport json\nimport logging\nfrom typing import Optional, Dict, Any, List, Callable\nfrom dataclasses import dataclass, field\nfrom enum import Enum\nimport unittest\n\n# Configure logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\n\n\nclass TaskStatus(Enum):\n    PENDING = \"pending\"\n    RUNNING = \"running\"\n    COMPLETED = \"completed\"\n    FAILED = \"failed\"\n    DEAD = \"dead\"\n\n\n@dataclass\nclass Task:\n    id: str\n    name: str\n    payload: Dict[str, Any]\n    status: TaskStatus\n    attempts: int\n    max_attempts: int\n    created_at: float\n    updated_at: float\n    claimed_at: Optional[float] = None\n    completed_at: Optional[float] = None\n    last_error: Optional[str] = None\n    next_retry_at: Optional[float] = None\n    lease_expires_at: Optional[float] = None\n\n    def to_dict(self) -> Dict[str, Any]:\n        return {\n            \"id\": self.id,\n            \"name\": self.name,"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 256,
+          "total_tokens": 305
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 136208,
+          "disk_reads": 12808,
+          "disk_bytes": 23853772896,
+          "io_seconds": 37.55105713009834,
+          "prefill_cache_admissions": 5833,
+          "table_cache_hits": 123356,
+          "table_expert_updates": 12852,
+          "table_layer_states": 96,
+          "fused_moe_calls": 11519,
+          "masked_experts": 0,
+          "gpu_hits": 123356,
+          "host_hits": 44
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          11856114792
+        ],
+        "host_cache_bytes": 1260852924,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 270012,
+          "disk_reads": 13164,
+          "disk_bytes": 24516791568,
+          "io_seconds": 38.75455800141208,
+          "prefill_cache_admissions": 5848,
+          "table_cache_hits": 255800,
+          "table_expert_updates": 14212,
+          "table_layer_states": 96,
+          "fused_moe_calls": 22846,
+          "masked_experts": 0,
+          "gpu_hits": 255800,
+          "host_hits": 1048
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12187624128
+        ],
+        "host_cache_bytes": 1571875728,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "coding",
+      "repeat": 2,
+      "client_seconds": 7.374129174044356,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement a complete Python SQLite task queue with enqueue, atomic claim, retry with exponential backoff, stale lease recovery and unit tests. Return only code. Include error handling and no placeholders."
+          }
+        ],
+        "enable_thinking": false,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-47de038d32264b44b11effb0a035155f",
+        "object": "chat.completion",
+        "created": 1791350776,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```python\nimport sqlite3\nimport threading\nimport time\nimport uuid\nimport json\nimport logging\nfrom typing import Optional, Dict, Any, List, Callable\nfrom dataclasses import dataclass, field\nfrom enum import Enum\nimport os\n\n# Configure logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\n\n\nclass TaskStatus(Enum):\n    PENDING = \"pending\"\n    RUNNING = \"running\"\n    COMPLETED = \"completed\"\n    FAILED = \"failed\"\n    DEAD = \"dead\"\n\n\n@dataclass\nclass Task:\n    id: str\n    name: str\n    payload: Dict[str, Any]\n    status: TaskStatus\n    attempts: int\n    max_attempts: int\n    created_at: float\n    updated_at: float\n    claimed_at: Optional[float] = None\n    completed_at: Optional[float] = None\n    last_error: Optional[str] = None\n    next_retry_at: Optional[float] = None\n    lease_expires_at: Optional[float] = None\n\n    def to_dict(self) -> Dict[str, Any]:\n        return {\n            \"id\": self.id,\n            \"name\": self.name,"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 256,
+          "total_tokens": 305
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 270012,
+          "disk_reads": 13164,
+          "disk_bytes": 24516791568,
+          "io_seconds": 38.75455800141208,
+          "prefill_cache_admissions": 5848,
+          "table_cache_hits": 255800,
+          "table_expert_updates": 14212,
+          "table_layer_states": 96,
+          "fused_moe_calls": 22846,
+          "masked_experts": 0,
+          "gpu_hits": 255800,
+          "host_hits": 1048
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12187624128
+        ],
+        "host_cache_bytes": 1571875728,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 403793,
+          "disk_reads": 13241,
+          "disk_bytes": 24660197292,
+          "io_seconds": 38.877291293116286,
+          "prefill_cache_admissions": 5852,
+          "table_cache_hits": 388791,
+          "table_expert_updates": 15002,
+          "table_layer_states": 96,
+          "fused_moe_calls": 34173,
+          "masked_experts": 0,
+          "gpu_hits": 388791,
+          "host_hits": 1761
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12249083724
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "thinking",
+      "repeat": 0,
+      "client_seconds": 17.833125549950637,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-eaccb6f6e0734b6bbb44e89089f6bc47",
+        "object": "chat.completion",
+        "created": 1791350784,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice reconciliation. This is a complex systems design question that touches on:\n\n1. Browser automation (Playwright/Selenium/Puppeteer)\n2. Financial reconciliation logic (matching invoices to bank transactions)\n3. Idempotency and duplicate handling\n4. Retry strategies with exponential backoff\n5. Audit logging\n6. Tradeoffs in design decisions\n\nLet me think about what makes this interesting and non-trivial:\n\n- Browser automation is inherently flaky (DOM changes, timing issues, CAPTCHAs, session expiry)\n- Financial reconciliation requires precision (no rounding errors, exact matching vs fuzzy matching)\n- Duplicates can come from multiple sources: re-submissions, partial failures, concurrent runs\n- Audit logs need to be tamper-evident and complete\n- The workflow needs to handle partial failures gracefully (you can't just restart from scratch if you've already posted some entries)\n\nKey tradeoffs to discuss:\n- Playwright vs Selenium (speed vs ecosystem maturity)\n- Headless vs headed (debugging vs resource usage)\n- Exact matching vs fuzzy matching (precision vs recall)\n- Synchronous vs async processing\n- Strong consistency vs"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 403793,
+          "disk_reads": 13241,
+          "disk_bytes": 24660197292,
+          "io_seconds": 38.877291293116286,
+          "prefill_cache_admissions": 5852,
+          "table_cache_hits": 388791,
+          "table_expert_updates": 15002,
+          "table_layer_states": 96,
+          "fused_moe_calls": 34173,
+          "masked_experts": 0,
+          "gpu_hits": 388791,
+          "host_hits": 1761
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          12249083724
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 541462,
+          "disk_reads": 18257,
+          "disk_bytes": 34002055884,
+          "io_seconds": 48.73426435957663,
+          "prefill_cache_admissions": 6768,
+          "table_cache_hits": 520307,
+          "table_expert_updates": 21155,
+          "table_layer_states": 96,
+          "fused_moe_calls": 46460,
+          "masked_experts": 0,
+          "gpu_hits": 520307,
+          "host_hits": 2898
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          15742968636
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "thinking",
+      "repeat": 1,
+      "client_seconds": 9.435597284929827,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-97edad0c1af941f4bfeb6dcfbfd2f2b8",
+        "object": "chat.completion",
+        "created": 1791350802,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "# Browser Automation Workflow: Invoice",
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice reconciliation with bank transactions. This is a complex systems design question that touches on:\n\n1. Browser automation (Playwright/Selenium/Puppeteer)\n2. Financial reconciliation logic\n3. Duplicate detection and handling\n4. Retry mechanisms with idempotency\n5. Audit logging\n6. Tradeoffs in design decisions\n\nLet me think about what makes this hard:\n- Browser automation is inherently flaky (DOM changes, timing issues, CAPTCHAs)\n- Financial data requires precision (no floating point errors, exact matching)\n- Duplicates can come from multiple sources (re-submissions, partial failures, race conditions)\n- Retries must be idempotent (can't double-post a payment)\n- Audit logs must be tamper-evident and complete\n- The system needs to handle partial failures gracefully\n\nI'll structure this as:\n1. Architecture overview\n2. Core workflow with pseudocode\n3. Duplicate handling strategy\n4. Retry mechanism\n5. Audit log design\n6. Tradeoffs analysis\n\nLet me make this thorough and production-grade in thinking, not just a toy example."
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 541462,
+          "disk_reads": 18257,
+          "disk_bytes": 34002055884,
+          "io_seconds": 48.73426435957663,
+          "prefill_cache_admissions": 6768,
+          "table_cache_hits": 520307,
+          "table_expert_updates": 21155,
+          "table_layer_states": 96,
+          "fused_moe_calls": 46460,
+          "masked_experts": 0,
+          "gpu_hits": 520307,
+          "host_hits": 2898
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          15742968636
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 682435,
+          "disk_reads": 19211,
+          "disk_bytes": 35778796932,
+          "io_seconds": 50.485434448346496,
+          "prefill_cache_admissions": 6771,
+          "table_cache_hits": 660206,
+          "table_expert_updates": 22229,
+          "table_layer_states": 96,
+          "fused_moe_calls": 58555,
+          "masked_experts": 0,
+          "gpu_hits": 660206,
+          "host_hits": 3018
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          16068890736
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "thinking",
+      "repeat": 2,
+      "client_seconds": 16.18306736194063,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Design a robust browser automation workflow to reconcile invoices with bank transactions, handle duplicates and retries, and produce an audit log. Explain the tradeoffs and include pseudocode."
+          }
+        ],
+        "enable_thinking": true,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-4dc29798e2534ce18ab173a2442f364e",
+        "object": "chat.completion",
+        "created": 1791350811,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "# Browser Automation Workflow: Invoice\u2013Bank Transaction Reconciliation\n\n## 1. System Architecture Overview\n\n```\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                          ORCHESTRATOR (Scheduler)                        \u2502\n\u2502",
+              "reasoning_content": "The user is asking for a comprehensive design of a browser automation workflow for invoice reconciliation with bank transactions. This is a complex systems design question that touches on:\n\n1. Browser automation (likely using something like Playwright, Puppeteer, or Selenium)\n2. Financial reconciliation logic (matching invoices to bank transactions)\n3. Duplicate detection and handling\n4. Retry mechanisms with idempotency\n5. Audit logging\n\nLet me think about the tradeoffs:\n- Browser automation vs API-based approaches (many banks don't expose APIs, so browser automation is sometimes necessary)\n- Synchronous vs asynchronous processing\n- Idempotency strategies\n- Matching algorithms (exact vs fuzzy)\n- Audit log granularity vs storage costs\n- Retry strategies (exponential backoff, circuit breakers)\n- State management (where to store reconciliation state)\n\nI'll design a comprehensive system with clear architecture, pseudocode, and tradeoff analysis. Let me structure this as a proper technical design document."
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 256,
+          "total_tokens": 329
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 682435,
+          "disk_reads": 19211,
+          "disk_bytes": 35778796932,
+          "io_seconds": 50.485434448346496,
+          "prefill_cache_admissions": 6771,
+          "table_cache_hits": 660206,
+          "table_expert_updates": 22229,
+          "table_layer_states": 96,
+          "fused_moe_calls": 58555,
+          "masked_experts": 0,
+          "gpu_hits": 660206,
+          "host_hits": 3018
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          16068890736
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 819009,
+          "disk_reads": 20393,
+          "disk_bytes": 37980167916,
+          "io_seconds": 54.47304019553121,
+          "prefill_cache_admissions": 6771,
+          "table_cache_hits": 795140,
+          "table_expert_updates": 23869,
+          "table_layer_states": 96,
+          "fused_moe_calls": 70746,
+          "masked_experts": 0,
+          "gpu_hits": 795140,
+          "host_hits": 3476
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          16493520672
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "prompt_copy",
+      "repeat": 0,
+      "client_seconds": 20.66528397006914,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Copy the following Python code exactly, preserving every line. Output only the code, no fences.\ndef transform_0(value):\n    return (value * 3 + 7) % 997\n\ndef transform_1(value):\n    return (value * 4 + 8) % 997\n\ndef transform_2(value):\n    return (value * 5 + 9) % 997\n\ndef transform_3(value):\n    return (value * 6 + 10) % 997\n\ndef transform_4(value):\n    return (value * 7 + 11) % 997\n\ndef transform_5(value):\n    return (value * 8 + 12) % 997\n\ndef transform_6(value):\n    return (value * 9 + 13) % 997\n\ndef transform_7(value):\n    return (value * 10 + 14) % 997\n\ndef transform_8(value):\n    return (value * 11 + 15) % 997\n\ndef transform_9(value):\n    return (value * 12 + 16) % 997\n\ndef transform_10(value):\n    return (value * 13 + 17) % 997\n\ndef transform_11(value):\n    return (value * 14 + 18) % 997\n\ndef transform_12(value):\n    return (value * 15 + 19) % 997\n\ndef transform_13(value):\n    return (value * 16 + 20) % 997\n\ndef transform_14(value):\n    return (value * 17 + 21) % 997\n\ndef transform_15(value):\n    return (value * 18 + 22) % 997\n\ndef transform_16(value):\n    return (value * 19 + 23) % 997\n\ndef transform_17(value):\n    return (value * 20 + 24) % 997\n\ndef transform_18(value):\n    return (value * 21 + 25) % 997\n\ndef transform_19(value):\n    return (value * 22 + 26) % 997\n\ndef transform_20(value):\n    return (value * 23 + 27) % 997\n\ndef transform_21(value):\n    return (value * 24 + 28) % 997\n\ndef transform_22(value):\n    return (value * 25 + 29) % 997\n\ndef transform_23(value):\n    return (value * 26 + 30) % 997\n\ndef transform_24(value):\n    return (value * 27 + 31) % 997\n\ndef transform_25(value):\n    return (value * 28 + 32) % 997\n\ndef transform_26(value):\n    return (value * 29 + 33) % 997\n\ndef transform_27(value):\n    return (value * 30 + 34) % 997\n\ndef transform_28(value):\n    return (value * 31 + 35) % 997\n\ndef transform_29(value):\n    return (value * 32 + 36) % 997\n\ndef transform_30(value):\n    return (value * 33 + 37) % 997\n\ndef transform_31(value):\n    return (value * 34 + 38) % 997\n\ndef transform_32(value):\n    return (value * 35 + 39) % 997\n\ndef transform_33(value):\n    return (value * 36 + 40) % 997\n\ndef transform_34(value):\n    return (value * 37 + 41) % 997\n\ndef transform_35(value):\n    return (value * 38 + 42) % 997\n\ndef transform_36(value):\n    return (value * 39 + 43) % 997\n\ndef transform_37(value):\n    return (value * 40 + 44) % 997\n\ndef transform_38(value):\n    return (value * 41 + 45) % 997\n\ndef transform_39(value):\n    return (value * 42 + 46) % 997\n\ndef transform_40(value):\n    return (value * 43 + 47) % 997\n\ndef transform_41(value):\n    return (value * 44 + 48) % 997\n\ndef transform_42(value):\n    return (value * 45 + 49) % 997\n\ndef transform_43(value):\n    return (value * 46 + 50) % 997\n\ndef transform_44(value):\n    return (value * 47 + 51) % 997\n\ndef transform_45(value):\n    return (value * 48 + 52) % 997\n\ndef transform_46(value):\n    return (value * 49 + 53) % 997\n\ndef transform_47(value):\n    return (value * 50 + 54) % 997\n\ndef transform_48(value):\n    return (value * 51 + 55) % 997\n\ndef transform_49(value):\n    return (value * 52 + 56) % 997\n\ndef transform_50(value):\n    return (value * 53 + 57) % 997\n\ndef transform_51(value):\n    return (value * 54 + 58) % 997\n\ndef transform_52(value):\n    return (value * 55 + 59) % 997\n\ndef transform_53(value):\n    return (value * 56 + 60) % 997\n\ndef transform_54(value):\n    return (value * 57 + 61) % 997\n\ndef transform_55(value):\n    return (value * 58 + 62) % 997\n\ndef transform_56(value):\n    return (value * 59 + 63) % 997\n\ndef transform_57(value):\n    return (value * 60 + 64) % 997\n\ndef transform_58(value):\n    return (value * 61 + 65) % 997\n\ndef transform_59(value):\n    return (value * 62 + 66) % 997\n\ndef transform_60(value):\n    return (value * 63 + 67) % 997\n\ndef transform_61(value):\n    return (value * 64 + 68) % 997\n\ndef transform_62(value):\n    return (value * 65 + 69) % 997\n\ndef transform_63(value):\n    return (value * 66 + 70) % 997\n\ndef transform_64(value):\n    return (value * 67 + 71) % 997\n\ndef transform_65(value):\n    return (value * 68 + 72) % 997\n\ndef transform_66(value):\n    return (value * 69 + 73) % 997\n\ndef transform_67(value):\n    return (value * 70 + 74) % 997\n\ndef transform_68(value):\n    return (value * 71 + 75) % 997\n\ndef transform_69(value):\n    return (value * 72 + 76) % 997\n\ndef transform_70(value):\n    return (value * 73 + 77) % 997\n\ndef transform_71(value):\n    return (value * 74 + 78) % 997\n\ndef transform_72(value):\n    return (value * 75 + 79) % 997\n\ndef transform_73(value):\n    return (value * 76 + 80) % 997\n\ndef transform_74(value):\n    return (value * 77 + 81) % 997\n\ndef transform_75(value):\n    return (value * 78 + 82) % 997\n\ndef transform_76(value):\n    return (value * 79 + 83) % 997\n\ndef transform_77(value):\n    return (value * 80 + 84) % 997\n\ndef transform_78(value):\n    return (value * 81 + 85) % 997\n\ndef transform_79(value):\n    return (value * 82 + 86) % 997\n"
+          }
+        ],
+        "enable_thinking": false,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-1496aab823f34d3596fffb4f3ae5e493",
+        "object": "chat.completion",
+        "created": 1791350827,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "def transform_0(value):\n    return (value * 3 + 7) % 997\n\ndef transform_1(value):\n    return (value * 4 + 8) % 997\n\ndef transform_2(value):\n    return (value * 5 + 9) % 997\n\ndef transform_3(value):\n    return (value * 6 + 10) % 997\n\ndef transform_4(value):\n    return (value * 7 + 11) % 997\n\ndef transform_5(value):\n    return (value * 8 + 12) % 997\n\ndef transform_6(value):\n    return (value * 9 + 13) % 997\n\ndef transform_7(value):\n    return (value * 10 + 14) % 997\n\ndef transform_8(value):\n    return (value * 11 + 15) % 997\n\ndef transform_9(value):\n    return (value * 12 + 16) % 997\n\ndef transform_10(value"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 256,
+          "total_tokens": 2427
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 819009,
+          "disk_reads": 20393,
+          "disk_bytes": 37980167916,
+          "io_seconds": 54.47304019553121,
+          "prefill_cache_admissions": 6771,
+          "table_cache_hits": 795140,
+          "table_expert_updates": 23869,
+          "table_layer_states": 96,
+          "fused_moe_calls": 70746,
+          "masked_experts": 0,
+          "gpu_hits": 795140,
+          "host_hits": 3476
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          16493520672
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 0,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 0,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 935326,
+          "disk_reads": 32861,
+          "disk_bytes": 61200720732,
+          "io_seconds": 85.62435959186405,
+          "prefill_cache_admissions": 9236,
+          "table_cache_hits": 897812,
+          "table_expert_updates": 37514,
+          "table_layer_states": 96,
+          "fused_moe_calls": 73432,
+          "masked_experts": 0,
+          "gpu_hits": 897812,
+          "host_hits": 4653
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          21337654284
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 116379664,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 1,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "prompt_copy",
+      "repeat": 1,
+      "client_seconds": 3.729331666021608,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Copy the following Python code exactly, preserving every line. Output only the code, no fences.\ndef transform_0(value):\n    return (value * 3 + 7) % 997\n\ndef transform_1(value):\n    return (value * 4 + 8) % 997\n\ndef transform_2(value):\n    return (value * 5 + 9) % 997\n\ndef transform_3(value):\n    return (value * 6 + 10) % 997\n\ndef transform_4(value):\n    return (value * 7 + 11) % 997\n\ndef transform_5(value):\n    return (value * 8 + 12) % 997\n\ndef transform_6(value):\n    return (value * 9 + 13) % 997\n\ndef transform_7(value):\n    return (value * 10 + 14) % 997\n\ndef transform_8(value):\n    return (value * 11 + 15) % 997\n\ndef transform_9(value):\n    return (value * 12 + 16) % 997\n\ndef transform_10(value):\n    return (value * 13 + 17) % 997\n\ndef transform_11(value):\n    return (value * 14 + 18) % 997\n\ndef transform_12(value):\n    return (value * 15 + 19) % 997\n\ndef transform_13(value):\n    return (value * 16 + 20) % 997\n\ndef transform_14(value):\n    return (value * 17 + 21) % 997\n\ndef transform_15(value):\n    return (value * 18 + 22) % 997\n\ndef transform_16(value):\n    return (value * 19 + 23) % 997\n\ndef transform_17(value):\n    return (value * 20 + 24) % 997\n\ndef transform_18(value):\n    return (value * 21 + 25) % 997\n\ndef transform_19(value):\n    return (value * 22 + 26) % 997\n\ndef transform_20(value):\n    return (value * 23 + 27) % 997\n\ndef transform_21(value):\n    return (value * 24 + 28) % 997\n\ndef transform_22(value):\n    return (value * 25 + 29) % 997\n\ndef transform_23(value):\n    return (value * 26 + 30) % 997\n\ndef transform_24(value):\n    return (value * 27 + 31) % 997\n\ndef transform_25(value):\n    return (value * 28 + 32) % 997\n\ndef transform_26(value):\n    return (value * 29 + 33) % 997\n\ndef transform_27(value):\n    return (value * 30 + 34) % 997\n\ndef transform_28(value):\n    return (value * 31 + 35) % 997\n\ndef transform_29(value):\n    return (value * 32 + 36) % 997\n\ndef transform_30(value):\n    return (value * 33 + 37) % 997\n\ndef transform_31(value):\n    return (value * 34 + 38) % 997\n\ndef transform_32(value):\n    return (value * 35 + 39) % 997\n\ndef transform_33(value):\n    return (value * 36 + 40) % 997\n\ndef transform_34(value):\n    return (value * 37 + 41) % 997\n\ndef transform_35(value):\n    return (value * 38 + 42) % 997\n\ndef transform_36(value):\n    return (value * 39 + 43) % 997\n\ndef transform_37(value):\n    return (value * 40 + 44) % 997\n\ndef transform_38(value):\n    return (value * 41 + 45) % 997\n\ndef transform_39(value):\n    return (value * 42 + 46) % 997\n\ndef transform_40(value):\n    return (value * 43 + 47) % 997\n\ndef transform_41(value):\n    return (value * 44 + 48) % 997\n\ndef transform_42(value):\n    return (value * 45 + 49) % 997\n\ndef transform_43(value):\n    return (value * 46 + 50) % 997\n\ndef transform_44(value):\n    return (value * 47 + 51) % 997\n\ndef transform_45(value):\n    return (value * 48 + 52) % 997\n\ndef transform_46(value):\n    return (value * 49 + 53) % 997\n\ndef transform_47(value):\n    return (value * 50 + 54) % 997\n\ndef transform_48(value):\n    return (value * 51 + 55) % 997\n\ndef transform_49(value):\n    return (value * 52 + 56) % 997\n\ndef transform_50(value):\n    return (value * 53 + 57) % 997\n\ndef transform_51(value):\n    return (value * 54 + 58) % 997\n\ndef transform_52(value):\n    return (value * 55 + 59) % 997\n\ndef transform_53(value):\n    return (value * 56 + 60) % 997\n\ndef transform_54(value):\n    return (value * 57 + 61) % 997\n\ndef transform_55(value):\n    return (value * 58 + 62) % 997\n\ndef transform_56(value):\n    return (value * 59 + 63) % 997\n\ndef transform_57(value):\n    return (value * 60 + 64) % 997\n\ndef transform_58(value):\n    return (value * 61 + 65) % 997\n\ndef transform_59(value):\n    return (value * 62 + 66) % 997\n\ndef transform_60(value):\n    return (value * 63 + 67) % 997\n\ndef transform_61(value):\n    return (value * 64 + 68) % 997\n\ndef transform_62(value):\n    return (value * 65 + 69) % 997\n\ndef transform_63(value):\n    return (value * 66 + 70) % 997\n\ndef transform_64(value):\n    return (value * 67 + 71) % 997\n\ndef transform_65(value):\n    return (value * 68 + 72) % 997\n\ndef transform_66(value):\n    return (value * 69 + 73) % 997\n\ndef transform_67(value):\n    return (value * 70 + 74) % 997\n\ndef transform_68(value):\n    return (value * 71 + 75) % 997\n\ndef transform_69(value):\n    return (value * 72 + 76) % 997\n\ndef transform_70(value):\n    return (value * 73 + 77) % 997\n\ndef transform_71(value):\n    return (value * 74 + 78) % 997\n\ndef transform_72(value):\n    return (value * 75 + 79) % 997\n\ndef transform_73(value):\n    return (value * 76 + 80) % 997\n\ndef transform_74(value):\n    return (value * 77 + 81) % 997\n\ndef transform_75(value):\n    return (value * 78 + 82) % 997\n\ndef transform_76(value):\n    return (value * 79 + 83) % 997\n\ndef transform_77(value):\n    return (value * 80 + 84) % 997\n\ndef transform_78(value):\n    return (value * 81 + 85) % 997\n\ndef transform_79(value):\n    return (value * 82 + 86) % 997\n"
+          }
+        ],
+        "enable_thinking": false,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-e6b4b13decba471b92b2d80d5657a947",
+        "object": "chat.completion",
+        "created": 1791350848,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "def transform_0(value):\n    return (value * 3 + 7) % 997\n\ndef transform_1(value):\n    return (value * 4 + 8) % 997\n\ndef transform_2(value):\n    return (value * 5 + 9) % 997\n\ndef transform_3(value):\n    return (value * 6 + 10) % 997\n\ndef transform_4(value):\n    return (value * 7 + 11) % 997\n\ndef transform_5(value):\n    return (value * 8 + 12) % 997\n\ndef transform_6(value):\n    return (value * 9 + 13) % 997\n\ndef transform_7(value):\n    return (value * 10 + 14) % 997\n\ndef transform_8(value):\n    return (value * 11 + 15) % 997\n\ndef transform_9(value):\n    return (value * 12 + 16) % 997\n\ndef transform_10(value"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 256,
+          "total_tokens": 2427
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 935326,
+          "disk_reads": 32861,
+          "disk_bytes": 61200720732,
+          "io_seconds": 85.62435959186405,
+          "prefill_cache_admissions": 9236,
+          "table_cache_hits": 897812,
+          "table_expert_updates": 37514,
+          "table_layer_states": 96,
+          "fused_moe_calls": 73432,
+          "masked_experts": 0,
+          "gpu_hits": 897812,
+          "host_hits": 4653
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          21337654284
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 116379664,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 1,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 1034009,
+          "disk_reads": 33726,
+          "disk_bytes": 62811707112,
+          "io_seconds": 87.54825655650347,
+          "prefill_cache_admissions": 9243,
+          "table_cache_hits": 995537,
+          "table_expert_updates": 38472,
+          "table_layer_states": 96,
+          "fused_moe_calls": 76071,
+          "masked_experts": 0,
+          "gpu_hits": 995537,
+          "host_hits": 4746
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          21373040112
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 116379664,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 1,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    },
+    {
+      "case": "prompt_copy",
+      "repeat": 2,
+      "client_seconds": 3.4720468409359455,
+      "request": {
+        "model": "flashnext",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Copy the following Python code exactly, preserving every line. Output only the code, no fences.\ndef transform_0(value):\n    return (value * 3 + 7) % 997\n\ndef transform_1(value):\n    return (value * 4 + 8) % 997\n\ndef transform_2(value):\n    return (value * 5 + 9) % 997\n\ndef transform_3(value):\n    return (value * 6 + 10) % 997\n\ndef transform_4(value):\n    return (value * 7 + 11) % 997\n\ndef transform_5(value):\n    return (value * 8 + 12) % 997\n\ndef transform_6(value):\n    return (value * 9 + 13) % 997\n\ndef transform_7(value):\n    return (value * 10 + 14) % 997\n\ndef transform_8(value):\n    return (value * 11 + 15) % 997\n\ndef transform_9(value):\n    return (value * 12 + 16) % 997\n\ndef transform_10(value):\n    return (value * 13 + 17) % 997\n\ndef transform_11(value):\n    return (value * 14 + 18) % 997\n\ndef transform_12(value):\n    return (value * 15 + 19) % 997\n\ndef transform_13(value):\n    return (value * 16 + 20) % 997\n\ndef transform_14(value):\n    return (value * 17 + 21) % 997\n\ndef transform_15(value):\n    return (value * 18 + 22) % 997\n\ndef transform_16(value):\n    return (value * 19 + 23) % 997\n\ndef transform_17(value):\n    return (value * 20 + 24) % 997\n\ndef transform_18(value):\n    return (value * 21 + 25) % 997\n\ndef transform_19(value):\n    return (value * 22 + 26) % 997\n\ndef transform_20(value):\n    return (value * 23 + 27) % 997\n\ndef transform_21(value):\n    return (value * 24 + 28) % 997\n\ndef transform_22(value):\n    return (value * 25 + 29) % 997\n\ndef transform_23(value):\n    return (value * 26 + 30) % 997\n\ndef transform_24(value):\n    return (value * 27 + 31) % 997\n\ndef transform_25(value):\n    return (value * 28 + 32) % 997\n\ndef transform_26(value):\n    return (value * 29 + 33) % 997\n\ndef transform_27(value):\n    return (value * 30 + 34) % 997\n\ndef transform_28(value):\n    return (value * 31 + 35) % 997\n\ndef transform_29(value):\n    return (value * 32 + 36) % 997\n\ndef transform_30(value):\n    return (value * 33 + 37) % 997\n\ndef transform_31(value):\n    return (value * 34 + 38) % 997\n\ndef transform_32(value):\n    return (value * 35 + 39) % 997\n\ndef transform_33(value):\n    return (value * 36 + 40) % 997\n\ndef transform_34(value):\n    return (value * 37 + 41) % 997\n\ndef transform_35(value):\n    return (value * 38 + 42) % 997\n\ndef transform_36(value):\n    return (value * 39 + 43) % 997\n\ndef transform_37(value):\n    return (value * 40 + 44) % 997\n\ndef transform_38(value):\n    return (value * 41 + 45) % 997\n\ndef transform_39(value):\n    return (value * 42 + 46) % 997\n\ndef transform_40(value):\n    return (value * 43 + 47) % 997\n\ndef transform_41(value):\n    return (value * 44 + 48) % 997\n\ndef transform_42(value):\n    return (value * 45 + 49) % 997\n\ndef transform_43(value):\n    return (value * 46 + 50) % 997\n\ndef transform_44(value):\n    return (value * 47 + 51) % 997\n\ndef transform_45(value):\n    return (value * 48 + 52) % 997\n\ndef transform_46(value):\n    return (value * 49 + 53) % 997\n\ndef transform_47(value):\n    return (value * 50 + 54) % 997\n\ndef transform_48(value):\n    return (value * 51 + 55) % 997\n\ndef transform_49(value):\n    return (value * 52 + 56) % 997\n\ndef transform_50(value):\n    return (value * 53 + 57) % 997\n\ndef transform_51(value):\n    return (value * 54 + 58) % 997\n\ndef transform_52(value):\n    return (value * 55 + 59) % 997\n\ndef transform_53(value):\n    return (value * 56 + 60) % 997\n\ndef transform_54(value):\n    return (value * 57 + 61) % 997\n\ndef transform_55(value):\n    return (value * 58 + 62) % 997\n\ndef transform_56(value):\n    return (value * 59 + 63) % 997\n\ndef transform_57(value):\n    return (value * 60 + 64) % 997\n\ndef transform_58(value):\n    return (value * 61 + 65) % 997\n\ndef transform_59(value):\n    return (value * 62 + 66) % 997\n\ndef transform_60(value):\n    return (value * 63 + 67) % 997\n\ndef transform_61(value):\n    return (value * 64 + 68) % 997\n\ndef transform_62(value):\n    return (value * 65 + 69) % 997\n\ndef transform_63(value):\n    return (value * 66 + 70) % 997\n\ndef transform_64(value):\n    return (value * 67 + 71) % 997\n\ndef transform_65(value):\n    return (value * 68 + 72) % 997\n\ndef transform_66(value):\n    return (value * 69 + 73) % 997\n\ndef transform_67(value):\n    return (value * 70 + 74) % 997\n\ndef transform_68(value):\n    return (value * 71 + 75) % 997\n\ndef transform_69(value):\n    return (value * 72 + 76) % 997\n\ndef transform_70(value):\n    return (value * 73 + 77) % 997\n\ndef transform_71(value):\n    return (value * 74 + 78) % 997\n\ndef transform_72(value):\n    return (value * 75 + 79) % 997\n\ndef transform_73(value):\n    return (value * 76 + 80) % 997\n\ndef transform_74(value):\n    return (value * 77 + 81) % 997\n\ndef transform_75(value):\n    return (value * 78 + 82) % 997\n\ndef transform_76(value):\n    return (value * 79 + 83) % 997\n\ndef transform_77(value):\n    return (value * 80 + 84) % 997\n\ndef transform_78(value):\n    return (value * 81 + 85) % 997\n\ndef transform_79(value):\n    return (value * 82 + 86) % 997\n"
+          }
+        ],
+        "enable_thinking": false,
+        "temperature": 0,
+        "max_tokens": 256
+      },
+      "response": {
+        "id": "chatcmpl-999d9b76e47f4043a8074eb70dae6c59",
+        "object": "chat.completion",
+        "created": 1791350852,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "def transform_0(value):\n    return (value * 3 + 7) % 997\n\ndef transform_1(value):\n    return (value * 4 + 8) % 997\n\ndef transform_2(value):\n    return (value * 5 + 9) % 997\n\ndef transform_3(value):\n    return (value * 6 + 10) % 997\n\ndef transform_4(value):\n    return (value * 7 + 11) % 997\n\ndef transform_5(value):\n    return (value * 8 + 12) % 997\n\ndef transform_6(value):\n    return (value * 9 + 13) % 997\n\ndef transform_7(value):\n    return (value * 10 + 14) % 997\n\ndef transform_8(value):\n    return (value * 11 + 15) % 997\n\ndef transform_9(value):\n    return (value * 12 + 16) % 997\n\ndef transform_10(value"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2171,
+          "completion_tokens": 256,
+          "total_tokens": 2427
+        }
+      },
+      "metrics_before": {
+        "counters": {
+          "expert_requests": 1034009,
+          "disk_reads": 33726,
+          "disk_bytes": 62811707112,
+          "io_seconds": 87.54825655650347,
+          "prefill_cache_admissions": 9243,
+          "table_cache_hits": 995537,
+          "table_expert_updates": 38472,
+          "table_layer_states": 96,
+          "fused_moe_calls": 76071,
+          "masked_experts": 0,
+          "gpu_hits": 995537,
+          "host_hits": 4746
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          21373040112
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 116379664,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 1,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      },
+      "metrics_after": {
+        "counters": {
+          "expert_requests": 1132909,
+          "disk_reads": 34458,
+          "disk_bytes": 64174992696,
+          "io_seconds": 88.72202605276834,
+          "prefill_cache_admissions": 9245,
+          "table_cache_hits": 1093515,
+          "table_expert_updates": 39394,
+          "table_layer_states": 96,
+          "fused_moe_calls": 78710,
+          "masked_experts": 0,
+          "gpu_hits": 1093515,
+          "host_hits": 4936
+        },
+        "gpu_cache_bytes": [
+          10736805180,
+          21386076996
+        ],
+        "host_cache_bytes": 1609123968,
+        "gpu_caps": [
+          10737418240,
+          21474836480
+        ],
+        "host_cap": 1610612736,
+        "recurrent_cache": {
+          "bytes": 116379664,
+          "capacity_bytes": 4294967296,
+          "checkpoints": 1,
+          "metrics": {
+            "stash_evictions": 0,
+            "stash_evictions_stranded": 0,
+            "stash_evictions_live_kv": 0,
+            "stash_pruned": 0
+          }
+        }
+      }
+    }
+  ]
+}

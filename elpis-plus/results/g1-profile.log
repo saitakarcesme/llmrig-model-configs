@@ -1,0 +1,8 @@
+[serve] loading native EXL3 target, cache=270336, cq=3
+[serve] READY in 13s, VRAM=22.98 GB
+loaded in 13s max_chunk=2048
+prompt tokens 260000
+timing pass: 263.2s (988 tok/s), 66 iterates
+/opt/venv/lib/python3.13/site-packages/torch/profiler/profiler.py:217: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+profile pass: 267.6s

@@ -1,0 +1,19 @@
+{
+  "time": 1793343658.2866497,
+  "available_ram_mib": 9713,
+  "swap_used_mib": 16670,
+  "gpus": [
+    [
+      0,
+      22728,
+      1441
+    ],
+    [
+      1,
+      21914,
+      2263
+    ]
+  ],
+  "media_worker_active": false,
+  "secondary_running": true
+}

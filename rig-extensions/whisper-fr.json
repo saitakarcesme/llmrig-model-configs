@@ -1,0 +1,100 @@
+{
+  "name": "whisper-fr",
+  "status": 200,
+  "elapsed_seconds": 6.524831703980453,
+  "body": {
+    "text": "Les mitochondries produisent de l'énergie dans les cellules. Nous étudions la biologie.",
+    "language": "fr",
+    "duration": 4.51375,
+    "segments": [
+      {
+        "id": 1,
+        "start": 0.0,
+        "end": 2.78,
+        "text": " Les mitochondries produisent de l'énergie dans les cellules.",
+        "avg_logprob": -0.05834960950804608,
+        "no_speech_prob": 0.00075531005859375
+      },
+      {
+        "id": 2,
+        "start": 3.1,
+        "end": 4.38,
+        "text": " Nous étudions la biologie.",
+        "avg_logprob": -0.05834960950804608,
+        "no_speech_prob": 0.00075531005859375
+      }
+    ],
+    "model": "whisper-large-v3",
+    "processing_seconds": 4.321622489020228
+  },
+  "memory_samples": [
+    {
+      "time": 1793343248.8636231,
+      "available_ram_mib": 5614,
+      "swap_used_mib": 18115,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ]
+    },
+    {
+      "time": 1793343250.89146,
+      "available_ram_mib": 9229,
+      "swap_used_mib": 18114,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ]
+    },
+    {
+      "time": 1793343252.9178865,
+      "available_ram_mib": 6882,
+      "swap_used_mib": 18114,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ]
+    },
+    {
+      "time": 1793343254.944014,
+      "available_ram_mib": 7320,
+      "swap_used_mib": 18114,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          274,
+          23903
+        ]
+      ]
+    }
+  ]
+}

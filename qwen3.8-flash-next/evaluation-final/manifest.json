@@ -1,0 +1,54 @@
+{
+  "endpoint": "http://127.0.0.1:30260",
+  "contexts": "2048,4096,8192,16384,32768,65536",
+  "tasks": "coding,agentic,browser_use,computer_use",
+  "max_steps": 16,
+  "enable_thinking": false,
+  "coordinate_system": "normalized",
+  "runtime_sources": {
+    "native_disk.py": "67004b20ecaaac0db6e38a372b1df1d33b8b187f1cb7b85b3244f14f39f058fe",
+    "smoke_native.py": "72e471435a03ba6f6a291fa2b4bba9dc89ad2f688855af8ec423a12c22d8f09f",
+    "check_disk_experts.py": "9765410ca75eb8f298903b2c902ea0ac7c942a5711928ae63af11bde029ec165",
+    "check_moe_layer.py": "d2b84d13f9b1d48f089465bacf20b55c7275f1bacffc8a414747664aacc57b2f",
+    "fused_disk.py": "6ccd8566cc1e49e417f664cb3cff9a7ca5d85899689b064e8c3d9b3649d577ae",
+    "server.py": "0c9a5db18217d898caf296709071b2ac459c2b3c368f6561146526ae0858516e",
+    "agent_eval.py": "cf1eb9409aebf537c9ec9f098b5cdbc1d02b3a6d7acf7f9514fa127e0539e9b6",
+    "eval_fixtures.py": "0c90c75547aa23e53253105fc74b597958c488efd3db68d8e71a9dc4095d1a91",
+    "eval_summary.py": "72b1f1e50f8e53099d04972a967f5301919dd85722e7cfac6752bb3a4d0e4815",
+    "hardware_monitor.py": "b32e27344e2e49280fca4dcdad0df5defeb94152c76eb81631e68e02fee6da49",
+    "check_vision_positions.py": "e3c26d99d393764e532a330dc84fee50807675efc50948fe93da768824788676",
+    "vision_positions.py": "d54e2375be1404ec7fa62c566bc3d3ae9031359385c01f06030d90a3c104ba85",
+    "check_fixtures.py": "2e89d55f0d492acef50d6ae3e10eb84d7482adbc476963bafbaf889e5dcc5832"
+  },
+  "server": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096
+  },
+  "cache": {
+    "counters": {
+      "expert_requests": 833010,
+      "disk_reads": 216692,
+      "disk_bytes": 403569781104,
+      "io_seconds": 719.4663269737503,
+      "fused_moe_calls": 38031,
+      "masked_experts": 0,
+      "gpu_hits": 610435,
+      "host_hits": 5883
+    },
+    "gpu_cache_bytes": [
+      10736805180,
+      14953305948
+    ],
+    "host_cache_bytes": 1204980564,
+    "gpu_caps": [
+      10737418240,
+      21474836480
+    ],
+    "host_cap": 1610612736
+  },
+  "started_unix": 1791329216.4628875
+}

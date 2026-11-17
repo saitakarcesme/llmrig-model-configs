@@ -1,0 +1,17 @@
+{
+  "elapsed_s": 2.2746230700286105,
+  "dimensions": [
+    1024,
+    1024,
+    1024,
+    1024
+  ],
+  "cross_language_scores": [
+    0.6187763824876655,
+    0.6211063195042169,
+    0.13406903073185672
+  ],
+  "reject_long_status": 400,
+  "docker_stats": "955.6MiB / 2GiB",
+  "gpu_memory": "index, memory.used [MiB], memory.free [MiB]\n0, 22564 MiB, 1605 MiB\n1, 21720 MiB, 2457 MiB"
+}

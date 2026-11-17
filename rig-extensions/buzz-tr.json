@@ -1,0 +1,75 @@
+{
+  "name": "buzz-tr",
+  "status": 200,
+  "elapsed_seconds": 4.2958097390364856,
+  "body": {
+    "text": "Mitokondri hücrede enerji üretir.Bugün biyoloji dersinde hücre yapısını öğreniyoruz.",
+    "language": "tr",
+    "duration": 5.83675,
+    "segments": [
+      {
+        "id": 1,
+        "start": 0.0,
+        "end": 5.62,
+        "text": "Mitokondri hücrede enerji üretir.Bugün biyoloji dersinde hücre yapısını öğreniyoruz.",
+        "avg_logprob": -0.05088682593526067,
+        "no_speech_prob": 1.8477439880371094e-05
+      }
+    ],
+    "model": "BuzzASR/turkish",
+    "processing_seconds": 2.1723825819790363
+  },
+  "memory_samples": [
+    {
+      "time": 1793343276.4286947,
+      "available_ram_mib": 5670,
+      "swap_used_mib": 18131,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ]
+    },
+    {
+      "time": 1793343278.4565022,
+      "available_ram_mib": 9230,
+      "swap_used_mib": 18131,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ]
+    },
+    {
+      "time": 1793343280.4833372,
+      "available_ram_mib": 9321,
+      "swap_used_mib": 18299,
+      "gpus": [
+        [
+          0,
+          22596,
+          1573
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    }
+  ]
+}

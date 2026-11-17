@@ -1,0 +1,77 @@
+{
+  "task": "filters",
+  "baseline": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 7,
+    "passed": false,
+    "return_code": 1
+  },
+  "acceptance": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "return_code": 0
+  },
+  "scope_ok": true,
+  "passed": true,
+  "pi_return_code": 0,
+  "timeout": false,
+  "wall_seconds": 234.32350916601717,
+  "changed_existing_files": [
+    "catalog.py"
+  ],
+  "new_test_files": [
+    "test_catalog_filters.py"
+  ],
+  "tool_calls": [
+    "read",
+    "bash",
+    "read",
+    "read",
+    "read",
+    "read",
+    "read",
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "bash",
+    "edit",
+    "bash",
+    "bash",
+    "bash",
+    "edit",
+    "bash",
+    "read",
+    "bash"
+  ],
+  "api_requests": 14,
+  "timing_receipts": 0,
+  "weighted_decode_tps": 125.9449567291527,
+  "per_request_decode_tps": [
+    166.5461073819198,
+    166.05267632090812,
+    124.75602983165548,
+    145.55552008404712,
+    144.707577422237,
+    165.02098201162113,
+    130.68693511928828,
+    128.45388047868528,
+    105.58057777284986,
+    106.24891545453846,
+    111.96820112278193,
+    121.11574519070184,
+    122.91720471237599,
+    108.45557733152027
+  ],
+  "decode_seconds": 0.0,
+  "prompt_seconds": 0.0,
+  "generated_tokens": 24500,
+  "prompt_tokens_evaluated": 0,
+  "cached_prompt_tokens": 0,
+  "tokens_per_wall_second": 104.55630374945375,
+  "reasoning_effort": "high",
+  "scope": "One first attempt per task; test criteria fixed before generation. Not local.ai benchmark scores."
+}

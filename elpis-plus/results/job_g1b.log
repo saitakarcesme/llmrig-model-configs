@@ -1,0 +1,131 @@
++ P=("${SERVE_ARGS[@]}")
++ P[1]=/work/serve/exl3_server.py
++ cand_run ep-g1s 1 18031 -- -B /work/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g1s gpu=1 port=18031
++ shift 3
++ envs=()
++ local envs
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1/triton ']'
++ docker rm -f ep-g1s
++ docker run -d --name ep-g1s --label elpis-plus=1 --device nvidia.com/gpu=1 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18031:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /work/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18031
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=20
++ '[' 20 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ return 0
++ log g1b ready
++ tee -a /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/window/events.log
+++ date +%FT%T
++ echo '2026-11-09T00:47:24 g1b ready'
+2026-11-09T00:47:24 g1b ready
++ gate 18031 g1s-greedy-short short --repeat 1
++ local port=18031 out=g1s-greedy-short suite=short
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py short --url http://127.0.0.1:18031/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g1s-greedy-short --repeat 1
+{"ttft": 2.07, "wall": 16.152, "prompt_tokens": 215, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 145.36, "accept": 3.562, "finish": "length", "sha256": "ddcc565ad5e5a127248387038c2fe3be4c97f2c24e593dda7da9043f23ec8c55", "chars": 6025, "id": "pelican", "rep": 0}
+{"ttft": 0.322, "wall": 13.29, "prompt_tokens": 243, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 157.85, "accept": 3.857, "finish": "length", "sha256": "d0b8de9dcc686b66cc0ccad7a59ff430c8f112943814a690e2df7ebb416c0cbf", "chars": 6655, "id": "hexagon", "rep": 0}
+{"ttft": 0.322, "wall": 14.549, "prompt_tokens": 236, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 143.89, "accept": 3.519, "finish": "length", "sha256": "2a89567308a66a0e244c432888dd76b41fc851ba1ac683a7e54ec3814ca206bf", "chars": 6040, "id": "solar", "rep": 0}
+{"ttft": 0.324, "wall": 14.142, "prompt_tokens": 233, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 148.14, "accept": 3.625, "finish": "length", "sha256": "650a26ed8944ae3a99ea7b2f075bc86e43e7ce4febc2771b753ec5ad621c3143", "chars": 6354, "id": "island", "rep": 0}
+{"ttft": 0.325, "wall": 16.836, "prompt_tokens": 230, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 123.98, "accept": 3.043, "finish": "length", "sha256": "c134e22d60c8af28a131a071ea2e2619ff936e5659c6931a6d6d7e6dad01979a", "chars": 7875, "id": "snake", "rep": 0}
+{"ttft": 0.327, "wall": 16.002, "prompt_tokens": 240, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 130.59, "accept": 3.205, "finish": "length", "sha256": "840c8e8c483cbf3de196df60e6557f7f5e4592d196c8cfb8a448e76662f8a558", "chars": 7551, "id": "landing", "rep": 0}
+{"ttft": 0.327, "wall": 15.901, "prompt_tokens": 242, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 131.44, "accept": 3.235, "finish": "length", "sha256": "4b989ea0199fe2bb35d72364dd8c500887d8115201b8dcce540f40b316786a8f", "chars": 7187, "id": "pendulum", "rep": 0}
+{"ttft": 0.326, "wall": 16.628, "prompt_tokens": 236, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 125.57, "accept": 3.089, "finish": "length", "sha256": "d7b05fc138c409274bd43984f9e5486f7f36882d1a902b8f80b363eeb9bb23d1", "chars": 7649, "id": "galaxy", "rep": 0}
+{
+ "n": 8,
+ "decode_tps_median": 137.665,
+ "ttft_median": 0.326,
+ "accept_median": 3.377,
+ "deterministic": true
+}
++ gate 18031 g1s-sampled-short short --repeat 1 --sampling '{"temperature":1.0,"top_p":0.95,"top_k":20}'
++ local port=18031 out=g1s-sampled-short suite=short
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py short --url http://127.0.0.1:18031/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g1s-sampled-short --repeat 1 --sampling '{"temperature":1.0,"top_p":0.95,"top_k":20}'
+{"ttft": 0.331, "wall": 24.628, "prompt_tokens": 215, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 84.25, "accept": 2.103, "finish": "length", "sha256": "98065ef7ced59069cda78507cee129de9c0e5118e4533c38ae834af642150c5b", "chars": 8313, "id": "pelican", "rep": 0}
+{"ttft": 0.327, "wall": 20.974, "prompt_tokens": 243, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 99.14, "accept": 2.488, "finish": "length", "sha256": "3c629ba97aed6c65151b52f89d60eb6ac9bda5a6cfb9f5cd203caaed6a21f05a", "chars": 8037, "id": "hexagon", "rep": 0}
+{"ttft": 0.326, "wall": 20.249, "prompt_tokens": 236, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 102.75, "accept": 2.576, "finish": "length", "sha256": "da268cc639ea21515631a2e125270d8ca3051c3e8e99ec4656398c8bd776ac03", "chars": 7311, "id": "solar", "rep": 0}
+{"ttft": 0.326, "wall": 19.991, "prompt_tokens": 233, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 104.09, "accept": 2.606, "finish": "length", "sha256": "aae3441bc923325b6021a132174d2cad33a021c781c09f1c8074047e2afbfa54", "chars": 6713, "id": "island", "rep": 0}
+{"ttft": 0.325, "wall": 23.478, "prompt_tokens": 230, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 88.41, "accept": 2.214, "finish": "length", "sha256": "461126adfccef703cee5a59609fc422dcc1005a36a2eaa737af6640d5964902c", "chars": 8644, "id": "snake", "rep": 0}
+{"ttft": 0.327, "wall": 21.097, "prompt_tokens": 240, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 98.56, "accept": 2.47, "finish": "length", "sha256": "df72f71200ea33754e5a69123553544243a3b6ce1f4126283b2d4355812d853b", "chars": 8108, "id": "landing", "rep": 0}
+{"ttft": 0.327, "wall": 21.227, "prompt_tokens": 242, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 97.95, "accept": 2.456, "finish": "length", "sha256": "2472fefb1892b039d6dd399f5658ddb459b24c1a2950373c482c1a264b2cadc3", "chars": 7482, "id": "pendulum", "rep": 0}
+{"ttft": 0.326, "wall": 22.758, "prompt_tokens": 236, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 91.25, "accept": 2.286, "finish": "length", "sha256": "756838b331d96e69d86fcec0a004541155a90dc8d6eb12c614a5eb7fffe51e15", "chars": 7963, "id": "galaxy", "rep": 0}
+{
+ "n": 8,
+ "decode_tps_median": 98.255,
+ "ttft_median": 0.327,
+ "accept_median": 2.463,
+ "deterministic": true
+}
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/sample_test.py 18031 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g1s-functional.json
+{
+ "seed_same": {
+  "equal": true,
+  "a": [
+   200,
+   "The lighthouse stood as a solitary sentinel of light, weaving a golden thread through the stormy night to guide lost ships home.",
+   "stop"
+  ],
+  "b": [
+   200,
+   "The lighthouse stood as a solitary sentinel of light, weaving a golden thread through the stormy night to guide lost ships home.",
+   "stop"
+  ]
+ },
+ "seed_diff": {
+  "differs": true,
+  "c": [
+   200,
+   "The lighthouse stood as a skeletal sentinel on the jagged cliffs, its beam slicing through the storm like a golden knife to stitch the scattered pieces of the dark sea back together.",
+   "stop"
+  ]
+ },
+ "unseeded_distinct_of_5": 5,
+ "stop_greedy": {
+  "content": "1, 2, 3, 4, 5, 6",
+  "finish": "stop",
+  "ok": true
+ },
+ "stop_sampled": {
+  "content": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ",
+  "finish": "stop"
+ },
+ "err_penalty_greedy": [
+  400,
+  "{\"error\": {\"message\": \"penalties require temperature > 0 (greedy decoding is served on the exact argmax path)\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request\"}}"
+ ],
+ "err_temp_range": [
+  400,
+  "{\"error\": {\"message\": \"temperature must be a number in [0, 2]\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request\"}}"
+ ],
+ "presence_penalty_ok": [
+  200,
+  "The lighthouse stood on the jagged edge of the world, sweeping its golden beam across the ocean like a slow, rhythmic heartbeat that refused to let the darkness swallow the coast whole.",
+  "stop"
+ ],
+ "greedy_seed_ignored": true
+}
++ docker logs ep-g1s
++ docker rm -f ep-g1s
++ log g1b done
++ tee -a /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/window/events.log
+++ date +%FT%T
++ echo '2026-11-09T00:52:27 g1b done'
+2026-11-09T00:52:27 g1b done

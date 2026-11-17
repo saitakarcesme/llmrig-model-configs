@@ -1,0 +1,1345 @@
+{
+  "step": 15,
+  "seconds": 583.0396857679589,
+  "trace": [
+    {
+      "step": 0,
+      "response": {
+        "id": "chatcmpl-bea824de44ca4b8289e64dc8e7729303",
+        "object": "chat.completion",
+        "created": 1791334697,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_e8cb6bb2f49145cf",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 57320,
+          "completion_tokens": 15,
+          "total_tokens": 57335
+        }
+      },
+      "seconds_elapsed": 106.51109580893535
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 1 of 4\n\nISS-001 Bug report 1 open / me / high / 2026-09-24\n\nISS-002 Bug report 2 open / other / high / 2026-09-23\n\nISS-003 Bug report 3 open / me / low / 2026-09-22\n\nPrevious pageNext page",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "all",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "all",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "all",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "newest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-001",
+            "text": "ISS-001 Bug report 1",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-002",
+            "text": "ISS-002 Bug report 2",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-003",
+            "text": "ISS-003 Bug report 3",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "id": "chatcmpl-9428392d493b4cb2b1eb072168650d4d",
+        "object": "chat.completion",
+        "created": 1791334803,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_d58f0c7fcb1645f7",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_select",
+                    "arguments": "{\"selector\": \"#status\", \"value\": \"open\"}"
+                  }
+                },
+                {
+                  "id": "call_6f3b34e25d0540d4",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_select",
+                    "arguments": "{\"selector\": \"#owner\", \"value\": \"me\"}"
+                  }
+                },
+                {
+                  "id": "call_6701e74e7c984260",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_select",
+                    "arguments": "{\"selector\": \"#priority\", \"value\": \"high\"}"
+                  }
+                },
+                {
+                  "id": "call_249fdcbae8a045d6",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_select",
+                    "arguments": "{\"selector\": \"#sort\", \"value\": \"oldest\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 57840,
+          "completion_tokens": 157,
+          "total_tokens": 57997
+        }
+      },
+      "seconds_elapsed": 121.30594134400599
+    },
+    {
+      "tool": "browser_select",
+      "arguments": {
+        "selector": "#status",
+        "value": "open"
+      },
+      "result": "Selected"
+    },
+    {
+      "tool": "browser_select",
+      "arguments": {
+        "selector": "#owner",
+        "value": "me"
+      },
+      "result": "Selected"
+    },
+    {
+      "tool": "browser_select",
+      "arguments": {
+        "selector": "#priority",
+        "value": "high"
+      },
+      "result": "Selected"
+    },
+    {
+      "tool": "browser_select",
+      "arguments": {
+        "selector": "#sort",
+        "value": "oldest"
+      },
+      "result": "Selected"
+    },
+    {
+      "step": 2,
+      "response": {
+        "id": "chatcmpl-2cefbdf6e89f42fa846137447eba5b29",
+        "object": "chat.completion",
+        "created": 1791334818,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_cd117cf80dd74265",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58041,
+          "completion_tokens": 15,
+          "total_tokens": 58056
+        }
+      },
+      "seconds_elapsed": 124.10167727898806
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 1 of 2\n\nISS-011 Bug report 11 open / me / high / 2026-09-14\n\nISS-007 Bug report 7 open / me / high / 2026-09-18\n\nISS-005 Bug report 5 open / me / high / 2026-09-20\n\nPrevious pageNext page",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "open",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "me",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "high",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "oldest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-011",
+            "text": "ISS-011 Bug report 11",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-007",
+            "text": "ISS-007 Bug report 7",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-005",
+            "text": "ISS-005 Bug report 5",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "id": "chatcmpl-945b01d687d54532bb35714937ac9cdc",
+        "object": "chat.completion",
+        "created": 1791334821,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The oldest matching issue is ISS-005 (2026-09-20). Opening it.",
+              "tool_calls": [
+                {
+                  "id": "call_6e277e46ef7242d6",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_click",
+                    "arguments": "{\"selector\": \"#issue-ISS-005\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58085,
+          "completion_tokens": 60,
+          "total_tokens": 58145
+        }
+      },
+      "seconds_elapsed": 236.17400649399497
+    },
+    {
+      "tool": "browser_click",
+      "arguments": {
+        "selector": "#issue-ISS-005"
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 4,
+      "response": {
+        "id": "chatcmpl-65cfcec7179d4a93a4cfaedc695ba2a2",
+        "object": "chat.completion",
+        "created": 1791334933,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_b0056b070a694a13",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58165,
+          "completion_tokens": 15,
+          "total_tokens": 58180
+        }
+      },
+      "seconds_elapsed": 238.79408991604578
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 1 of 2\n\nISS-011 Bug report 11 open / me / high / 2026-09-14\n\nISS-007 Bug report 7 open / me / high / 2026-09-18\n\nISS-005 Bug report 5 open / me / high / 2026-09-20\n\nPrevious pageNext page\nISS-005\n\nReproduction notes attached.\n\nSave label",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "open",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "me",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "high",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "oldest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-011",
+            "text": "ISS-011 Bug report 11",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-007",
+            "text": "ISS-007 Bug report 7",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-005",
+            "text": "ISS-005 Bug report 5",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "INPUT",
+            "id": "label",
+            "text": "",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-label",
+            "text": "Save label",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "response": {
+        "id": "chatcmpl-3e1c1277e1a24f0e8aeebd8fb8822dbb",
+        "object": "chat.completion",
+        "created": 1791334935,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_27cbbe6751fd4980",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_fill",
+                    "arguments": "{\"selector\": \"#label\", \"text\": \"needs-reproduction\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58278,
+          "completion_tokens": 41,
+          "total_tokens": 58319
+        }
+      },
+      "seconds_elapsed": 347.9182525880169
+    },
+    {
+      "tool": "browser_fill",
+      "arguments": {
+        "selector": "#label",
+        "text": "needs-reproduction"
+      },
+      "result": "Filled"
+    },
+    {
+      "step": 6,
+      "response": {
+        "id": "chatcmpl-fef0c90ca0a6412c88f4d3711357a6e7",
+        "object": "chat.completion",
+        "created": 1791335045,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_4249d3190c9a43b9",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_click",
+                    "arguments": "{\"selector\": \"#save-label\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58339,
+          "completion_tokens": 29,
+          "total_tokens": 58368
+        }
+      },
+      "seconds_elapsed": 350.7029537749477
+    },
+    {
+      "tool": "browser_click",
+      "arguments": {
+        "selector": "#save-label"
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 7,
+      "response": {
+        "id": "chatcmpl-c64936ecd52f42de9a7960425d283a67",
+        "object": "chat.completion",
+        "created": 1791335047,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_19ea22c70eac4eca",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58388,
+          "completion_tokens": 15,
+          "total_tokens": 58403
+        }
+      },
+      "seconds_elapsed": 352.9387399679981
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 1 of 2\n\nISS-011 Bug report 11 open / me / high / 2026-09-14\n\nISS-007 Bug report 7 open / me / high / 2026-09-18\n\nISS-005 Bug report 5 open / me / high / 2026-09-20\n\nPrevious pageNext page\nISS-005\n\nReproduction notes attached.\n\nSave label\n\nneeds-reproduction",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "open",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "me",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "high",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "oldest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-011",
+            "text": "ISS-011 Bug report 11",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-007",
+            "text": "ISS-007 Bug report 7",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-005",
+            "text": "ISS-005 Bug report 5",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "INPUT",
+            "id": "label",
+            "text": "",
+            "value": "needs-reproduction",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-label",
+            "text": "Save label",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 8,
+      "response": {
+        "id": "chatcmpl-18e2d7528da94ab58c994928aa5d18b1",
+        "object": "chat.completion",
+        "created": 1791335050,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_ad6082c59cb1435a",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_click",
+                    "arguments": "{\"selector\": \"#next\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58439,
+          "completion_tokens": 28,
+          "total_tokens": 58467
+        }
+      },
+      "seconds_elapsed": 461.4993649070384
+    },
+    {
+      "tool": "browser_click",
+      "arguments": {
+        "selector": "#next"
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 9,
+      "response": {
+        "id": "chatcmpl-02ceee2ccce0450ea3f5a930a7c23ea0",
+        "object": "chat.completion",
+        "created": 1791335158,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_a929528b88a248f6",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58487,
+          "completion_tokens": 15,
+          "total_tokens": 58502
+        }
+      },
+      "seconds_elapsed": 463.150101520936
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 2 of 2\n\nISS-001 Bug report 1 open / me / high / 2026-09-24\n\nPrevious pageNext page\nISS-005\n\nReproduction notes attached.\n\nSave label\n\nneeds-reproduction",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "open",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "me",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "high",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "oldest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-001",
+            "text": "ISS-001 Bug report 1",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "INPUT",
+            "id": "label",
+            "text": "",
+            "value": "needs-reproduction",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-label",
+            "text": "Save label",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 10,
+      "response": {
+        "id": "chatcmpl-419e7e5c6eeb4a5c94afab8b74e4f263",
+        "object": "chat.completion",
+        "created": 1791335160,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_703435022eaa4573",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_click",
+                    "arguments": "{\"selector\": \"#prev\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58389,
+          "completion_tokens": 28,
+          "total_tokens": 58417
+        }
+      },
+      "seconds_elapsed": 467.60043132596184
+    },
+    {
+      "tool": "browser_click",
+      "arguments": {
+        "selector": "#prev"
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 11,
+      "response": {
+        "id": "chatcmpl-09e2ee90940442e8b4243e75e1169c08",
+        "object": "chat.completion",
+        "created": 1791335164,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_bf29f40d7f8642d9",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58437,
+          "completion_tokens": 15,
+          "total_tokens": 58452
+        }
+      },
+      "seconds_elapsed": 468.8927588519873
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 1 of 2\n\nISS-011 Bug report 11 open / me / high / 2026-09-14\n\nISS-007 Bug report 7 open / me / high / 2026-09-18\n\nISS-005 Bug report 5 open / me / high / 2026-09-20\n\nPrevious pageNext page\nISS-005\n\nReproduction notes attached.\n\nSave label\n\nneeds-reproduction",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "open",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "me",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "high",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "oldest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-011",
+            "text": "ISS-011 Bug report 11",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-007",
+            "text": "ISS-007 Bug report 7",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-005",
+            "text": "ISS-005 Bug report 5",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "INPUT",
+            "id": "label",
+            "text": "",
+            "value": "needs-reproduction",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-label",
+            "text": "Save label",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 12,
+      "response": {
+        "id": "chatcmpl-44e1a6c397924ea1b5ea4687f3fa817a",
+        "object": "chat.completion",
+        "created": 1791335166,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_79ea3c81e8f446f7",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_click",
+                    "arguments": "{\"selector\": \"#issue-ISS-005\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58619,
+          "completion_tokens": 34,
+          "total_tokens": 58653
+        }
+      },
+      "seconds_elapsed": 474.75633473403286
+    },
+    {
+      "tool": "browser_click",
+      "arguments": {
+        "selector": "#issue-ISS-005"
+      },
+      "result": "Clicked"
+    },
+    {
+      "step": 13,
+      "response": {
+        "id": "chatcmpl-8401ee4d075745a99014f0932d85bcff",
+        "object": "chat.completion",
+        "created": 1791335171,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_69243003ceca408a",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_snapshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58673,
+          "completion_tokens": 15,
+          "total_tokens": 58688
+        }
+      },
+      "seconds_elapsed": 477.29793642496224
+    },
+    {
+      "tool": "browser_snapshot",
+      "arguments": {},
+      "result": {
+        "visible_text": "Local Issue Tracker\nStatus\nall\nopen\nclosed\n Owner\nall\nme\nother\n Priority\nall\nhigh\nlow\n Sort\nnewest\noldest\n\nPage 1 of 2\n\nISS-011 Bug report 11 open / me / high / 2026-09-14\n\nISS-007 Bug report 7 open / me / high / 2026-09-18\n\nISS-005 Bug report 5 open / me / high / 2026-09-20\n\nPrevious pageNext page\nISS-005\n\nReproduction notes attached.\n\nSave label\n\nneeds-reproduction",
+        "controls": [
+          {
+            "tag": "SELECT",
+            "id": "status",
+            "text": "all\nopen\nclosed",
+            "value": "open",
+            "options": [
+              "all",
+              "open",
+              "closed"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "owner",
+            "text": "all\nme\nother",
+            "value": "me",
+            "options": [
+              "all",
+              "me",
+              "other"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "priority",
+            "text": "all\nhigh\nlow",
+            "value": "high",
+            "options": [
+              "all",
+              "high",
+              "low"
+            ]
+          },
+          {
+            "tag": "SELECT",
+            "id": "sort",
+            "text": "newest\noldest",
+            "value": "oldest",
+            "options": [
+              "newest",
+              "oldest"
+            ]
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-011",
+            "text": "ISS-011 Bug report 11",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-007",
+            "text": "ISS-007 Bug report 7",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "issue-ISS-005",
+            "text": "ISS-005 Bug report 5",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "prev",
+            "text": "Previous page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "next",
+            "text": "Next page",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "INPUT",
+            "id": "label",
+            "text": "",
+            "value": "",
+            "options": null
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save-label",
+            "text": "Save label",
+            "value": "",
+            "options": null
+          }
+        ]
+      }
+    },
+    {
+      "step": 14,
+      "response": {
+        "id": "chatcmpl-303b6a515770477381d27e7800705b99",
+        "object": "chat.completion",
+        "created": 1791335174,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_7ba1183f632c4a03",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_fill",
+                    "arguments": "{\"selector\": \"#label\", \"text\": \"needs-reproduction\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58711,
+          "completion_tokens": 41,
+          "total_tokens": 58752
+        }
+      },
+      "seconds_elapsed": 580.6101899149362
+    },
+    {
+      "tool": "browser_fill",
+      "arguments": {
+        "selector": "#label",
+        "text": "needs-reproduction"
+      },
+      "result": "Filled"
+    },
+    {
+      "step": 15,
+      "response": {
+        "id": "chatcmpl-08528842bd5c4ef08ba4cd822a510b75",
+        "object": "chat.completion",
+        "created": 1791335277,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_7ee4be3a3c254434",
+                  "type": "function",
+                  "function": {
+                    "name": "browser_click",
+                    "arguments": "{\"selector\": \"#save-label\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 58772,
+          "completion_tokens": 29,
+          "total_tokens": 58801
+        }
+      },
+      "seconds_elapsed": 583.0217866690364
+    },
+    {
+      "tool": "browser_click",
+      "arguments": {
+        "selector": "#save-label"
+      },
+      "result": "Clicked"
+    }
+  ]
+}

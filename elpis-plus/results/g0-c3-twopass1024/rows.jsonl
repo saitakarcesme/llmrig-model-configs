@@ -1,0 +1,1 @@
+{"ttft": 304.923, "wall": 306.491, "prompt_tokens": 260965, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 80.98, "accept": 3.765, "finish": "length", "sha256": "d7d2b5b159012f2f937781f6186843e0592ed312bf5d95ad9ccf82a9061acbed", "chars": 538, "id": "long-58e7ec1f6c7bf753", "rep": 0}

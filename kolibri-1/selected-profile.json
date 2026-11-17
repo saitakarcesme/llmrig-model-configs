@@ -1,0 +1,7 @@
+{
+  "context": 1048576,
+  "cache": "q4_0",
+  "quant": "q3",
+  "split": "1,1.04",
+  "ubatch": 256
+}

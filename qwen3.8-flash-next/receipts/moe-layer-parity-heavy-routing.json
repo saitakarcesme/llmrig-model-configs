@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "repeat": 0,
+      "rows": 512,
+      "max_absolute_error": 1.1641532182693481e-10,
+      "seconds": 2.9913005370181054
+    },
+    {
+      "repeat": 0,
+      "rows": 1024,
+      "max_absolute_error": 2.3283064365386963e-10,
+      "seconds": 0.04435233992990106
+    },
+    {
+      "repeat": 1,
+      "rows": 512,
+      "max_absolute_error": 1.1641532182693481e-10,
+      "seconds": 0.026496057980693877
+    },
+    {
+      "repeat": 1,
+      "rows": 1024,
+      "max_absolute_error": 2.3283064365386963e-10,
+      "seconds": 0.04033084702678025
+    }
+  ],
+  "offload": {
+    "counters": {
+      "expert_requests": 40,
+      "disk_reads": 40,
+      "disk_bytes": 74496480,
+      "io_seconds": 0.4461317857494578,
+      "fused_moe_calls": 4,
+      "masked_experts": 0
+    },
+    "gpu_cache_bytes": [
+      0,
+      0
+    ],
+    "host_cache_bytes": 0,
+    "gpu_caps": [
+      21474836,
+      21474836
+    ],
+    "host_cap": 21474836
+  }
+}

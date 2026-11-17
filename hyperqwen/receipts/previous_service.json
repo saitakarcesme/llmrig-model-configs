@@ -1,0 +1,6 @@
+{
+  "containers": [
+    "kolibri-serve-kolibri-q3-1048576-q40-1791153976"
+  ],
+  "restore": "python3 /home/isa/Experiments/kolibri-fit/scripts/ensure_server.py"
+}

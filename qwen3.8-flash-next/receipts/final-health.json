@@ -1,0 +1,1 @@
+{"status":"ready","model":"flashnext","context":65536,"busy":false,"vision_mrope":true,"prefill_chunk_tokens":4096,"vision_device":0,"recurrent_cache_mb":4096,"default_thinking":true}

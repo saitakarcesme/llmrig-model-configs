@@ -1,0 +1,42 @@
+{
+  "name": "native-pdf-live",
+  "status": 200,
+  "elapsed_seconds": 0.41223535989411175,
+  "body": {
+    "entries": [
+      "image-128.png",
+      "image-175.png",
+      "page-3.svg",
+      "image-182.png",
+      "image-200.png",
+      "image-183.png",
+      "image-201.png",
+      "page-4.svg",
+      "objects.json"
+    ],
+    "pages": [
+      3,
+      4
+    ],
+    "text_spans": 341
+  },
+  "memory_samples": [
+    {
+      "time": 1793343183.8482804,
+      "available_ram_mib": 5756,
+      "swap_used_mib": 18197,
+      "gpus": [
+        [
+          0,
+          22546,
+          1623
+        ],
+        [
+          1,
+          21830,
+          2347
+        ]
+      ]
+    }
+  ]
+}

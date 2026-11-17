@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "return_code": 0,
+  "tools": [
+    "read",
+    "write"
+  ],
+  "result": {
+    "model": "Kolibri",
+    "product": 391
+  },
+  "seconds": 6.6095396860037,
+  "reasoning_effort": "high",
+  "scope": "Actual Pi read and write tool round trip in isolated synthetic workspace."
+}

@@ -1,0 +1,29 @@
+{
+  "label": "speed-none-1",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 512,
+    "prompt_tokens": 65,
+    "total_tokens": 577,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 65,
+    "prompt_ms": 95.133,
+    "prompt_per_token_ms": 1.4635846153846153,
+    "prompt_per_second": 683.25397075673,
+    "predicted_n": 512,
+    "predicted_ms": 4327.394,
+    "predicted_per_token_ms": 8.468481409001958,
+    "predicted_per_second": 118.08492593926043
+  },
+  "ttft_seconds": 0.10252213903004304,
+  "total_seconds": 4.429893612046726,
+  "finish_reason": "length",
+  "answer": "# Comprehensive Tutorial on Implementing an LRU Cache in Python\n\n## Table of Contents\n1. Introduction to LRU Cache\n2. What is LRU? (Least Recently Used)\n3. Why use an LRU Cache?\n4. Simple Implementation Using OrderedDict\n5. Implementation Using a Dictionary and Linked List\n6. Implementation Using functools.lru_cache\n7. Custom LRU Cache with Thread Safety\n8. Performance Comparison\n9. Real-World Use Cases\n10. Advanced Topics\n11. Testing LRU Cache\n12. Conclusion\n\n---\n\n## 1. Introduction to LRU Cache\n\nAn LRU Cache, which stands for Least Recently Used Cache, is a type of caching mechanism that stores a fixed number of items. When the cache reaches its capacity and a new item needs to be added, the least recently used item is evicted to make space for the new one.\n\nThink of it like a library book shelf that can only hold 5 books. If you want to add a 6th book, you remove the book that you haven't touched in the longest time.\n\nLRU caches are widely used in:\n- CPU caches\n- Web browsers\n- Database systems\n- Application caching\n- Rate limiting\n\n## 2. What is LRU? (Least Recently Used)\n\nThe \"Least Recently Used\" strategy determines which item to remove based on usage history. Every time an item is accessed (read or written), it becomes \"recently used.\" The item that hasn't been accessed for the longest period is considered the \"least recently used\" and is the first to be removed.\n\nKey characteristics:\n- **Access Pattern**: Both reads and writes count as accesses\n- **Recency**: The most recently used item is always available\n- **Capacity**: The cache has a fixed maximum size\n- **Efficiency**: Aims to minimize cache misses\n\nExample scenario:\n```\nCache size = 3\nOperations:\n1. GET key1 -> cache: [key1]\n2. GET key2 -> cache: [key1, key2]\n3. GET key1 -> cache: [key2, key1] (key1 is now most recent)\n4. GET key3 -> cache: [key2, key1, key3]\n5. GET key2 -> cache: [key1, key3, key2] (key2 is now most recent)\n6. GET key4 -> cache: [key1, key3, key4] (key2 was least recent, evict",
+  "reasoning_characters": 0,
+  "tool_deltas": []
+}

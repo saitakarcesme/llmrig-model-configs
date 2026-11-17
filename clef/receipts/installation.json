@@ -1,0 +1,10 @@
+{
+  "clef_revision": "2f3de3dd85f379784083b0814d997ab627200f0c",
+  "flash_revision": "17f0b0ad64efb65d273590632833508766b2aae6",
+  "runtime": "hyperqwen image 00713ba1e04b",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.15.0",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.15.0",
+  "gpu": "2xRTX3090 24GiB"
+}

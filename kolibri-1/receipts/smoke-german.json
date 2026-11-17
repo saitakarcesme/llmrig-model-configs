@@ -1,0 +1,29 @@
+{
+  "label": "smoke-german",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 48,
+    "total_tokens": 50,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 48,
+    "prompt_ms": 83.419,
+    "prompt_per_token_ms": 1.7378958333333332,
+    "prompt_per_second": 575.4084800824753,
+    "predicted_n": 2,
+    "predicted_ms": 11.791,
+    "predicted_per_token_ms": 11.791,
+    "predicted_per_second": 84.81044864727335
+  },
+  "ttft_seconds": 0.09312243101885542,
+  "total_seconds": 0.10510150803020224,
+  "finish_reason": "stop",
+  "answer": "Paris",
+  "reasoning_characters": 0,
+  "tool_deltas": []
+}

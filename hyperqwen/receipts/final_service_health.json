@@ -1,0 +1,9 @@
+{
+  "restored_models": [
+    "kolibri-1"
+  ],
+  "model_gpu_containers": [
+    "kolibri-serve-kolibri-q3-1048576-q40-1791161727"
+  ],
+  "status": "Previous Kolibri API healthy; all finite benchmark coordinator jobs exited successfully."
+}

@@ -1,0 +1,244 @@
+{
+  "status": "passed",
+  "peer_access_reported": false,
+  "checks": [
+    {
+      "dtype": "torch.float16",
+      "elements": 10,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 10,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 2560,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 2560,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 10240,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 10240,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 1048576,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float16",
+      "elements": 1048576,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 10,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 10,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 2560,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 2560,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 10240,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 10240,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 1048576,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.float32",
+      "elements": 1048576,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 10,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 10,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 2560,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 2560,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 10240,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 10240,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 1048576,
+      "direction": [
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "dtype": "torch.int64",
+      "elements": 1048576,
+      "direction": [
+        1,
+        0
+      ],
+      "exact": true
+    }
+  ],
+  "latency": {
+    "bounce": {
+      "round_trip_us": [
+        70.2348304912448,
+        39.72765465732664,
+        39.493050426244736,
+        39.25218537915498,
+        39.40815455280244
+      ],
+      "median_round_trip_us": 39.493050426244736
+    },
+    "direct": {
+      "round_trip_us": [
+        44.916149927303195,
+        43.71615999843925,
+        44.410330010578036,
+        43.52103511337191,
+        43.84970001410693
+      ],
+      "median_round_trip_us": 43.84970001410693
+    }
+  }
+}

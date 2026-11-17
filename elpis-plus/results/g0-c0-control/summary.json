@@ -1,0 +1,14 @@
+{
+ "suite": "long",
+ "url": "http://127.0.0.1:18030/v1/chat/completions",
+ "label": "",
+ "started": "2026-11-09T00:03:59+0100",
+ "finished": "2026-11-09T00:08:59+0100",
+ "summary": {
+  "n": 1,
+  "decode_tps_median": 70.65,
+  "ttft_median": 298.063,
+  "accept_median": 3.282,
+  "deterministic": true
+ }
+}

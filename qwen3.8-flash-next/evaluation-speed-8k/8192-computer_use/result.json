@@ -1,0 +1,72 @@
+{
+  "task": "computer_use",
+  "context_capacity_tokens": 8192,
+  "initial_text_prompt_tokens": 2024,
+  "context_material": "synthetic repository excerpts",
+  "status": "failed",
+  "seconds": 19.62789524300024,
+  "error": "Server error '500 Internal Server Error' for url 'http://127.0.0.1:30260/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500",
+  "trace": [
+    {
+      "step": 0,
+      "response": {
+        "id": "chatcmpl-42734d02c18a43798a158e07980cd020",
+        "object": "chat.completion",
+        "created": 1791352647,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_59435e6418d04d22",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2024,
+          "completion_tokens": 16,
+          "total_tokens": 2040
+        }
+      },
+      "seconds_elapsed": 12.757901473902166
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-speed-8k/8192-computer_use/screen-000.png",
+        "width": 1280,
+        "height": 800,
+        "action_coordinate_units": "normalized",
+        "action_coordinate_range": [
+          0,
+          1000
+        ]
+      }
+    }
+  ],
+  "agent_verified": false,
+  "enable_thinking": false,
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "presence_penalty": 0
+  },
+  "system_suffix": "",
+  "coordinate_system": "normalized",
+  "excluded_from_benchmark": false,
+  "note": "Computer use executes screenshot-driven mouse/keyboard actions in an isolated Chromium fixture, not an OS desktop app."
+}

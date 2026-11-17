@@ -1,0 +1,248 @@
+{
+  "task": "computer_use",
+  "context_capacity_tokens": 2048,
+  "initial_text_prompt_tokens": 710,
+  "context_material": "synthetic repository excerpts",
+  "status": "failed",
+  "seconds": 51.1856006529415,
+  "error": "Task context budget exhausted",
+  "trace": [
+    {
+      "step": 0,
+      "response": {
+        "id": "chatcmpl-ba8f186176f64e26b698c9af45ef52c2",
+        "object": "chat.completion",
+        "created": 1791328713,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll start by taking a screenshot to see the current state of the screen.",
+              "tool_calls": [
+                {
+                  "id": "call_46c7211cbf4a4777",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 710,
+          "completion_tokens": 33,
+          "total_tokens": 743
+        }
+      },
+      "seconds_elapsed": 13.11071382299997
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-mrope/2048-computer_use/screen-000.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "id": "chatcmpl-0eea7371f2294bf4b9bbe435b2134104",
+        "object": "chat.completion",
+        "created": 1791328726,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The spreadsheet shows 6 invoices. I need to filter unpaid invoices due before Oct 7, 2026. Let me start by enabling \"Unpaid only\" and \"Overdue only\" filters.",
+              "tool_calls": [
+                {
+                  "id": "call_ba54c44ddb6b4c38",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 97, \"y\": 198}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1567,
+          "completion_tokens": 84,
+          "total_tokens": 1651
+        }
+      },
+      "seconds_elapsed": 28.014649368007667
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 97,
+        "y": 198
+      },
+      "result": {
+        "clicked_pixels": {
+          "x": 124,
+          "y": 158
+        }
+      }
+    },
+    {
+      "step": 2,
+      "response": {
+        "id": "chatcmpl-1a04baf2ff2a40bd84ff38d7ab3e5650",
+        "object": "chat.completion",
+        "created": 1791328741,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_1511ecac8192441a",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 250, \"y\": 198}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1688,
+          "completion_tokens": 41,
+          "total_tokens": 1729
+        }
+      },
+      "seconds_elapsed": 33.13685241690837
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 250,
+        "y": 198
+      },
+      "result": {
+        "clicked_pixels": {
+          "x": 320,
+          "y": 158
+        }
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "id": "chatcmpl-d9a14e76b11846ce8a896d5277a59884",
+        "object": "chat.completion",
+        "created": 1791328746,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_188cfea0f98540cf",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1766,
+          "completion_tokens": 16,
+          "total_tokens": 1782
+        }
+      },
+      "seconds_elapsed": 36.30913860897999
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-mrope/2048-computer_use/screen-001.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 4,
+      "response": {
+        "id": "chatcmpl-12538d0505f842c5b616dacb4f722691",
+        "object": "chat.completion",
+        "created": 1791328750,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The filters are now ON, showing 3 unpaid invoices due before October 7, 2026 (INV-001, INV-004, INV-005). Now I'll sort by due date ascending.",
+              "tool_calls": [
+                {
+                  "id": "call_dbbe2646f2e941e9",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 406, \"y\": 198}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1872,
+          "completion_tokens": 92,
+          "total_tokens": 1964
+        }
+      },
+      "seconds_elapsed": 50.992895095958374
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 406,
+        "y": 198
+      },
+      "result": {
+        "clicked_pixels": {
+          "x": 520,
+          "y": 158
+        }
+      }
+    }
+  ],
+  "agent_verified": false,
+  "enable_thinking": false,
+  "coordinate_system": "normalized",
+  "excluded_from_benchmark": false,
+  "note": "Computer use executes screenshot-driven mouse/keyboard actions in an isolated Chromium fixture, not an OS desktop app."
+}

@@ -1,0 +1,44 @@
+{
+  "label": "context-1048576-first",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 1044399,
+    "total_tokens": 1044452,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 1044399,
+    "prompt_ms": 3373270.845,
+    "prompt_per_token_ms": 3.229867938402852,
+    "prompt_per_second": 309.6101819241852,
+    "predicted_n": 53,
+    "predicted_ms": 6231.968,
+    "predicted_per_token_ms": 119.84553846153845,
+    "predicted_per_second": 8.344073653779994
+  },
+  "ttft_seconds": 3373.9306696159765,
+  "total_seconds": 3380.177078043984,
+  "finish_reason": "stop",
+  "answer": "{\n  \"start\": \"47fdeff1202b\",\n  \"middle\": \"e4b8125877f0\",\n  \"end\": \"f715013f6bbc\"\n}",
+  "reasoning_characters": 0,
+  "tool_deltas": [],
+  "context_configured": 1048576,
+  "prompt_tokens_estimated": 1044399,
+  "marker_check_passed": true,
+  "marker_expected": {
+    "start": "47fdeff1202b",
+    "middle": "e4b8125877f0",
+    "end": "f715013f6bbc"
+  },
+  "marker_actual": {
+    "start": "47fdeff1202b",
+    "middle": "e4b8125877f0",
+    "end": "f715013f6bbc"
+  },
+  "prompt_sha256": "bc7c6cca20b51c82927318917d0ef65c14989322d7151d0cdcba50eae4d13959",
+  "scope": "Synthetic three-position retrieval. Not a general real-project quality benchmark."
+}

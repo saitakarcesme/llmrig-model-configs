@@ -1,0 +1,9 @@
+{
+  "dataset": "https://raw.githubusercontent.com/openai/grade-school-math/b0bb162abedc65e1fdd8e93ed090fd7598ee68bc/grade_school_math/data/test.jsonl",
+  "revision": "b0bb162abedc65e1fdd8e93ed090fd7598ee68bc",
+  "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+  "selection": "First 50 test rows, fixed before HyperQwen inference",
+  "sampling": "temperature=0, seed=123, thinking disabled, maximum 1024 output tokens",
+  "grading": "Last numerical answer; exact numeric equality against dataset answer. Truncations count as failures. Not a broad intelligence ranking.",
+  "projects": "Four fixed PocketLore maintenance tasks, same source SHA and hidden graders for EXL3 and HyperQwen."
+}

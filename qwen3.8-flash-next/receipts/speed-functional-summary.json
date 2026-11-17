@@ -1,0 +1,129 @@
+{
+  "fixture_rows": [
+    {
+      "task": "agentic",
+      "context_capacity_tokens": 8192,
+      "initial_text_prompt_tokens": 4072,
+      "status": "passed",
+      "seconds": 30.963310756953433,
+      "error": null,
+      "agent_verified": true,
+      "enable_thinking": false,
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "top_k": 0,
+        "presence_penalty": 0
+      },
+      "coordinate_system": "normalized",
+      "root": "evaluation-speed-8k"
+    },
+    {
+      "task": "computer_use",
+      "context_capacity_tokens": 8192,
+      "initial_text_prompt_tokens": 2024,
+      "status": "failed",
+      "seconds": 19.62789524300024,
+      "error": "Server error '500 Internal Server Error' for url 'http://127.0.0.1:30260/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500",
+      "agent_verified": false,
+      "enable_thinking": false,
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "top_k": 0,
+        "presence_penalty": 0
+      },
+      "coordinate_system": "normalized",
+      "root": "evaluation-speed-8k"
+    },
+    {
+      "task": "coding",
+      "context_capacity_tokens": 8192,
+      "initial_text_prompt_tokens": 4072,
+      "status": "passed",
+      "seconds": 48.18724739609752,
+      "error": null,
+      "agent_verified": true,
+      "enable_thinking": false,
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "top_k": 0,
+        "presence_penalty": 0
+      },
+      "coordinate_system": "normalized",
+      "root": "evaluation-speed-8k"
+    },
+    {
+      "task": "computer_use",
+      "context_capacity_tokens": 8192,
+      "initial_text_prompt_tokens": 2024,
+      "status": "passed",
+      "seconds": 161.40227847301867,
+      "error": null,
+      "agent_verified": true,
+      "enable_thinking": false,
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "top_k": 0,
+        "presence_penalty": 0
+      },
+      "coordinate_system": "normalized",
+      "root": "evaluation-speed-vision-fixed"
+    },
+    {
+      "task": "browser_use",
+      "context_capacity_tokens": 8192,
+      "initial_text_prompt_tokens": 2024,
+      "status": "passed",
+      "seconds": 85.47174787800759,
+      "error": null,
+      "agent_verified": true,
+      "enable_thinking": true,
+      "sampling": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "presence_penalty": 0.0
+      },
+      "coordinate_system": "pixels",
+      "root": "evaluation-speed-browser"
+    },
+    {
+      "task": "computer_use",
+      "context_capacity_tokens": 262144,
+      "initial_text_prompt_tokens": 253927,
+      "status": "passed",
+      "seconds": 756.9456777209416,
+      "error": null,
+      "agent_verified": true,
+      "enable_thinking": false,
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "top_k": 0,
+        "presence_penalty": 0
+      },
+      "coordinate_system": "normalized",
+      "root": "evaluation-speed-long"
+    }
+  ],
+  "final_api": "passed",
+  "final_service": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true,
+    "speculation": {
+      "mode": "mtp",
+      "draft_tokens": 4,
+      "draft_device": 1
+    }
+  }
+}

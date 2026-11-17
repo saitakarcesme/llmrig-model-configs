@@ -1,0 +1,29 @@
+{
+  "label": "smoke-json",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 19,
+    "prompt_tokens": 59,
+    "total_tokens": 78,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 59,
+    "prompt_ms": 101.865,
+    "prompt_per_token_ms": 1.7265254237288135,
+    "prompt_per_second": 579.1979580817749,
+    "predicted_n": 19,
+    "predicted_ms": 167.344,
+    "predicted_per_token_ms": 9.296888888888889,
+    "predicted_per_second": 107.56286451859643
+  },
+  "ttft_seconds": 0.1107424660003744,
+  "total_seconds": 0.27800215501338243,
+  "finish_reason": "stop",
+  "answer": "{\n  \"name\": \"Kolibri\",\n  \"count\": 7\n}",
+  "reasoning_characters": 0,
+  "tool_deltas": []
+}

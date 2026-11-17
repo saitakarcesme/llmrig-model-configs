@@ -1,0 +1,14 @@
+{
+ "suite": "short",
+ "url": "http://127.0.0.1:18021/v1/chat/completions",
+ "label": "prod-13e8b59-lane1",
+ "started": "2026-11-08T23:35:27+0100",
+ "finished": "2026-11-08T23:41:34+0100",
+ "summary": {
+  "n": 24,
+  "decode_tps_median": 136.785,
+  "ttft_median": 0.327,
+  "accept_median": 3.377,
+  "deterministic": true
+ }
+}

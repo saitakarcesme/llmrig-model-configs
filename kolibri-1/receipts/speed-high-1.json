@@ -1,0 +1,29 @@
+{
+  "label": "speed-high-1",
+  "reasoning_effort": "high",
+  "usage": {
+    "completion_tokens": 512,
+    "prompt_tokens": 78,
+    "total_tokens": 590,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 78,
+    "prompt_ms": 101.982,
+    "prompt_per_token_ms": 1.3074615384615385,
+    "prompt_per_second": 764.8408542684003,
+    "predicted_n": 512,
+    "predicted_ms": 4376.681,
+    "predicted_per_token_ms": 8.564933463796477,
+    "predicted_per_second": 116.75513933960461
+  },
+  "ttft_seconds": 0.13006025197682902,
+  "total_seconds": 4.4850587919936515,
+  "finish_reason": "length",
+  "answer": "",
+  "reasoning_characters": 2421,
+  "tool_deltas": []
+}

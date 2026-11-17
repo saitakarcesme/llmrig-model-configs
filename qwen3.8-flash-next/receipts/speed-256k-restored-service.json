@@ -1,0 +1,21 @@
+{
+  "unix": 1791370263.887556,
+  "health": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true,
+    "speculation": {
+      "mode": "mtp",
+      "draft_tokens": 4,
+      "draft_device": 1
+    }
+  },
+  "container_swap_bytes": 0,
+  "container_id": "71775ed2321d24580d69beb0ad6861a733c066c9857f5984a0b564356de9317d"
+}

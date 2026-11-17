@@ -1,0 +1,60 @@
+{
+  "endpoint": "http://127.0.0.1:30260",
+  "contexts": "8192",
+  "tasks": "coding,computer_use",
+  "max_steps": 16,
+  "enable_thinking": false,
+  "coordinate_system": "normalized",
+  "grading": "Correct artifact, model-issued verification, then a final model report; browser report must name the correct issue.",
+  "runtime_sources": {
+    "native_disk.py": "67004b20ecaaac0db6e38a372b1df1d33b8b187f1cb7b85b3244f14f39f058fe",
+    "smoke_native.py": "72e471435a03ba6f6a291fa2b4bba9dc89ad2f688855af8ec423a12c22d8f09f",
+    "check_disk_experts.py": "9765410ca75eb8f298903b2c902ea0ac7c942a5711928ae63af11bde029ec165",
+    "check_moe_layer.py": "cd021458780027722863ff4ee343c5b626f47d6c2dc0cbc98440e6d456ad62db",
+    "fused_disk.py": "6ccd8566cc1e49e417f664cb3cff9a7ca5d85899689b064e8c3d9b3649d577ae",
+    "server.py": "69e74bb3c32cf66bfd7b2a0c1f363f7230666cbbb0121a91cc26e084e4561a02",
+    "agent_eval.py": "aede32924652cc6867a7cebcc6a2e2c73a5d93db7e79d9920910a74c48916b35",
+    "eval_fixtures.py": "bbbfb187e13fad536d9dccacdc200c2a7c21272068f337a20ddccba517494e27",
+    "eval_summary.py": "f23869debc622d1ec733f75382eaf253c70fbe5399fe5d39d5a549aac4fbbbdc",
+    "hardware_monitor.py": "b32e27344e2e49280fca4dcdad0df5defeb94152c76eb81631e68e02fee6da49",
+    "check_vision_positions.py": "e3c26d99d393764e532a330dc84fee50807675efc50948fe93da768824788676",
+    "vision_positions.py": "d54e2375be1404ec7fa62c566bc3d3ae9031359385c01f06030d90a3c104ba85",
+    "check_fixtures.py": "1d62d157a51dcb7e85d0654d2b701ca98ade64e20fdcd7d7b5e2ee4ea0a2b0c7",
+    "check_api.py": "974c0bd7fa0e3367de0ba0193678bccab5bb8fbe632a17ce7cf43e652aad3b2f"
+  },
+  "server": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 262144,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 8192,
+    "vision_device": 1,
+    "recurrent_cache_mb": 4096
+  },
+  "cache": {
+    "counters": {},
+    "gpu_cache_bytes": [
+      0,
+      0
+    ],
+    "host_cache_bytes": 0,
+    "gpu_caps": [
+      4294967296,
+      20401094656
+    ],
+    "host_cap": 1610612736,
+    "recurrent_cache": {
+      "bytes": 0,
+      "capacity_bytes": 4294967296,
+      "checkpoints": 0,
+      "metrics": {
+        "stash_evictions": 0,
+        "stash_evictions_stranded": 0,
+        "stash_evictions_live_kv": 0,
+        "stash_pruned": 0
+      }
+    }
+  },
+  "started_unix": 1791335560.7162197
+}

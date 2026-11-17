@@ -1,0 +1,145 @@
+{
+  "reference": "Native resident fused layer; exact routes and weights; FP16 kernel numerical tolerance 1% normalized RMS and cosine >0.9999",
+  "input_scale": 1.0,
+  "status": "passed",
+  "checks": [
+    {
+      "repeat": 0,
+      "rows": 128,
+      "max_absolute_error": 0.0008968114852905273,
+      "normalized_rms_error": 0.0009457860141992569,
+      "cosine_similarity": 0.9999995231628418,
+      "seconds": 1.9130136870080605
+    },
+    {
+      "repeat": 0,
+      "rows": 1,
+      "max_absolute_error": 0.0012280642986297607,
+      "normalized_rms_error": 0.0013745989417657256,
+      "cosine_similarity": 0.9999990463256836,
+      "seconds": 0.054948623990640044
+    },
+    {
+      "repeat": 0,
+      "rows": 4,
+      "max_absolute_error": 0.000578463077545166,
+      "normalized_rms_error": 0.0007284476305358112,
+      "cosine_similarity": 0.9999997615814209,
+      "seconds": 0.11998073605354875
+    },
+    {
+      "repeat": 0,
+      "rows": 5,
+      "max_absolute_error": 0.0006459206342697144,
+      "normalized_rms_error": 0.0004420081968419254,
+      "cosine_similarity": 0.9999998807907104,
+      "seconds": 0.13260554510634392
+    },
+    {
+      "repeat": 0,
+      "rows": 8,
+      "max_absolute_error": 0.0013579130172729492,
+      "normalized_rms_error": 0.0007109363796189427,
+      "cosine_similarity": 0.9999997019767761,
+      "seconds": 0.08772730501368642
+    },
+    {
+      "repeat": 0,
+      "rows": 16,
+      "max_absolute_error": 5.960464477539063e-08,
+      "normalized_rms_error": 7.411308899918367e-08,
+      "cosine_similarity": 1.0,
+      "seconds": 0.07634759694337845
+    },
+    {
+      "repeat": 0,
+      "rows": 1024,
+      "max_absolute_error": 0.0018737316131591797,
+      "normalized_rms_error": 0.0006764706922695041,
+      "cosine_similarity": 0.9999998211860657,
+      "seconds": 0.43780485400930047
+    },
+    {
+      "repeat": 1,
+      "rows": 128,
+      "max_absolute_error": 0.0008968114852905273,
+      "normalized_rms_error": 0.0009457860141992569,
+      "cosine_similarity": 0.9999995231628418,
+      "seconds": 0.2317888509714976
+    },
+    {
+      "repeat": 1,
+      "rows": 1,
+      "max_absolute_error": 0.0012280642986297607,
+      "normalized_rms_error": 0.0013745989417657256,
+      "cosine_similarity": 0.9999990463256836,
+      "seconds": 0.013292872929014266
+    },
+    {
+      "repeat": 1,
+      "rows": 4,
+      "max_absolute_error": 0.000578463077545166,
+      "normalized_rms_error": 0.0007284476305358112,
+      "cosine_similarity": 0.9999997615814209,
+      "seconds": 0.049350333982147276
+    },
+    {
+      "repeat": 1,
+      "rows": 5,
+      "max_absolute_error": 0.0006459206342697144,
+      "normalized_rms_error": 0.0004420081968419254,
+      "cosine_similarity": 0.9999998807907104,
+      "seconds": 0.054433119017630816
+    },
+    {
+      "repeat": 1,
+      "rows": 8,
+      "max_absolute_error": 0.0013579130172729492,
+      "normalized_rms_error": 0.0007109363796189427,
+      "cosine_similarity": 0.9999997019767761,
+      "seconds": 0.08943808905314654
+    },
+    {
+      "repeat": 1,
+      "rows": 16,
+      "max_absolute_error": 5.960464477539063e-08,
+      "normalized_rms_error": 7.402200452588659e-08,
+      "cosine_similarity": 1.0,
+      "seconds": 0.0778577980818227
+    },
+    {
+      "repeat": 1,
+      "rows": 1024,
+      "max_absolute_error": 0.0018737316131591797,
+      "normalized_rms_error": 0.0006764706922695041,
+      "cosine_similarity": 0.9999998211860657,
+      "seconds": 0.4243807579623535
+    }
+  ],
+  "offload": {
+    "counters": {
+      "expert_requests": 2100,
+      "disk_reads": 1962,
+      "disk_bytes": 3654052344,
+      "io_seconds": 4.73514722334221,
+      "prefill_cache_admissions": 22,
+      "table_cache_hits": 168,
+      "table_expert_updates": 1932,
+      "table_layer_states": 2,
+      "fused_moe_calls": 14,
+      "masked_experts": 0,
+      "gpu_hits": 87,
+      "host_hits": 51
+    },
+    "gpu_cache_bytes": [
+      20486532,
+      20486532
+    ],
+    "host_cache_bytes": 20486532,
+    "gpu_caps": [
+      21474836,
+      21474836
+    ],
+    "host_cap": 21474836
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "purpose": "Separate unfinished responses under the initial short output budget from completed wrong answers. Exploratory follow-up, retained separately from the original 1024-token scores.",
+  "rule": "For all three quality arms, rerun every finish_reason=length response with identical frozen question, thinking disabled, temperature zero, seed 123, and maximum 4096 output tokens. Do not rerun completed wrong responses. Do not pass expected answers or grading feedback to the model.",
+  "arms": [
+    "exl3-mtp",
+    "hyper-off",
+    "hyper-dflash7"
+  ],
+  "prefix_check": "Record whether the extended output starts with the original truncated content; numerical kernel/cache differences may prevent exact prefix equality."
+}

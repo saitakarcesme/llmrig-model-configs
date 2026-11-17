@@ -1,0 +1,696 @@
+{
+  "status": "passed",
+  "health": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true
+  },
+  "checks": [
+    {
+      "label": "first",
+      "seconds": 19.343504850985482,
+      "response": {
+        "id": "chatcmpl-68095362ed2b4946aa7c88e257167b38",
+        "object": "chat.completion",
+        "created": 1791344132,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```python\ndef sum_even_numbers(nums):\n    return sum(num for num in nums if num % 2 == 0)\n```"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 36,
+          "completion_tokens": 30,
+          "total_tokens": 66
+        }
+      },
+      "code_verified": true
+    },
+    {
+      "label": "repeat",
+      "seconds": 1.9654570049606264,
+      "response": {
+        "id": "chatcmpl-28bbdd3d639f4c9ebe308a89c309c552",
+        "object": "chat.completion",
+        "created": 1791344151,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```python\ndef sum_even_numbers(nums):\n    return sum(num for num in nums if num % 2 == 0)\n```"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 36,
+          "completion_tokens": 30,
+          "total_tokens": 66
+        }
+      },
+      "code_verified": true
+    },
+    {
+      "label": "text_stream",
+      "seconds": 1.864099715021439,
+      "first_payload_seconds": 0.27559952391311526,
+      "chunks": [
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "```"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "python"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "\n"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "def"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " sum"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "_even"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "_numbers"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "(nums"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "):"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "\n"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "   "
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " return"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " sum"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "(num"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " for"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " num"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " in"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " nums"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " if"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " num"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " %"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " "
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "2"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " =="
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": " "
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "0"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": ")"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "\n"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "```"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-0258ebb6ec314f6a8667a742e2444a31",
+          "object": "chat.completion.chunk",
+          "created": 1791344153,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {},
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 36,
+            "completion_tokens": 30,
+            "total_tokens": 66
+          }
+        }
+      ]
+    },
+    {
+      "label": "tool_stream",
+      "seconds": 41.024376985034905,
+      "first_payload_seconds": 41.0242308099987,
+      "chunks": [
+        {
+          "id": "chatcmpl-6868b4c2f91a4fd1ae818ececfda8fe7",
+          "object": "chat.completion.chunk",
+          "created": 1791344155,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant"
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-6868b4c2f91a4fd1ae818ececfda8fe7",
+          "object": "chat.completion.chunk",
+          "created": 1791344155,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "content": null,
+                "tool_calls": [
+                  {
+                    "id": "call_941ad58d563343cf",
+                    "type": "function",
+                    "function": {
+                      "name": "read_file",
+                      "arguments": "{\"path\": \"package.json\"}"
+                    },
+                    "index": 0
+                  }
+                ]
+              },
+              "finish_reason": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-6868b4c2f91a4fd1ae818ececfda8fe7",
+          "object": "chat.completion.chunk",
+          "created": 1791344155,
+          "model": "flashnext",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {},
+              "finish_reason": "tool_calls"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 282,
+            "completion_tokens": 26,
+            "total_tokens": 308
+          }
+        }
+      ]
+    },
+    {
+      "label": "nonzero_temperature",
+      "response": {
+        "id": "chatcmpl-3245afb1d2104089b975411b10c9c67b",
+        "object": "chat.completion",
+        "created": 1791344196,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```python\ndef sum_even_numbers(nums):\n    return sum(num for num in nums if num % 2 == 0)\n```"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 36,
+          "completion_tokens": 30,
+          "total_tokens": 66
+        }
+      }
+    },
+    {
+      "label": "truncated_reasoning",
+      "response": {
+        "id": "chatcmpl-4421263a922b445b999955671e55cd71",
+        "object": "chat.completion",
+        "created": 1791344199,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "reasoning_content": "The user wants me to compute 1"
+            },
+            "finish_reason": "length"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 48,
+          "completion_tokens": 8,
+          "total_tokens": 56
+        }
+      }
+    },
+    {
+      "label": "native_thinking_defaults",
+      "response": {
+        "id": "chatcmpl-86215ef522204009ae183debf6b0c6c7",
+        "object": "chat.completion",
+        "created": 1791344201,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "reasoning_content": "The user wants me to call the read_file tool with the path \"package.json\".",
+              "tool_calls": [
+                {
+                  "id": "call_33fde159d545459a",
+                  "type": "function",
+                  "function": {
+                    "name": "read_file",
+                    "arguments": "{\"path\": \"package.json\"}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 306,
+          "completion_tokens": 46,
+          "total_tokens": 352
+        }
+      }
+    }
+  ],
+  "context_overflow_status": 400,
+  "unknown_model_status": 404
+}

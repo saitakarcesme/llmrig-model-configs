@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-05",
+  "status": "installed_and_verified",
+  "rig": "llmrig",
+  "runtime": "2xRTX3090; Qwen TP2 plus Clef-flash NF4 on GPU0",
+  "models": {
+    "clef_flash_bf16": {
+      "warm_requests": 15,
+      "warm_median_ms": 166.04567505419254,
+      "warm_p95_ms": 172.88912599906325,
+      "department_correct": 20,
+      "requests": 20,
+      "outage_correct": 20,
+      "cold_request_ms": 1670.951756008435,
+      "peak_vram_mib": 18270.2158203125,
+      "load_seconds": 96.71211122500245,
+      "input_token_range": [
+        312,
+        322
+      ]
+    },
+    "clef_flash_nf4": {
+      "warm_requests": 15,
+      "warm_median_ms": 192.5580759998411,
+      "warm_p95_ms": 199.06339200679213,
+      "department_correct": 20,
+      "requests": 20,
+      "outage_correct": 16,
+      "cold_request_ms": 1458.1713760271668,
+      "peak_vram_mib": 7893.90185546875,
+      "load_seconds": 13.394305376976263,
+      "input_token_range": [
+        312,
+        322
+      ]
+    },
+    "clef_nf4": {
+      "warm_requests": 15,
+      "warm_median_ms": 573.339368973393,
+      "warm_p95_ms": 590.063415991608,
+      "department_correct": 20,
+      "requests": 20,
+      "outage_correct": 20,
+      "cold_request_ms": 1858.9054920012131,
+      "peak_vram_mib": 17558.703125,
+      "load_seconds": 28.020727226976305,
+      "input_token_range": [
+        312,
+        322
+      ]
+    }
+  },
+  "pi": {
+    "total_seconds": 5.28,
+    "tool_wall_ms": 178.979773,
+    "inference_ms": 175.453585,
+    "tool": "clef_decide"
+  },
+  "harness": {
+    "version": "0.2.0-rc.2",
+    "path": "/Users/ibrahimsaitakarcesme/Applications/DeepSeekHarness",
+    "chat_provider": "qwen3.8-27b",
+    "decision_tool": "mcp__clef__decide",
+    "ui_verified": true,
+    "telemetry": "disabled"
+  },
+  "active_qwen_context": 32768,
+  "preserved_qwen_context": 262144,
+  "limitations": [
+    "Five unique synthetic short cases repeated four times; not a general accuracy benchmark.",
+    "Clef-flash NF4 missed the English checkout outage case at the 0.5 threshold; BF16 did not.",
+    "Local decision endpoint is text/JSON only with a 4096-token cap.",
+    "Standalone model timings were collected during Qwen startup or absence; Pi integration timing was collected with both services ready."
+  ]
+}

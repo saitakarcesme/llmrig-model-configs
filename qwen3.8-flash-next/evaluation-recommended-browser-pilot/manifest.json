@@ -1,0 +1,75 @@
+{
+  "endpoint": "http://127.0.0.1:30260",
+  "contexts": "8192",
+  "tasks": "browser_use",
+  "max_steps": 16,
+  "enable_thinking": false,
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "presence_penalty": 1.5
+  },
+  "coordinate_system": "normalized",
+  "grading": "Correct artifact, model-issued verification, then a final model report; browser report must name the correct issue.",
+  "runtime_sources": {
+    "native_disk.py": "67004b20ecaaac0db6e38a372b1df1d33b8b187f1cb7b85b3244f14f39f058fe",
+    "smoke_native.py": "72e471435a03ba6f6a291fa2b4bba9dc89ad2f688855af8ec423a12c22d8f09f",
+    "check_disk_experts.py": "9765410ca75eb8f298903b2c902ea0ac7c942a5711928ae63af11bde029ec165",
+    "check_moe_layer.py": "cd021458780027722863ff4ee343c5b626f47d6c2dc0cbc98440e6d456ad62db",
+    "fused_disk.py": "6ccd8566cc1e49e417f664cb3cff9a7ca5d85899689b064e8c3d9b3649d577ae",
+    "server.py": "69e74bb3c32cf66bfd7b2a0c1f363f7230666cbbb0121a91cc26e084e4561a02",
+    "agent_eval.py": "c75cf9d1551e4d802ce8bfdd12348113c1622caabfc7d92e3670e00f778f7376",
+    "eval_fixtures.py": "bbbfb187e13fad536d9dccacdc200c2a7c21272068f337a20ddccba517494e27",
+    "eval_summary.py": "f23869debc622d1ec733f75382eaf253c70fbe5399fe5d39d5a549aac4fbbbdc",
+    "hardware_monitor.py": "b32e27344e2e49280fca4dcdad0df5defeb94152c76eb81631e68e02fee6da49",
+    "check_vision_positions.py": "e3c26d99d393764e532a330dc84fee50807675efc50948fe93da768824788676",
+    "vision_positions.py": "d54e2375be1404ec7fa62c566bc3d3ae9031359385c01f06030d90a3c104ba85",
+    "check_fixtures.py": "1d62d157a51dcb7e85d0654d2b701ca98ade64e20fdcd7d7b5e2ee4ea0a2b0c7",
+    "check_api.py": "974c0bd7fa0e3367de0ba0193678bccab5bb8fbe632a17ce7cf43e652aad3b2f"
+  },
+  "server": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 4096,
+    "vision_device": 0,
+    "recurrent_cache_mb": 4096
+  },
+  "cache": {
+    "counters": {
+      "expert_requests": 1420431,
+      "disk_reads": 217774,
+      "disk_bytes": 405584910888,
+      "io_seconds": 606.848570295726,
+      "fused_moe_calls": 72807,
+      "masked_experts": 0,
+      "gpu_hits": 1188476,
+      "host_hits": 14181
+    },
+    "gpu_cache_bytes": [
+      10736805180,
+      18266536896
+    ],
+    "host_cache_bytes": 826910928,
+    "gpu_caps": [
+      10737418240,
+      21474836480
+    ],
+    "host_cap": 1610612736,
+    "recurrent_cache": {
+      "bytes": 2211213616,
+      "capacity_bytes": 4294967296,
+      "checkpoints": 19,
+      "metrics": {
+        "stash_evictions": 0,
+        "stash_evictions_stranded": 0,
+        "stash_evictions_live_kv": 0,
+        "stash_pruned": 0
+      }
+    }
+  },
+  "started_unix": 1791340130.6599908
+}

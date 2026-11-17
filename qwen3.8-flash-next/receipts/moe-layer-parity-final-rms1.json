@@ -1,0 +1,109 @@
+{
+  "reference": "Native resident fused layer; exact routes and weights; FP16 kernel numerical tolerance 1% normalized RMS and cosine >0.9999",
+  "input_scale": 1.0,
+  "status": "passed",
+  "checks": [
+    {
+      "repeat": 0,
+      "rows": 1,
+      "max_absolute_error": 0.0009739622473716736,
+      "normalized_rms_error": 0.0023352433927357197,
+      "cosine_similarity": 0.9999972581863403,
+      "seconds": 1.540637249010615
+    },
+    {
+      "repeat": 0,
+      "rows": 4,
+      "max_absolute_error": 0.0013855695724487305,
+      "normalized_rms_error": 0.000572955992538482,
+      "cosine_similarity": 0.9999998211860657,
+      "seconds": 0.13519346702378243
+    },
+    {
+      "repeat": 0,
+      "rows": 16,
+      "max_absolute_error": 5.960464477539063e-08,
+      "normalized_rms_error": 7.467770046787336e-08,
+      "cosine_similarity": 0.9999999403953552,
+      "seconds": 0.10811741801444441
+    },
+    {
+      "repeat": 0,
+      "rows": 128,
+      "max_absolute_error": 0.0007314682006835938,
+      "normalized_rms_error": 0.0006413076771423221,
+      "cosine_similarity": 0.9999998211860657,
+      "seconds": 0.3031698279082775
+    },
+    {
+      "repeat": 0,
+      "rows": 1024,
+      "max_absolute_error": 0.0022737979888916016,
+      "normalized_rms_error": 0.0007092068553902209,
+      "cosine_similarity": 0.9999997615814209,
+      "seconds": 0.49269800004549325
+    },
+    {
+      "repeat": 1,
+      "rows": 1,
+      "max_absolute_error": 0.0009739622473716736,
+      "normalized_rms_error": 0.0023352433927357197,
+      "cosine_similarity": 0.9999972581863403,
+      "seconds": 0.019159035058692098
+    },
+    {
+      "repeat": 1,
+      "rows": 4,
+      "max_absolute_error": 0.0013855695724487305,
+      "normalized_rms_error": 0.000572955992538482,
+      "cosine_similarity": 0.9999998211860657,
+      "seconds": 0.05432852893136442
+    },
+    {
+      "repeat": 1,
+      "rows": 16,
+      "max_absolute_error": 5.960464477539063e-08,
+      "normalized_rms_error": 7.474316277011894e-08,
+      "cosine_similarity": 0.9999999403953552,
+      "seconds": 0.07338386098854244
+    },
+    {
+      "repeat": 1,
+      "rows": 128,
+      "max_absolute_error": 0.0007314682006835938,
+      "normalized_rms_error": 0.000641307735349983,
+      "cosine_similarity": 0.9999998211860657,
+      "seconds": 0.26255907805170864
+    },
+    {
+      "repeat": 1,
+      "rows": 1024,
+      "max_absolute_error": 0.0022737979888916016,
+      "normalized_rms_error": 0.0007092068553902209,
+      "cosine_similarity": 0.9999997615814209,
+      "seconds": 0.4670841769548133
+    }
+  ],
+  "offload": {
+    "counters": {
+      "expert_requests": 1836,
+      "disk_reads": 1708,
+      "disk_bytes": 3180999696,
+      "io_seconds": 4.333078151452355,
+      "fused_moe_calls": 10,
+      "masked_experts": 0,
+      "gpu_hits": 106,
+      "host_hits": 22
+    },
+    "gpu_cache_bytes": [
+      20486532,
+      20486532
+    ],
+    "host_cache_bytes": 0,
+    "gpu_caps": [
+      21474836,
+      21474836
+    ],
+    "host_cap": 21474836
+  }
+}

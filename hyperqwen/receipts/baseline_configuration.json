@@ -1,0 +1,22 @@
+{
+  "config_sha256": "153407dcf65483b121759efc6bdd0e41e124e1e297496a9ba979936689a4b9d2",
+  "quantization_config": {
+    "quant_method": "exl3",
+    "version": "1.4.2",
+    "bpw": 3.5,
+    "head_bits": 6,
+    "calibration": {
+      "rows": 250,
+      "cols": 2048
+    },
+    "out_scales": "always",
+    "codebook": "mul1",
+    "mtp_bits": 4
+  },
+  "files": {
+    "generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+    "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3"
+  }
+}

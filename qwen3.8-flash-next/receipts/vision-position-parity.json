@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "position": 0,
+      "rows": 1000,
+      "query_max_error": 0.0,
+      "pooled_max_error": 0.0
+    },
+    {
+      "position": 1000,
+      "rows": 777,
+      "query_max_error": 0.0,
+      "pooled_max_error": 0.0
+    },
+    {
+      "position": 1777,
+      "rows": 523,
+      "query_max_error": 0.0,
+      "pooled_max_error": 0.0
+    },
+    {
+      "position": 2300,
+      "rows": 1,
+      "query_max_error": 0.0,
+      "pooled_max_error": 0.0
+    },
+    {
+      "position": 2301,
+      "rows": 1,
+      "query_max_error": 0.0,
+      "pooled_max_error": 0.0
+    },
+    {
+      "position": 2302,
+      "rows": 4,
+      "query_max_error": 0.0,
+      "pooled_max_error": 0.0
+    }
+  ],
+  "reference": "Independent Transformers partial rotary and pooled-key equations; permuted cache pages, image span and decode offset."
+}

@@ -1,0 +1,7 @@
+__pycache__/
+receipts/
+evaluation*/
+*.png
+*.env
+models/
+references/

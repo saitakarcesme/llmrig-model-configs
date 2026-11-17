@@ -1,0 +1,50 @@
+{
+  "task": "paths",
+  "baseline": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 4,
+    "passed": false,
+    "return_code": 1
+  },
+  "acceptance": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 4,
+    "passed": false,
+    "return_code": 1
+  },
+  "scope_ok": true,
+  "passed": false,
+  "pi_return_code": 0,
+  "timeout": false,
+  "wall_seconds": 78.95036825101124,
+  "changed_existing_files": [],
+  "new_test_files": [],
+  "tool_calls": [
+    "read",
+    "bash",
+    "read",
+    "read",
+    "read",
+    "read",
+    "read",
+    "read"
+  ],
+  "api_requests": 3,
+  "timing_receipts": 0,
+  "weighted_decode_tps": 123.05824229166086,
+  "per_request_decode_tps": [
+    141.37491986286037,
+    101.43270051940803,
+    123.77368966145399
+  ],
+  "decode_seconds": 0.0,
+  "prompt_seconds": 0.0,
+  "generated_tokens": 8591,
+  "prompt_tokens_evaluated": 0,
+  "cached_prompt_tokens": 0,
+  "tokens_per_wall_second": 108.81519859015935,
+  "reasoning_effort": "high",
+  "scope": "One first attempt per task; test criteria fixed before generation. Not local.ai benchmark scores."
+}

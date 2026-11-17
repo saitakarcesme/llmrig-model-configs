@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "context": 1048576,
+    "cache": "q4_0",
+    "quant": "q3",
+    "split": "1,1.04",
+    "ubatch": 256
+  },
+  "high_tps": [
+    115.99711437315477,
+    117.0551668860783,
+    116.62944110532757
+  ],
+  "high_median_tps": 116.62944110532757,
+  "scope": "512 generated tokens including thought on a short prompt in the final configured context slot."
+}

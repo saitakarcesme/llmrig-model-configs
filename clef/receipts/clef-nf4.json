@@ -1,0 +1,1019 @@
+{
+  "model": "clef",
+  "health": {
+    "model": "clef",
+    "precision": "nf4",
+    "load_seconds": 28.020727226976305,
+    "vram_allocated_mb": 17341.568359375
+  },
+  "summary": {
+    "warm_requests": 15,
+    "warm_median_ms": 573.339368973393,
+    "warm_p95_ms": 590.063415991608,
+    "department_correct": 20,
+    "requests": 20,
+    "outage_correct": 20
+  },
+  "rows": [
+    {
+      "case": "outage",
+      "repeat": 0,
+      "cold_request": true,
+      "wall_ms": 1858.9054920012131,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9564,
+            "probabilities": {
+              "billing": 0.0436,
+              "technical": 0.9564
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9199
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.7399,
+            "confidence": 0.8066,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0667,
+              "1": 0.1266,
+              "2": 0.8066
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 316,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 1849.2785220150836,
+          "precision": "nf4",
+          "peak_vram_mb": 17556.55908203125
+        }
+      }
+    },
+    {
+      "case": "invoice",
+      "repeat": 0,
+      "cold_request": false,
+      "wall_ms": 569.3820630549453,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.995,
+            "probabilities": {
+              "billing": 0.995,
+              "technical": 0.005
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0079
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.1918,
+            "confidence": 0.8284,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.8284,
+              "1": 0.1514,
+              "2": 0.0202
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 567.861867020838,
+          "precision": "nf4",
+          "peak_vram_mb": 17557.80126953125
+        }
+      }
+    },
+    {
+      "case": "bug",
+      "repeat": 0,
+      "cold_request": false,
+      "wall_ms": 554.6786490012892,
+      "expected_department": "technical",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.0038,
+              "technical": 0.9962
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.3381
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.8494,
+            "confidence": 0.8758,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0263,
+              "1": 0.0979,
+              "2": 0.8758
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 312,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 553.0589839909226,
+          "precision": "nf4",
+          "peak_vram_mb": 17557.80126953125
+        }
+      }
+    },
+    {
+      "case": "refund",
+      "repeat": 0,
+      "cold_request": false,
+      "wall_ms": 571.8110899906605,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.9962,
+              "technical": 0.0038
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0072
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.1708,
+            "confidence": 0.6203,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1045,
+              "1": 0.6203,
+              "2": 0.2752
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 570.239573949948,
+          "precision": "nf4",
+          "peak_vram_mb": 17557.80126953125
+        }
+      }
+    },
+    {
+      "case": "turkish",
+      "repeat": 0,
+      "cold_request": false,
+      "wall_ms": 588.8198550092056,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9702,
+            "probabilities": {
+              "billing": 0.0298,
+              "technical": 0.9702
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.967
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.6098,
+            "confidence": 0.7183,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1084,
+              "1": 0.1733,
+              "2": 0.7183
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 322,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 587.3783289571293,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "outage",
+      "repeat": 1,
+      "cold_request": false,
+      "wall_ms": 572.2930079791695,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9564,
+            "probabilities": {
+              "billing": 0.0436,
+              "technical": 0.9564
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9199
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.7399,
+            "confidence": 0.8066,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0667,
+              "1": 0.1266,
+              "2": 0.8066
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 316,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 570.7556139677763,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "invoice",
+      "repeat": 1,
+      "cold_request": false,
+      "wall_ms": 572.9168279794976,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.995,
+            "probabilities": {
+              "billing": 0.995,
+              "technical": 0.005
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0079
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.1918,
+            "confidence": 0.8284,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.8284,
+              "1": 0.1514,
+              "2": 0.0202
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 571.2873750017025,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "bug",
+      "repeat": 1,
+      "cold_request": false,
+      "wall_ms": 554.7803480294533,
+      "expected_department": "technical",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.0038,
+              "technical": 0.9962
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.3381
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.8494,
+            "confidence": 0.8758,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0263,
+              "1": 0.0979,
+              "2": 0.8758
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 312,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 553.2787760021165,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "refund",
+      "repeat": 1,
+      "cold_request": false,
+      "wall_ms": 572.2290570265613,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.9962,
+              "technical": 0.0038
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0072
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.1708,
+            "confidence": 0.6203,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1045,
+              "1": 0.6203,
+              "2": 0.2752
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 570.7576459972188,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "turkish",
+      "repeat": 1,
+      "cold_request": false,
+      "wall_ms": 589.3044710392132,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9702,
+            "probabilities": {
+              "billing": 0.0298,
+              "technical": 0.9702
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.967
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.6098,
+            "confidence": 0.7183,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1084,
+              "1": 0.1733,
+              "2": 0.7183
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 322,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 587.8696689615026,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "outage",
+      "repeat": 2,
+      "cold_request": false,
+      "wall_ms": 572.2395770135336,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9564,
+            "probabilities": {
+              "billing": 0.0436,
+              "technical": 0.9564
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9199
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.7399,
+            "confidence": 0.8066,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0667,
+              "1": 0.1266,
+              "2": 0.8066
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 316,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 570.5404150066897,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "invoice",
+      "repeat": 2,
+      "cold_request": false,
+      "wall_ms": 573.5279869986698,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.995,
+            "probabilities": {
+              "billing": 0.995,
+              "technical": 0.005
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0079
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.1918,
+            "confidence": 0.8284,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.8284,
+              "1": 0.1514,
+              "2": 0.0202
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 571.9111280050129,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "bug",
+      "repeat": 2,
+      "cold_request": false,
+      "wall_ms": 554.7300709877163,
+      "expected_department": "technical",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.0038,
+              "technical": 0.9962
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.3381
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.8494,
+            "confidence": 0.8758,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0263,
+              "1": 0.0979,
+              "2": 0.8758
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 312,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 553.1949480064213,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "refund",
+      "repeat": 2,
+      "cold_request": false,
+      "wall_ms": 573.339368973393,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.9962,
+              "technical": 0.0038
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0072
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.1708,
+            "confidence": 0.6203,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1045,
+              "1": 0.6203,
+              "2": 0.2752
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 571.8766190111637,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "turkish",
+      "repeat": 2,
+      "cold_request": false,
+      "wall_ms": 590.063415991608,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9702,
+            "probabilities": {
+              "billing": 0.0298,
+              "technical": 0.9702
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.967
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.6098,
+            "confidence": 0.7183,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1084,
+              "1": 0.1733,
+              "2": 0.7183
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 322,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 588.5513129760511,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "outage",
+      "repeat": 3,
+      "cold_request": false,
+      "wall_ms": 574.1891800425947,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9564,
+            "probabilities": {
+              "billing": 0.0436,
+              "technical": 0.9564
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.9199
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.7399,
+            "confidence": 0.8066,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0667,
+              "1": 0.1266,
+              "2": 0.8066
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 316,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 572.6593089639209,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "invoice",
+      "repeat": 3,
+      "cold_request": false,
+      "wall_ms": 573.5994229908101,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.995,
+            "probabilities": {
+              "billing": 0.995,
+              "technical": 0.005
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0079
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.1918,
+            "confidence": 0.8284,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.8284,
+              "1": 0.1514,
+              "2": 0.0202
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 572.0117620076053,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "bug",
+      "repeat": 3,
+      "cold_request": false,
+      "wall_ms": 555.1889369962737,
+      "expected_department": "technical",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.0038,
+              "technical": 0.9962
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.3381
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.8494,
+            "confidence": 0.8758,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.0263,
+              "1": 0.0979,
+              "2": 0.8758
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 312,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 553.8881450193003,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "refund",
+      "repeat": 3,
+      "cold_request": false,
+      "wall_ms": 573.6602609977126,
+      "expected_department": "billing",
+      "expected_outage": false,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "confidence": 0.9962,
+            "probabilities": {
+              "billing": 0.9962,
+              "technical": 0.0038
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.0072
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.1708,
+            "confidence": 0.6203,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1045,
+              "1": 0.6203,
+              "2": 0.2752
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 314,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 572.3122569615953,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    },
+    {
+      "case": "turkish",
+      "repeat": 3,
+      "cold_request": false,
+      "wall_ms": 591.3189749699086,
+      "expected_department": "technical",
+      "expected_outage": true,
+      "response": {
+        "model": "clef",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "confidence": 0.9702,
+            "probabilities": {
+              "billing": 0.0298,
+              "technical": 0.9702
+            }
+          },
+          "outage": {
+            "type": "noul",
+            "noul": 0.967
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.6098,
+            "confidence": 0.7183,
+            "legend": {
+              "0": "Can wait",
+              "1": "This week",
+              "2": "Today"
+            },
+            "probabilities": {
+              "0": 0.1084,
+              "1": 0.1733,
+              "2": 0.7183
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 322,
+          "output_tokens": 0
+        },
+        "metrics": {
+          "inference_ms": 589.9900100193918,
+          "precision": "nf4",
+          "peak_vram_mb": 17558.703125
+        }
+      }
+    }
+  ]
+}

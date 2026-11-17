@@ -1,0 +1,462 @@
+{
+  "native_project_timing": {
+    "scope": "Aggregate across all four HyperQwen Pi project tasks. Native first-to-last-token decode timing, excluding all recorded speed and math runs. The discarded 64-token warmup is bounded between zero and its full native engine elapsed time.",
+    "project_completion_tokens": 126892,
+    "project_api_requests": 75,
+    "validated_total_request_count": 141,
+    "prior_recorded_decode_seconds": 155.75702082522912,
+    "native_total_decode_seconds": 965.1478372755228,
+    "project_decode_seconds_range": [
+      808.8908164502936,
+      809.3908164502936
+    ],
+    "decode_tps_range": [
+      156.6820347136816,
+      156.778884641711
+    ],
+    "warmup_elapsed_upper_bound_seconds": 0.5,
+    "api_output_tps_including_ttft": 126.56883555734673,
+    "invalid_raw_proxy_fields": "The first project proxy missed delta.reasoning; its original observed_decode_tps and weighted_decode_tps fields are invalid for this arm. Standalone speed and quality clients handled both reasoning fields."
+  },
+  "speed": {
+    "exl3-mtp": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 107.41278322417607,
+        "median_ttft_seconds": 0.15558565099490806,
+        "total_completion_tokens": 4563
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 170.1586333340368,
+        "median_ttft_seconds": 0.1599457219708711,
+        "total_completion_tokens": 3057
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 89.36226450496416,
+        "median_ttft_seconds": 0.17207699501886964,
+        "total_completion_tokens": 3057
+      }
+    },
+    "hyper-dflash15-constant": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 166.23424465941926,
+        "median_ttft_seconds": 0.06285140296677127,
+        "total_completion_tokens": 4608
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 505.4811417703388,
+        "median_ttft_seconds": 0.6640301159932278,
+        "total_completion_tokens": 3072
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 101.39262192364816,
+        "median_ttft_seconds": 0.09233354998286813,
+        "total_completion_tokens": 3072
+      }
+    },
+    "hyper-dflash15": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 181.12955849132894,
+        "median_ttft_seconds": 0.06221662601456046,
+        "total_completion_tokens": 4608
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 467.4958797488423,
+        "median_ttft_seconds": 0.6625028409762308,
+        "total_completion_tokens": 3072
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 106.70935758600297,
+        "median_ttft_seconds": 0.09106351505033672,
+        "total_completion_tokens": 3072
+      }
+    },
+    "hyper-dflash7": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 181.74697535042816,
+        "median_ttft_seconds": 0.08059083303669468,
+        "total_completion_tokens": 4608
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 252.92770018874734,
+        "median_ttft_seconds": 0.4342844460043125,
+        "total_completion_tokens": 3072
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 108.64691076526752,
+        "median_ttft_seconds": 0.11059798300266266,
+        "total_completion_tokens": 3072
+      }
+    },
+    "hyper-dflash7-tp2": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 171.65736088944544,
+        "median_ttft_seconds": 0.08720422902842984,
+        "total_completion_tokens": 4608
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 240.01458973370285,
+        "median_ttft_seconds": 0.4437731970101595,
+        "total_completion_tokens": 3072
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 100.6578993807049,
+        "median_ttft_seconds": 0.0948166039888747,
+        "total_completion_tokens": 3072
+      }
+    },
+    "hyper-mtp": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 151.48991141526787,
+        "median_ttft_seconds": 0.07935837999684736,
+        "total_completion_tokens": 4608
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 224.25190372170874,
+        "median_ttft_seconds": 0.477637684030924,
+        "total_completion_tokens": 3072
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 108.34464462686539,
+        "median_ttft_seconds": 0.10821938602020964,
+        "total_completion_tokens": 3072
+      }
+    },
+    "hyper-off": {
+      "normal": {
+        "samples": 9,
+        "median_decode_tps": 53.110914628925904,
+        "median_ttft_seconds": 0.0624072159989737,
+        "total_completion_tokens": 4608
+      },
+      "copy": {
+        "samples": 3,
+        "median_decode_tps": 52.2294732053071,
+        "median_ttft_seconds": 0.27346437197411433,
+        "total_completion_tokens": 3072
+      },
+      "normal_xhigh": {
+        "samples": 3,
+        "median_decode_tps": 52.992826967374604,
+        "median_ttft_seconds": 0.09130645601544529,
+        "total_completion_tokens": 3072
+      }
+    }
+  },
+  "quality": {
+    "exl3-mtp": {
+      "passed": 48,
+      "total": 50,
+      "complete": true,
+      "output_cap": 1024
+    },
+    "hyper-dflash7": {
+      "passed": 47,
+      "total": 50,
+      "complete": true,
+      "output_cap": 1024
+    },
+    "hyper-mtp": {
+      "passed": 48,
+      "total": 50,
+      "complete": true,
+      "output_cap": 4096
+    },
+    "hyper-off": {
+      "passed": 47,
+      "total": 50,
+      "complete": true,
+      "output_cap": 1024
+    }
+  },
+  "extended_quality": {
+    "exl3-mtp": {
+      "initial_passed": 48,
+      "passed": 48,
+      "total": 50,
+      "rerun_count": 1,
+      "complete": true
+    },
+    "hyper-off": {
+      "initial_passed": 47,
+      "passed": 50,
+      "total": 50,
+      "rerun_count": 3,
+      "complete": true
+    },
+    "hyper-dflash7": {
+      "initial_passed": 47,
+      "passed": 48,
+      "total": 50,
+      "rerun_count": 3,
+      "complete": true
+    }
+  },
+  "projects": {
+    "exl3-mtp-v2": {
+      "passed": 4,
+      "total": 4,
+      "total_task_seconds": 841.5246501339716,
+      "median_task_seconds": 210.0500606269925,
+      "tasks": [
+        {
+          "task": "paths",
+          "passed": true,
+          "acceptance": {
+            "tests": 4,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 187.10101971396944,
+          "generated_tokens": 19902,
+          "weighted_decode_tps": 126.64519476430878,
+          "api_completion_tps_including_ttft": 106.84138669217757,
+          "decode_seconds": 157.04504254594212
+        },
+        {
+          "task": "inflate",
+          "passed": true,
+          "acceptance": {
+            "tests": 8,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 227.78645937598776,
+          "generated_tokens": 22299,
+          "weighted_decode_tps": 115.59119468608245,
+          "api_completion_tps_including_ttft": 98.71643766002441,
+          "decode_seconds": 192.78285046294332
+        },
+        {
+          "task": "atomic",
+          "passed": true,
+          "acceptance": {
+            "tests": 5,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 192.31366187799722,
+          "generated_tokens": 19233,
+          "weighted_decode_tps": 118.48227831401273,
+          "api_completion_tps_including_ttft": 100.45858188136158,
+          "decode_seconds": 162.24367283901665
+        },
+        {
+          "task": "filters",
+          "passed": true,
+          "acceptance": {
+            "tests": 6,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 234.32350916601717,
+          "generated_tokens": 24500,
+          "weighted_decode_tps": 125.9449567291527,
+          "api_completion_tps_including_ttft": 104.84930625388029,
+          "decode_seconds": 194.41826521611074
+        }
+      ]
+    },
+    "hyper-dflash7": {
+      "passed": 4,
+      "total": 4,
+      "total_task_seconds": 1009.2655690519605,
+      "median_task_seconds": 193.10136100798263,
+      "tasks": [
+        {
+          "task": "paths",
+          "passed": true,
+          "acceptance": {
+            "tests": 4,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 478.03486349398736,
+          "generated_tokens": 55186,
+          "weighted_decode_tps": null,
+          "api_completion_tps_including_ttft": 116.11963011672191,
+          "decode_seconds": 105.05345136189135
+        },
+        {
+          "task": "inflate",
+          "passed": true,
+          "acceptance": {
+            "tests": 8,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 164.38304281799356,
+          "generated_tokens": 22997,
+          "weighted_decode_tps": null,
+          "api_completion_tps_including_ttft": 141.28621374548962,
+          "decode_seconds": 26.88543355400907
+        },
+        {
+          "task": "atomic",
+          "passed": true,
+          "acceptance": {
+            "tests": 5,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 145.02798354200786,
+          "generated_tokens": 18686,
+          "weighted_decode_tps": null,
+          "api_completion_tps_including_ttft": 130.16801370379147,
+          "decode_seconds": 20.647801224899013
+        },
+        {
+          "task": "filters",
+          "passed": true,
+          "acceptance": {
+            "tests": 6,
+            "failures": 0,
+            "errors": 0,
+            "passed": true,
+            "return_code": 0
+          },
+          "wall_seconds": 221.8196791979717,
+          "generated_tokens": 30023,
+          "weighted_decode_tps": null,
+          "api_completion_tps_including_ttft": 135.86285461822328,
+          "decode_seconds": 24.880255821102764
+        }
+      ]
+    }
+  },
+  "speculation_greedy_equivalence": {
+    "paired_samples": 50,
+    "same_numerical_answer": 47,
+    "same_content_hash": 23,
+    "off_only_correct": [
+      37
+    ],
+    "fast_only_correct": [
+      20
+    ]
+  },
+  "normal_greedy_equivalence": {
+    "hyper-mtp": {
+      "samples": 9,
+      "same_content_hash": 0,
+      "same_prompt_hash": 9
+    },
+    "hyper-dflash7": {
+      "samples": 9,
+      "same_content_hash": 3,
+      "same_prompt_hash": 9
+    },
+    "hyper-dflash15": {
+      "samples": 9,
+      "same_content_hash": 3,
+      "same_prompt_hash": 9
+    },
+    "hyper-dflash7-tp2": {
+      "samples": 9,
+      "same_content_hash": 0,
+      "same_prompt_hash": 9
+    }
+  },
+  "copy_prefix_checks": {
+    "exl3-mtp": {
+      "correct_prefixes": 3,
+      "total": 3
+    },
+    "hyper-off": {
+      "correct_prefixes": 3,
+      "total": 3
+    },
+    "hyper-mtp": {
+      "correct_prefixes": 3,
+      "total": 3
+    },
+    "hyper-dflash7": {
+      "correct_prefixes": 3,
+      "total": 3
+    },
+    "hyper-dflash15": {
+      "correct_prefixes": 0,
+      "total": 3
+    },
+    "hyper-dflash7-tp2": {
+      "correct_prefixes": 3,
+      "total": 3
+    },
+    "hyper-dflash15-constant": {
+      "correct_prefixes": 3,
+      "total": 3
+    }
+  },
+  "runtime_image": {
+    "digest": "ghcr.io/syv-ai/hyperqwen@sha256:00713ba1e04b68db1be9eba2b15b579250f9fb0c29ed61add40c750228fc0cf8",
+    "revision": "bd6c5e2f11628483109031d99d1cc4a7d22b1a26",
+    "created": "2026-10-04T08:40:28.022273423Z"
+  },
+  "protocol": {
+    "dataset": "https://raw.githubusercontent.com/openai/grade-school-math/b0bb162abedc65e1fdd8e93ed090fd7598ee68bc/grade_school_math/data/test.jsonl",
+    "revision": "b0bb162abedc65e1fdd8e93ed090fd7598ee68bc",
+    "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "selection": "First 50 test rows, fixed before HyperQwen inference",
+    "sampling": "temperature=0, seed=123, thinking disabled, maximum 1024 output tokens",
+    "grading": "Last numerical answer; exact numeric equality against dataset answer. Truncations count as failures. Not a broad intelligence ranking.",
+    "projects": "Four fixed PocketLore maintenance tasks, same source SHA and hidden graders for EXL3 and HyperQwen."
+  },
+  "state": {
+    "stage": "complete",
+    "updated_at": "2026-10-05T01:02:21.400412+00:00",
+    "started_epoch": 1791157908.076437,
+    "completed_arms": [
+      "hyper-off",
+      "hyper-mtp",
+      "hyper-dflash7",
+      "hyper-dflash15",
+      "hyper-dflash7-tp2"
+    ],
+    "restore_return_code": 0,
+    "extended_completed": [
+      "exl3-mtp",
+      "hyper-off",
+      "hyper-dflash7"
+    ],
+    "extended_arm": "hyper-dflash7",
+    "copy_control_done": true,
+    "mtp_quality_done": true,
+    "report": "REPORT.md",
+    "native_project_timing": "receipts/hyper-dflash7-native-project-timing.json",
+    "final_health": "receipts/final_service_health.json",
+    "all_finite_jobs_finished": true,
+    "pi_defaults_changed": false,
+    "user_projects_modified": false
+  }
+}

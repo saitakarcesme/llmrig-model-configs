@@ -1,0 +1,29 @@
+{
+  "label": "warmup-none",
+  "reasoning_effort": "none",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 65,
+    "total_tokens": 129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 65,
+    "prompt_ms": 105.51,
+    "prompt_per_token_ms": 1.6232307692307693,
+    "prompt_per_second": 616.0553502037722,
+    "predicted_n": 64,
+    "predicted_ms": 545.496,
+    "predicted_per_token_ms": 8.658666666666667,
+    "predicted_per_second": 115.49122266707731
+  },
+  "ttft_seconds": 0.11407166800927371,
+  "total_seconds": 0.6593607509857975,
+  "finish_reason": "length",
+  "answer": "# Comprehensive Tutorial on Implementing an LRU Cache in Python\n\n## Table of Contents\n1. Introduction to LRU Cache\n2. What is LRU? (Least Recently Used)\n3. Why use an LRU Cache?\n4. Simple Implementation Using OrderedDict\n5. Implementation Using a Dictionary and Linked List\n6",
+  "reasoning_characters": 0,
+  "tool_deltas": []
+}

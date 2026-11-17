@@ -1,0 +1,70 @@
+{
+  "endpoint": "http://127.0.0.1:30260",
+  "contexts": "131072,262144",
+  "tasks": "browser_use",
+  "max_steps": 16,
+  "enable_thinking": true,
+  "max_output_tokens": 2048,
+  "reserve_tokens": 16384,
+  "system_suffix": "",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "presence_penalty": 0.0
+  },
+  "coordinate_system": "normalized",
+  "grading": "Correct artifact, model-issued verification, then a final model report; browser report must name the correct issue.",
+  "runtime_sources": {
+    "native_disk.py": "63feeda591907b5deedafc84477e104df16f40e651c037fdd65069a11c545e8c",
+    "smoke_native.py": "72e471435a03ba6f6a291fa2b4bba9dc89ad2f688855af8ec423a12c22d8f09f",
+    "check_disk_experts.py": "9765410ca75eb8f298903b2c902ea0ac7c942a5711928ae63af11bde029ec165",
+    "check_moe_layer.py": "7e874ce993fa0bb2885a895fdd5e4914629a1139d539519abf3908d84e75f899",
+    "fused_disk.py": "9c61e9f9dece8f0877c5acbd94411d572c62cd492c6856836b5b5577d12c871d",
+    "server.py": "69379d00d454e36303f4da247700f0693c94cf98cea6ecf14012daac0145e63f",
+    "agent_eval.py": "8fe83747c14e7be895e2540a2bfcb575304a1a6d3b232df3863d43b9ad0d9b0c",
+    "eval_fixtures.py": "bbbfb187e13fad536d9dccacdc200c2a7c21272068f337a20ddccba517494e27",
+    "eval_summary.py": "f23869debc622d1ec733f75382eaf253c70fbe5399fe5d39d5a549aac4fbbbdc",
+    "hardware_monitor.py": "b32e27344e2e49280fca4dcdad0df5defeb94152c76eb81631e68e02fee6da49",
+    "check_vision_positions.py": "e3c26d99d393764e532a330dc84fee50807675efc50948fe93da768824788676",
+    "vision_positions.py": "d54e2375be1404ec7fa62c566bc3d3ae9031359385c01f06030d90a3c104ba85",
+    "check_fixtures.py": "1d62d157a51dcb7e85d0654d2b701ca98ade64e20fdcd7d7b5e2ee4ea0a2b0c7",
+    "check_api.py": "d9f2e506760d369e348b68d15111f0527aec7ae302e7eba4881399b8362770da"
+  },
+  "server": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 262144,
+    "busy": false,
+    "vision_mrope": true,
+    "prefill_chunk_tokens": 8192,
+    "vision_device": 1,
+    "recurrent_cache_mb": 4096,
+    "default_thinking": true
+  },
+  "cache": {
+    "counters": {},
+    "gpu_cache_bytes": [
+      0,
+      0
+    ],
+    "host_cache_bytes": 0,
+    "gpu_caps": [
+      4294967296,
+      20401094656
+    ],
+    "host_cap": 1610612736,
+    "recurrent_cache": {
+      "bytes": 0,
+      "capacity_bytes": 4294967296,
+      "checkpoints": 0,
+      "metrics": {
+        "stash_evictions": 0,
+        "stash_evictions_stranded": 0,
+        "stash_evictions_live_kv": 0,
+        "stash_pruned": 0
+      }
+    }
+  },
+  "started_unix": 1791342499.5139642
+}

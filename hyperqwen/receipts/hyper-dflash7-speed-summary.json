@@ -1,0 +1,20 @@
+{
+  "normal": {
+    "samples": 9,
+    "median_decode_tps": 181.74697535042816,
+    "median_ttft_seconds": 0.08059083303669468,
+    "total_completion_tokens": 4608
+  },
+  "copy": {
+    "samples": 3,
+    "median_decode_tps": 252.92770018874734,
+    "median_ttft_seconds": 0.4342844460043125,
+    "total_completion_tokens": 3072
+  },
+  "normal_xhigh": {
+    "samples": 3,
+    "median_decode_tps": 108.64691076526752,
+    "median_ttft_seconds": 0.11059798300266266,
+    "total_completion_tokens": 3072
+  }
+}

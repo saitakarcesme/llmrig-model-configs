@@ -1,0 +1,55 @@
+{
+  "status": "generated",
+  "prompt": "Write a Python function add(a, b) that returns their sum. Return only the function.",
+  "completion": "```python\ndef add(a, b):\n    return a + b\n```",
+  "generation_seconds": 27.745645602000877,
+  "load_seconds": 6.741007136064582,
+  "context_capacity": 4096,
+  "model_revision": "69e33439ae950f17bcbe95c98f117d80f759ab6d",
+  "result": {
+    "job": "Generator job #0",
+    "stage": "streaming",
+    "eos": true,
+    "serial": 0,
+    "eos_reason": "stop_string",
+    "eos_triggering_string": "<|im_end|>",
+    "token_ids": "tensor([[248046]])",
+    "full_completion": "```python\ndef add(a, b):\n    return a + b\n```",
+    "new_tokens": 18,
+    "prompt_tokens": 31,
+    "time_enqueued": 0.00040721893310546875,
+    "time_prefill": 15.190244913101196,
+    "time_generate": 12.541986227035522,
+    "cached_pages": 0,
+    "cached_tokens": 0,
+    "held": {
+      "text": "<|im_end|>"
+    }
+  },
+  "offload": {
+    "counters": {
+      "expert_requests": 13326,
+      "disk_reads": 10048,
+      "disk_bytes": 18713515776,
+      "io_seconds": 29.735723726684228,
+      "fused_moe_calls": 911,
+      "masked_experts": 0,
+      "gpu_hits": 3173,
+      "host_hits": 105
+    },
+    "gpu_cache_bytes": [
+      536374656,
+      1072749312
+    ],
+    "host_cache_bytes": 268187328,
+    "gpu_caps": [
+      536870912,
+      1073741824
+    ],
+    "host_cap": 268435456
+  },
+  "gpu_peak_allocated": [
+    7901125120,
+    1113183232
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "result": null,
+  "expected": {
+    "listening_port": 8012,
+    "context_shift_enabled": false,
+    "short_speed_efforts": [
+      "none",
+      "high"
+    ],
+    "long_gate_uses_pi": false,
+    "long_gate_compares_all_three_markers": true
+  },
+  "tools": [
+    "read",
+    "read",
+    "read",
+    "write"
+  ],
+  "seconds": 75.57279687101254,
+  "reasoning_effort": "high",
+  "scope": "Actual Pi source reading and structured code comprehension in isolated workspace."
+}

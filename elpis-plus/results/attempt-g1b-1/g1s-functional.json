@@ -1,0 +1,47 @@
+{
+ "seed_same": {
+  "equal": true,
+  "a": [
+   503,
+   "{\"error\": {\"message\": \"Native generation failed; inspect server logs\", \"type\": \"server_error\", \"param\": null, \"code\": \"generation_failed\"}}",
+   null
+  ],
+  "b": [
+   503,
+   "{\"error\": {\"message\": \"Native generation failed; inspect server logs\", \"type\": \"server_error\", \"param\": null, \"code\": \"generation_failed\"}}",
+   null
+  ]
+ },
+ "seed_diff": {
+  "differs": false,
+  "c": [
+   503,
+   "{\"error\": {\"message\": \"Native generation failed; inspect server logs\", \"type\": \"server_error\", \"param\": null, \"code\": \"generation_failed\"}}",
+   null
+  ]
+ },
+ "unseeded_distinct_of_5": 1,
+ "stop_greedy": {
+  "content": "{\"error\": {\"message\": \"Native generation failed; inspect server logs\", \"type\": \"server_error\", \"param\": null, \"code\": \"generation_failed\"}}",
+  "finish": null,
+  "ok": false
+ },
+ "stop_sampled": {
+  "content": "{\"error\": {\"message\": \"Native generation failed; inspect server logs\", \"type\": \"server_error\", \"param\": null, \"code\": \"generation_failed\"}}",
+  "finish": null
+ },
+ "err_penalty_greedy": [
+  400,
+  "{\"error\": {\"message\": \"penalties require temperature > 0 (greedy decoding is served on the exact argmax path)\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request\"}}"
+ ],
+ "err_temp_range": [
+  400,
+  "{\"error\": {\"message\": \"temperature must be a number in [0, 2]\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request\"}}"
+ ],
+ "presence_penalty_ok": [
+  503,
+  "{\"error\": {\"message\": \"Native generation failed; inspect server logs\", \"type\": \"server_error\", \"param\": null, \"code\": \"generation_failed\"}}",
+  null
+ ],
+ "greedy_seed_ignored": true
+}

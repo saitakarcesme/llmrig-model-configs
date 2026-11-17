@@ -1,0 +1,15 @@
+{
+  "task": "agentic",
+  "context_capacity_tokens": 8192,
+  "initial_text_prompt_tokens": 4072,
+  "context_material": "synthetic repository excerpts",
+  "status": "failed",
+  "seconds": 4.540083596948534,
+  "error": "Interrupted by operator",
+  "trace": [],
+  "agent_verified": false,
+  "enable_thinking": false,
+  "coordinate_system": "normalized",
+  "excluded_from_benchmark": true,
+  "note": ""
+}

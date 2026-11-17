@@ -1,0 +1,75 @@
+{
+  "seconds": 0.363,
+  "response": {
+    "id": "chatcmpl-95d24fa3a3633370",
+    "object": "chat.completion",
+    "created": 1791179897,
+    "model": "qwen3.8-27b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "\n\nREADY",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": "The user wants me to reply with exactly \"READY\". This is a simple, direct instruction. I should output only the word \"READY\" with no additional text, punctuation, or formatting.\n"
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.30.0-tp2-3863ab93",
+    "usage": {
+      "prompt_tokens": 57,
+      "total_tokens": 100,
+      "completion_tokens": 43,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 39
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": {
+      "time_to_first_token_ms": 113.37123304838315,
+      "generation_time_ms": 224.26608699606732,
+      "queue_time_ms": 0.01679599517956376,
+      "mean_itl_ms": 5.3396687380016035,
+      "tokens_per_second": 127.35558970299546,
+      "speculative_decoding": {
+        "mean_acceptance_length": 4.777777777777778,
+        "draft_acceptance_rate": 0.5396825396825397,
+        "acceptance_histogram": [
+          1,
+          1,
+          2,
+          1,
+          0,
+          0,
+          2,
+          2
+        ],
+        "num_spec_steps": 9,
+        "num_accepted_draft_tokens": 34,
+        "num_draft_tokens": 63,
+        "num_spec_tokens": 7,
+        "per_step_accepted": null,
+        "per_step_drafted": null
+      }
+    }
+  }
+}

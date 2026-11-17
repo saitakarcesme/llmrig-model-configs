@@ -1,0 +1,41 @@
+{
+  "providers": {
+    "hyperqwen": {
+      "baseUrl": "http://127.0.0.1:18020/v1",
+      "api": "openai-completions",
+      "apiKey": "none",
+      "models": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "HyperQwen TP2 262K DFlash7 BF16",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 32768,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "thinkingLevelMap": {
+              "off": "none",
+              "minimal": "low",
+              "low": "low",
+              "medium": "medium",
+              "high": "xhigh",
+              "xhigh": null,
+              "max": null
+            },
+            "maxTokensField": "max_tokens"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,352 @@
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c0-control
++ envs=()
++ [[ c0-control == *:* ]]
++ cand_run ep-g0 0 18030 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c0-control long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c0-control suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c0-control --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 298.063, "wall": 299.861, "prompt_tokens": 260964, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 70.65, "accept": 3.282, "finish": "length", "sha256": "07d87cd6a7d2c5d2eeaae110a67f49bdc401d7051bccc28cf0aad8b421658122", "chars": 544, "id": "long-e570235e1d29c4bc", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 70.65,
+ "ttft_median": 298.063,
+ "accept_median": 3.282,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c1-attn-triton
++ envs=()
++ [[ c1-attn-triton:-e EXL3_PREFILL_ATTN=triton == *:* ]]
++ read -ra envs
++ cand_run ep-g0 0 18030 -e EXL3_PREFILL_ATTN=triton -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -e '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' EXL3_PREFILL_ATTN=triton '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 -e EXL3_PREFILL_ATTN=triton --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=20
++ '[' 20 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c1-attn-triton long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c1-attn-triton suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c1-attn-triton --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 578.879, "wall": 580.684, "prompt_tokens": 260963, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 70.39, "accept": 3.282, "finish": "length", "sha256": "d902c27a84ed51edcbe99c211a994f4bca67412d3dd20fcb924a974a0d81b2d1", "chars": 563, "id": "long-bf7c23dee3a15b5d", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 70.39,
+ "ttft_median": 578.879,
+ "accept_median": 3.282,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c2-twopass128
++ envs=()
++ [[ c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128 == *:* ]]
++ read -ra envs
++ cand_run ep-g0 0 18030 -e EXL3_QC_PF_TWO_PASS_MIN_Q=128 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -e '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' EXL3_QC_PF_TWO_PASS_MIN_Q=128 '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 -e EXL3_QC_PF_TWO_PASS_MIN_Q=128 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c2-twopass128 long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c2-twopass128 suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c2-twopass128 --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 299.081, "wall": 300.732, "prompt_tokens": 260964, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 76.91, "accept": 3.556, "finish": "length", "sha256": "071e777c1d3eef369397538fd09238d1d398da7bcd366d39fd5dae4c645167da", "chars": 544, "id": "long-c249e796bfb5b5f8", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 76.91,
+ "ttft_median": 299.081,
+ "accept_median": 3.556,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c3-twopass1024
++ envs=()
++ [[ c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024 == *:* ]]
++ read -ra envs
++ cand_run ep-g0 0 18030 -e EXL3_QC_PF_TWO_PASS_MIN_Q=1024 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -e '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' EXL3_QC_PF_TWO_PASS_MIN_Q=1024 '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 -e EXL3_QC_PF_TWO_PASS_MIN_Q=1024 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c3-twopass1024 long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c3-twopass1024 suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c3-twopass1024 --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 304.923, "wall": 306.491, "prompt_tokens": 260965, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 80.98, "accept": 3.765, "finish": "length", "sha256": "d7d2b5b159012f2f937781f6186843e0592ed312bf5d95ad9ccf82a9061acbed", "chars": 538, "id": "long-58e7ec1f6c7bf753", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 80.98,
+ "ttft_median": 304.923,
+ "accept_median": 3.765,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c4-ns1
++ envs=()
++ [[ c4-ns1:-e EXL3_QC_PREFILL_NS=1 == *:* ]]
++ read -ra envs
++ cand_run ep-g0 0 18030 -e EXL3_QC_PREFILL_NS=1 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -e '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' EXL3_QC_PREFILL_NS=1 '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 -e EXL3_QC_PREFILL_NS=1 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c4-ns1 long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c4-ns1 suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c4-ns1 --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 298.377, "wall": 299.99, "prompt_tokens": 260965, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 78.76, "accept": 3.657, "finish": "length", "sha256": "d7d2b5b159012f2f937781f6186843e0592ed312bf5d95ad9ccf82a9061acbed", "chars": 538, "id": "long-26c26eb856a4b957", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 78.76,
+ "ttft_median": 298.377,
+ "accept_median": 3.657,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c5-ns2
++ envs=()
++ [[ c5-ns2:-e EXL3_QC_PREFILL_NS=2 == *:* ]]
++ read -ra envs
++ cand_run ep-g0 0 18030 -e EXL3_QC_PREFILL_NS=2 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -e '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' EXL3_QC_PREFILL_NS=2 '!=' -- ']'
++ envs+=("$1")
++ shift
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 -e EXL3_QC_PREFILL_NS=2 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c5-ns2 long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c5-ns2 suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c5-ns2 --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 296.18, "wall": 297.963, "prompt_tokens": 260964, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 71.23, "accept": 3.282, "finish": "length", "sha256": "d902c27a84ed51edcbe99c211a994f4bca67412d3dd20fcb924a974a0d81b2d1", "chars": 563, "id": "long-d52e87920f5e1807", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 71.23,
+ "ttft_median": 296.18,
+ "accept_median": 3.282,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ for cfg in "c0-control" "c1-attn-triton:-e EXL3_PREFILL_ATTN=triton" "c2-twopass128:-e EXL3_QC_PF_TWO_PASS_MIN_Q=128" "c3-twopass1024:-e EXL3_QC_PF_TWO_PASS_MIN_Q=1024" "c4-ns1:-e EXL3_QC_PREFILL_NS=1" "c5-ns2:-e EXL3_QC_PREFILL_NS=2" "c6-control"
++ name=c6-control
++ envs=()
++ [[ c6-control == *:* ]]
++ cand_run ep-g0 0 18030 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g0 gpu=0 port=18030
++ shift 3
++ envs=()
++ local envs
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0/triton ']'
++ docker rm -f ep-g0
++ docker run -d --name ep-g0 --label elpis-plus=1 --device nvidia.com/gpu=0 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18030:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g0:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18030
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18030/v1/models
++ return 0
++ gate 18030 g0-c6-control long --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18030 out=g0-c6-control suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18030/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g0-c6-control --repeat 1 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 296.695, "wall": 298.396, "prompt_tokens": 260964, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 74.68, "accept": 3.459, "finish": "length", "sha256": "07d87cd6a7d2c5d2eeaae110a67f49bdc401d7051bccc28cf0aad8b421658122", "chars": 544, "id": "long-a3d24545d9a72a13", "rep": 0}
+{
+ "n": 1,
+ "decode_tps_median": 74.68,
+ "ttft_median": 296.695,
+ "accept_median": 3.459,
+ "deterministic": true
+}
++ docker rm -f ep-g0
++ log g0 done
++ tee -a /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/window/events.log
+++ date +%FT%T
++ echo '2026-11-09T00:45:24 g0 done'
+2026-11-09T00:45:24 g0 done

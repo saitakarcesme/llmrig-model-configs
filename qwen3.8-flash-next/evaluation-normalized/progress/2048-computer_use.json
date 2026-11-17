@@ -1,0 +1,238 @@
+{
+  "step": 4,
+  "seconds": 39.60377108503599,
+  "trace": [
+    {
+      "step": 0,
+      "response": {
+        "id": "chatcmpl-90efce20b8774b9fb3eed4722b934855",
+        "object": "chat.completion",
+        "created": 1791328212,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll start by taking a screenshot to see the current state of the screen.",
+              "tool_calls": [
+                {
+                  "id": "call_d3e0a7eae3c740ef",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 710,
+          "completion_tokens": 33,
+          "total_tokens": 743
+        }
+      },
+      "seconds_elapsed": 11.815365927061066
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-normalized/2048-computer_use/screen-000.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "id": "chatcmpl-d70cb5350ec544c8994315d247b04685",
+        "object": "chat.completion",
+        "created": 1791328224,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The spreadsheet shows 6 invoices. I need to filter unpaid invoices due before 2026-10-07. Let me start by enabling \"Unpaid only\" and \"Overdue only\" filters.",
+              "tool_calls": [
+                {
+                  "id": "call_6e9fd8cb6fb74adb",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 152, \"y\": 234}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1566,
+          "completion_tokens": 87,
+          "total_tokens": 1653
+        }
+      },
+      "seconds_elapsed": 22.969036048045382
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 152,
+        "y": 234
+      },
+      "result": {
+        "clicked_pixels": {
+          "x": 195,
+          "y": 187
+        }
+      }
+    },
+    {
+      "step": 2,
+      "response": {
+        "id": "chatcmpl-1b5580db3f814d328b4ccc1ab334d4da",
+        "object": "chat.completion",
+        "created": 1791328235,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_acdc721ad8fd472d",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 388, \"y\": 234}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1690,
+          "completion_tokens": 41,
+          "total_tokens": 1731
+        }
+      },
+      "seconds_elapsed": 26.484999243053608
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 388,
+        "y": 234
+      },
+      "result": {
+        "clicked_pixels": {
+          "x": 497,
+          "y": 187
+        }
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "id": "chatcmpl-19fe20cccfda4b30b4405de8dfb4aa03",
+        "object": "chat.completion",
+        "created": 1791328239,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_6d8ee30ff8374f72",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1768,
+          "completion_tokens": 16,
+          "total_tokens": 1784
+        }
+      },
+      "seconds_elapsed": 28.718445082078688
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-normalized/2048-computer_use/screen-001.png",
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "step": 4,
+      "response": {
+        "id": "chatcmpl-78343bfa38ac4ca1bd64919d72dd827b",
+        "object": "chat.completion",
+        "created": 1791328241,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "My clicks didn't register on the buttons. Let me click the \"Unpaid only\" button precisely.",
+              "tool_calls": [
+                {
+                  "id": "call_a2968c2c2ccb4124",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 117, \"y\": 208}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1873,
+          "completion_tokens": 63,
+          "total_tokens": 1936
+        }
+      },
+      "seconds_elapsed": 39.449310556054115
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 117,
+        "y": 208
+      },
+      "result": {
+        "clicked_pixels": {
+          "x": 150,
+          "y": 166
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "providers": {
+    "kolibri-project": {
+      "baseUrl": "http://127.0.0.1:8013/v1",
+      "api": "openai-completions",
+      "apiKey": "none",
+      "models": [
+        {
+          "id": "qwen3.8:27b",
+          "name": "Qwen matched project benchmark",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 65536,
+          "maxTokens": 32768,
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
+            "thinkingLevelMap": {
+              "off": "none",
+              "minimal": "low",
+              "low": "low",
+              "medium": "medium",
+              "high": "xhigh",
+              "xhigh": null,
+              "max": null
+            }
+          }
+        }
+      ]
+    }
+  }
+}

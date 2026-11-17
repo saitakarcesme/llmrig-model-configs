@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-04T23:20:18.096305+00:00",
+  "source": "https://local.ai/about",
+  "model_table_url": "https://local.ai/models",
+  "observed_model_table": "Redirects to /access?next=%2Fmodels, Hugging Face sign-in required. No account created or profile submitted.",
+  "intelligence_formula": {
+    "tau2_bench": 0.02,
+    "GAIA": 0.36,
+    "GDPval": 0.62
+  },
+  "our_official_scores": {
+    "tau2_bench": null,
+    "GAIA": null,
+    "GDPval": null
+  },
+  "our_local_ai_intelligence_index": null,
+  "our_local_ai_rank": null,
+  "reason": "Four PocketLore maintenance tasks are not the three benchmark cohorts, their scoring protocols, or local.ai model/quant/harness configurations. Missing benchmarks cannot be assigned zero or replaced by project test pass rates."
+}

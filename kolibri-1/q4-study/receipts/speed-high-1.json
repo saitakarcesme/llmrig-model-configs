@@ -1,0 +1,29 @@
+{
+  "label": "speed-high-1",
+  "reasoning_effort": "high",
+  "usage": {
+    "completion_tokens": 512,
+    "prompt_tokens": 78,
+    "total_tokens": 590,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 78,
+    "prompt_ms": 101.598,
+    "prompt_per_token_ms": 1.3025384615384614,
+    "prompt_per_second": 767.7316482607926,
+    "predicted_n": 512,
+    "predicted_ms": 4314.375,
+    "predicted_per_token_ms": 8.443003913894325,
+    "predicted_per_second": 118.44125742430826
+  },
+  "ttft_seconds": 0.12981526099611074,
+  "total_seconds": 4.423381391970906,
+  "finish_reason": "length",
+  "answer": "# Building an LRU Cache in Python \u2013 A Complete Tutorial  \n\nAn **LRU (Least Recently Used) cache** is one of the most common data\u2011structure problems you\u2019ll encounter in software engineering. It stores a bounded number of key\u2011value pairs and evicts the entry that has not been accessed for the longest time when the cache reaches its capacity.  \n\nLRU caches are used everywhere:\n\n* **Web browsers** \u2013 caching images, scripts, and stylesheets.  \n* **Databases** \u2013 buffer pool for hot pages.  \n* **APIs** \u2013 rate\u2011limiting and response caching.  \n* **Programming language runtimes** \u2013 memoizing function results.  \n\nIn Python you have several ways to implement an LRU cache:\n\n1. **Na\u00efve list\u2011based approach** (for learning only).  \n2. **Using `collections.OrderedDict`** (the most concise and fast built\u2011in solution).  \n3. **Manual doubly\u2011linked list + hash map** (the classic interview answer).  \n4. **`functools.lru_cache` decorator** (for function memoisation).  \n\nIn this tutorial we\u2019ll walk through each method, explain the underlying ideas, provide full code examples, discuss performance, and show how to test and extend the implementations.\n\n---\n\n## 1.",
+  "reasoning_characters": 1207,
+  "tool_deltas": []
+}

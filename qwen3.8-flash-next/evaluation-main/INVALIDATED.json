@@ -1,0 +1,4 @@
+{
+  "excluded_from_benchmark": true,
+  "reason": "Interrupted because harness progress.json was exposed in the coding fixture; corrected matrix uses a fresh directory."
+}

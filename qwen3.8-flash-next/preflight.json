@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-06T22:14:33.682545+00:00",
+  "status": "blocked",
+  "blockers": [
+    "No Intel GPU; upstream uses torch.xpu, Intel xe SVM, and B70 SYCL kernels.",
+    "Required Intel image 24c872759256 is absent; no reproducible image build is supplied.",
+    "Missing required path: /home/isa/freetoken-exl3/bench/xpu_run.sh",
+    "Missing required path: /mnt/nvx/n104/qwen_experts.bin",
+    "Missing required path: /home/isa/models/turboderp-Qwen3.8-Flash-Next-exl3-3.05bpw_h5_ng5",
+    "Repository does not ship bench/xpu_run.sh",
+    "Repository does not ship plugin/exl3xpu/_moe_a8.so"
+  ],
+  "checks": {
+    "pci": {
+      "exit_code": 0,
+      "stdout": "00:00.0 Host bridge: Intel Corporation Device a705 (rev 01)\n00:01.0 PCI bridge: Intel Corporation Raptor Lake PCI Express 5.0 Graphics Port (PEG010) (rev 01)\n00:06.0 PCI bridge: Intel Corporation Raptor Lake PCI Express 4.0 Graphics Port (rev 01)\n00:0a.0 Signal processing controller: Intel Corporation Raptor Lake Crashlog and Telemetry (rev 01)\n00:0e.0 RAID bus controller: Intel Corporation RST Volume Management Device Controller\n00:14.0 USB controller: Intel Corporation 700 Series Chipset Family USB 3.2 Gen 2x2 (20 Gbs) xHCI Host Controller (rev 11)\n00:14.2 RAM memory: Intel Corporation 700 Series Chipset Family Shared SRAM (rev 11)\n00:14.3 Network controller: Intel Corporation 700 Series Chipset Family CNVi Wi-Fi (rev 11)\n00:15.0 Serial bus controller: Intel Corporation 700 Series Chipset Family I2C Controller #0 (rev 11)\n00:16.0 Communication controller: Intel Corporation 700 Series Chipset Family CSME HECI #1 (rev 11)\n00:17.0 SATA controller: Intel Corporation 700 Series Chipset Family SATA Controller (AHCI) (rev 11)\n00:1a.0 PCI bridge: Intel Corporation 700 Series Chipset Family PCIe Root Port #25 (rev 11)\n00:1c.0 PCI bridge: Intel Corporation 700 Series Chipset Family PCIe Root Port #1 (rev 11)\n00:1c.2 PCI bridge: Intel Corporation 700 Series Chipset Family PCIe Root Port #3 (rev 11)\n00:1c.4 PCI bridge: Intel Corporation 700 Series Chipset Family PCIe Root Port #5 (rev 11)\n00:1d.0 PCI bridge: Intel Corporation 700 Series Chipset Family PCIe Root Port #15 (rev 11)\n00:1f.0 ISA bridge: Intel Corporation B760 Chipset eSPI Controller (rev 11)\n00:1f.3 Audio device: Intel Corporation 700 Series Chipset Family HD Audio (rev 11)\n00:1f.4 SMBus: Intel Corporation 700 Series Chipset Family SMBus (rev 11)\n00:1f.5 Serial bus controller: Intel Corporation 700 Series Chipset Family SPI (flash) Controller (rev 11)\n01:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3090] (rev a1)\n01:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)\n02:00.0 Non-Volatile memory controller: Kingston Technology Company, Inc. NV3 NVMe SSD [SM2268XT2] (DRAM-less) (rev 03)\n05:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller (rev 05)\n06:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3090] (rev a1)\n06:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)",
+      "stderr": ""
+    },
+    "gpu": {
+      "exit_code": 0,
+      "stdout": "name, memory.total [MiB], memory.used [MiB]\nNVIDIA GeForce RTX 3090, 24576 MiB, 14991 MiB\nNVIDIA GeForce RTX 3090, 24576 MiB, 14550 MiB",
+      "stderr": ""
+    },
+    "memory": {
+      "exit_code": 0,
+      "stdout": "total        used        free      shared  buff/cache   available\nMem:            31Gi        19Gi       1.5Gi        48Mi        12Gi        12Gi\nSwap:           62Gi       8.9Gi        53Gi",
+      "stderr": ""
+    },
+    "disk": {
+      "exit_code": 0,
+      "stdout": "Filesystem        Size  Used Avail Use% Mounted on\n/dev/mapper/root  1.9T  1.7T  163G  92% /home",
+      "stderr": ""
+    },
+    "required_image": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Error response from daemon: No such image: 24c872759256:latest"
+    },
+    "source_commit": {
+      "exit_code": 0,
+      "stdout": "30d1b5b94d15f020ed926350d37341d7269d3692",
+      "stderr": ""
+    },
+    "active_services": {
+      "exit_code": 0,
+      "stdout": "clef-pi-qwen 00713ba1e04b 127.0.0.1:18020->18020/tcp",
+      "stderr": ""
+    },
+    "required_paths": {
+      "/home/isa/freetoken-exl3/bench/xpu_run.sh": false,
+      "/mnt/nvx/n104/qwen_experts.bin": false,
+      "/home/isa/models/turboderp-Qwen3.8-Flash-Next-exl3-3.05bpw_h5_ng5": false
+    },
+    "endpoint": {
+      "error": "<urlopen error [Errno 111] Connection refused>"
+    }
+  },
+  "measured_model_generations": 0
+}

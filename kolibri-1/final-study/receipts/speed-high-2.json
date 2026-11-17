@@ -1,0 +1,29 @@
+{
+  "label": "speed-high-2",
+  "reasoning_effort": "high",
+  "usage": {
+    "completion_tokens": 512,
+    "prompt_tokens": 78,
+    "total_tokens": 590,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 78,
+    "prompt_ms": 99.975,
+    "prompt_per_token_ms": 1.2817307692307691,
+    "prompt_per_second": 780.1950487621905,
+    "predicted_n": 512,
+    "predicted_ms": 4365.463,
+    "predicted_per_token_ms": 8.542980430528376,
+    "predicted_per_second": 117.0551668860783
+  },
+  "ttft_seconds": 0.13310391700360924,
+  "total_seconds": 4.4783173149917275,
+  "finish_reason": "length",
+  "answer": "# Implementing an LRU Cache in Python \u2013 A Step\u2011by\u2011Step Tutorial  \n\n## Table of Contents  \n\n1. [What is an LRU Cache?](#what-is-an-lru-cache)  \n2. [Why an LRU Cache?](#why-an-lru-cache)  \n3. [Core Design Requirements](#core-design-requirements)  \n4. [Using `collections.OrderedDict` \u2013 The Quick Path](#using-collectionsordereddict--the-quick-path)  \n5. [Building a Custom LRU Cache with a Doubly\u2011Linked List and Hash Map](#building-a-custom-lru-cache-with-a-doubly-linked-list-and-hash-map)  \n6. [Walkthrough of the Custom Implementation](#walkthrough-of-the-custom-implementation)  \n7. [Testing the",
+  "reasoning_characters": 1705,
+  "tool_deltas": []
+}

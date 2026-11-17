@@ -1,0 +1,44 @@
+{
+  "cells": [
+    {
+      "task": "coding",
+      "context_capacity_tokens": 65536,
+      "status": "passed",
+      "seconds": 178.17945444292855,
+      "error": null,
+      "initial_text_prompt_tokens": 57320,
+      "agent_verified": true,
+      "enable_thinking": false,
+      "requests": 6,
+      "tool_calls": 5,
+      "maximum_prompt_tokens": 58269,
+      "median_decode_tokens_per_second": 14.402570362615975,
+      "prefill_seconds": 128.8510344028473,
+      "maximum_request_seconds": 115.64471916900948,
+      "maximum_internal_ttft_seconds": 114.73725762299728,
+      "receipt": "evaluation-production-final/65536-coding/result.json"
+    },
+    {
+      "task": "computer_use",
+      "context_capacity_tokens": 65536,
+      "status": "passed",
+      "seconds": 239.53582247998565,
+      "error": null,
+      "initial_text_prompt_tokens": 57320,
+      "agent_verified": true,
+      "enable_thinking": false,
+      "requests": 14,
+      "tool_calls": 13,
+      "maximum_prompt_tokens": 59596,
+      "median_decode_tokens_per_second": 15.796596309718376,
+      "prefill_seconds": 173.02112555503845,
+      "maximum_request_seconds": 109.27557411894668,
+      "maximum_internal_ttft_seconds": 107.93382167199161,
+      "receipt": "evaluation-production-final/65536-computer_use/result.json"
+    }
+  ],
+  "passed": 2,
+  "total": 2,
+  "context_material": "synthetic repository excerpts",
+  "computer_use_surface": "isolated screenshot-driven Chromium fixture, not OS desktop apps"
+}

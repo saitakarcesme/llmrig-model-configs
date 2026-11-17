@@ -1,0 +1,200 @@
+--- exl3_server.orig.py	2026-11-09 00:05:20.618341715 +0100
++++ exl3_server.py	2026-11-09 00:46:49.750609032 +0100
+@@ -36,7 +36,7 @@
+ from exllamav3 import Cache, Config, Job, Model, Tokenizer
+ from exllamav3 import Generator as NativeGenerator
+ from exllamav3.cache import CacheLayer_quant
+-from exllamav3.generator.sampler.presets import ArgmaxSampler
++from exllamav3.generator.sampler.presets import ArgmaxSampler, ComboSampler
+ from jinja2 import TemplateError
+ from jsonschema import Draft202012Validator, FormatChecker, validators
+ from jsonschema.exceptions import SchemaError, ValidationError
+@@ -986,6 +986,14 @@
+     stream: bool
+     include_usage: bool
+     skip_special_tokens: bool
++    # elpis-plus: None = greedy (the original ArgmaxSampler path, byte-identical job arguments)
++    sampling: dict[str, float | int] | None = None
++    seed: int | None = None
++    stop: tuple[str, ...] = ()
++
++    def is_greedy_identity(self) -> bool:
++        """True when the native job is exactly the original greedy job."""
++        return self.sampling is None and self.seed is None and not self.stop
+ 
+ 
+ # Sampling controls a greedy client may send; each is admitted only at the value that
+@@ -1020,16 +1028,14 @@
+         "max_completion_tokens", body.get("max_tokens", 4096 if chat else 256)
+     )
+     max_tokens = positive_integer(limit, "output token limit")
+-    temperature = body.get("temperature", 0)
+-    if type(temperature) not in {int, float} or temperature != 0:
+-        msg = "temperature must be numeric zero (greedy)"
+-        raise APIError(msg)
+-    for name, identity in GREEDY_IDENTITY.items():
+-        if name in body and (
+-            type(body[name]) not in {int, float} or body[name] != identity
+-        ):
+-            msg = f"{name} must be numeric {identity} (greedy identity)"
++    sampling = parse_sampling(body)
++    seed = None
++    if body.get("seed") is not None:
++        if type(body["seed"]) is not int or not 0 <= body["seed"] < 2**63:
++            msg = "seed must be a non-negative integer"
+             raise APIError(msg)
++        seed = body["seed"] if sampling is not None else None  # greedy ignores the seed
++    stop = parse_stop(body.get("stop"))
+     if "n" in body and (type(body["n"]) is not int or body["n"] != 1):
+         msg = "Only n=1 is supported"
+         raise APIError(msg)
+@@ -1048,7 +1054,77 @@
+     if not chat and stream:
+         msg = "Streaming raw completions is unsupported"
+         raise APIError(msg)
+-    return Options(max_tokens, stream, include_usage, skip)
++    return Options(max_tokens, stream, include_usage, skip, sampling, seed, stop)
++
++
++# elpis-plus sampling limits (OpenAI-compatible names; repetition_penalty / top_k / min_p as in vLLM)
++SAMPLING_RANGES: dict[str, tuple[float, float]] = {
++    "temperature": (0.0, 2.0),
++    "top_p": (0.0, 1.0),
++    "min_p": (0.0, 1.0),
++    "frequency_penalty": (-2.0, 2.0),
++    "presence_penalty": (-2.0, 2.0),
++    "repetition_penalty": (0.0, 2.0),
++}
++MAX_STOP_STRINGS = 8
++MAX_STOP_CHARS = 256
++
++
++def parse_sampling(body: dict[str, JSON]) -> dict[str, float | int] | None:
++    """Validate sampling controls. None when the request is greedy (temperature 0 or top_k 1 and every
++    penalty at its identity), so greedy requests keep the original fused argmax / tree-verify path."""
++    values: dict[str, float | int] = {}
++    for name, (lo, hi) in SAMPLING_RANGES.items():
++        if name in body and body[name] is not None:
++            v = body[name]
++            if type(v) not in {int, float} or not lo <= v <= hi or v != v:
++                msg = f"{name} must be a number in [{lo:g}, {hi:g}]"
++                raise APIError(msg)
++            values[name] = float(v)
++    top_k = body.get("top_k")
++    if top_k is not None:
++        if type(top_k) is not int or top_k < -1 or top_k > 1000:
++            msg = "top_k must be an integer in [-1, 1000] (0 or -1 disables it)"
++            raise APIError(msg)
++        values["top_k"] = max(top_k, 0)
++    temperature = values.get("temperature", 0.0)
++    penalties = (values.get("frequency_penalty", 0.0), values.get("presence_penalty", 0.0),
++                 values.get("repetition_penalty", 1.0))
++    if (temperature == 0.0 or values.get("top_k") == 1) and penalties == (0.0, 0.0, 1.0):
++        return None
++    if temperature == 0.0 and penalties != (0.0, 0.0, 1.0):
++        msg = "penalties require temperature > 0 (greedy decoding is served on the exact argmax path)"
++        raise APIError(msg)
++    return values
++
++
++def parse_stop(value: JSON) -> tuple[str, ...]:
++    """Validate the OpenAI `stop` field: a string or a list of up to MAX_STOP_STRINGS nonempty strings."""
++    if value is None:
++        return ()
++    items = [value] if isinstance(value, str) else value
++    if not isinstance(items, list) or len(items) > MAX_STOP_STRINGS or not all(
++        isinstance(x, str) and 0 < len(x) <= MAX_STOP_CHARS for x in items
++    ):
++        msg = f"stop must be a nonempty string or a list of at most {MAX_STOP_STRINGS} nonempty strings"
++        raise APIError(msg)
++    return tuple(dict.fromkeys(items))
++
++
++def build_sampler(options: Options) -> object:
++    """The original ArgmaxSampler for greedy requests; a ComboSampler otherwise."""
++    if options.sampling is None:
++        return ArgmaxSampler()
++    s = options.sampling
++    return ComboSampler(
++        rep_p=s.get("repetition_penalty", 1.0),
++        freq_p=s.get("frequency_penalty", 0.0),
++        pres_p=s.get("presence_penalty", 0.0),
++        temperature=s.get("temperature", 1.0),
++        min_p=s.get("min_p", 0.0),
++        top_k=int(s.get("top_k", 0)),
++        top_p=s.get("top_p", 1.0),
++    )
+ 
+ 
+ @dataclass
+@@ -2436,14 +2512,28 @@
+         ids = pending.input_ids
+         if ids.ndim == 1:
+             ids = ids.unsqueeze(0)
+-        job = Job(
+-            input_ids=ids,
+-            max_new_tokens=pending.options.max_tokens,
+-            sampler=ArgmaxSampler(),
+-            stop_conditions=self.stop_ids,
+-            decode_special_tokens=not pending.options.skip_special_tokens,
+-            identifier=pending.identifier,
+-        )
++        options = pending.options
++        if options.is_greedy_identity():
++            job = Job(
++                input_ids=ids,
++                max_new_tokens=options.max_tokens,
++                sampler=ArgmaxSampler(),
++                stop_conditions=self.stop_ids,
++                decode_special_tokens=not options.skip_special_tokens,
++                identifier=pending.identifier,
++            )
++        else:
++            # elpis-plus: sampled / stop-string jobs take the generator's serial verify path (the DFlash2 chain draft is
++            # accepted while the sampled target token matches it, which keeps the target distribution exact)
++            job = Job(
++                input_ids=ids,
++                max_new_tokens=options.max_tokens,
++                sampler=build_sampler(options),
++                seed=options.seed if options.seed is not None else int.from_bytes(os.urandom(4), "little"),
++                stop_conditions=[*self.stop_ids, *options.stop],
++                decode_special_tokens=not options.skip_special_tokens,
++                identifier=pending.identifier,
++            )
+         self.gen.enqueue(job)
+         final = None
+         while self.gen.num_remaining_jobs():
+@@ -2497,9 +2587,13 @@
+         spec_rounds, spec_committed = speculative_counts(
+             final, self.draft_window, completion_tokens
+         )
++        # elpis-plus: a non-greedy job (sampled or with stop strings) is ineligible for the admitted greedy
++        # path, so it must commit zero greedy (and zero tree) rounds; a greedy job must commit all of them
++        greedy_job = pending.options.is_greedy_identity()
+         if (
+             self.verified_acceptance
+-            and self.gen.greedy_verify_rounds - verified_before != spec_rounds
++            and self.gen.greedy_verify_rounds - verified_before
++            != (spec_rounds if greedy_job else 0)
+         ):
+             msg = "A verify round bypassed the admitted acceptance decision"
+             raise RuntimeError(msg)
+@@ -2509,7 +2603,7 @@
+         tree_rounds = (
+             self.gen.tree_verify_rounds - tree_before if self.verified_acceptance else 0
+         )
+-        if tree_rounds != (spec_rounds if self.tree_rounds_expected else 0):
++        if tree_rounds != (spec_rounds if self.tree_rounds_expected and greedy_job else 0):
+             msg = "Tree verify rounds disagree with the EXL3_TREE configuration"
+             raise RuntimeError(msg)
+         if self.persist_debug:
+@@ -2595,6 +2689,9 @@
+     "stream_options",
+     "skip_special_tokens",
+     "n",
++    "top_k",
++    "seed",
++    "stop",
+ } | set(GREEDY_IDENTITY)
+ CHAT_FIELDS = COMMON_FIELDS | {
+     "messages",

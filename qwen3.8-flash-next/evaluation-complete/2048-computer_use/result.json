@@ -1,0 +1,261 @@
+{
+  "task": "computer_use",
+  "context_capacity_tokens": 2048,
+  "initial_text_prompt_tokens": 739,
+  "context_material": "synthetic repository excerpts",
+  "status": "failed",
+  "seconds": 52.042221193085425,
+  "error": "Task context budget exhausted",
+  "trace": [
+    {
+      "step": 0,
+      "response": {
+        "id": "chatcmpl-a4f465cc89794ee78cb20c5eb03fe399",
+        "object": "chat.completion",
+        "created": 1791332375,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I'll start by inspecting the current screen.",
+              "tool_calls": [
+                {
+                  "id": "call_38b80a02be964088",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 739,
+          "completion_tokens": 27,
+          "total_tokens": 766
+        }
+      },
+      "seconds_elapsed": 10.452494511031546
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-complete/2048-computer_use/screen-000.png",
+        "width": 1280,
+        "height": 800,
+        "action_coordinate_units": "normalized",
+        "action_coordinate_range": [
+          0,
+          1000
+        ]
+      }
+    },
+    {
+      "step": 1,
+      "response": {
+        "id": "chatcmpl-489a08eeed9543ecb61a1358206d4e8c",
+        "object": "chat.completion",
+        "created": 1791332386,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The spreadsheet shows 6 invoices. I need unpaid invoices due before 2026-10-07: INV-001 (09-28), INV-004 (10-01), INV-005 (10-06). Let me enable the filters.",
+              "tool_calls": [
+                {
+                  "id": "call_97d85e1bce574e87",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 97, \"y\": 196}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1610,
+          "completion_tokens": 108,
+          "total_tokens": 1718
+        }
+      },
+      "seconds_elapsed": 27.280980725074187
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 97,
+        "y": 196
+      },
+      "result": {
+        "clicked": {
+          "x": 97,
+          "y": 196,
+          "units": "normalized"
+        }
+      }
+    },
+    {
+      "step": 2,
+      "response": {
+        "id": "chatcmpl-0018a53440e64e67aaa699bce7edef2e",
+        "object": "chat.completion",
+        "created": 1791332402,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_11cb39ef7ebf47f1",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 249, \"y\": 196}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1759,
+          "completion_tokens": 41,
+          "total_tokens": 1800
+        }
+      },
+      "seconds_elapsed": 31.909311484079808
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 249,
+        "y": 196
+      },
+      "result": {
+        "clicked": {
+          "x": 249,
+          "y": 196,
+          "units": "normalized"
+        }
+      }
+    },
+    {
+      "step": 3,
+      "response": {
+        "id": "chatcmpl-7ed6af6006884e46848e38241407e163",
+        "object": "chat.completion",
+        "created": 1791332407,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": null,
+              "tool_calls": [
+                {
+                  "id": "call_10d5462dd86b47cd",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_screenshot",
+                    "arguments": "{}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1842,
+          "completion_tokens": 16,
+          "total_tokens": 1858
+        }
+      },
+      "seconds_elapsed": 35.522211494040675
+    },
+    {
+      "tool": "computer_screenshot",
+      "arguments": {},
+      "result": {
+        "screenshot": "/home/isa/Experiments/qwen38-flash-next-b70-fit/evaluation-complete/2048-computer_use/screen-001.png",
+        "width": 1280,
+        "height": 800,
+        "action_coordinate_units": "normalized",
+        "action_coordinate_range": [
+          0,
+          1000
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "response": {
+        "id": "chatcmpl-017c360a98cb4871bcc89ae26060e948",
+        "object": "chat.completion",
+        "created": 1791332410,
+        "model": "flashnext",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The filters are already applied correctly. Let me explicitly apply the sort to be sure, then export.",
+              "tool_calls": [
+                {
+                  "id": "call_dbbad8e894494128",
+                  "type": "function",
+                  "function": {
+                    "name": "computer_click",
+                    "arguments": "{\"x\": 407, \"y\": 196}"
+                  }
+                }
+              ]
+            },
+            "finish_reason": "tool_calls"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1968,
+          "completion_tokens": 62,
+          "total_tokens": 2030
+        }
+      },
+      "seconds_elapsed": 51.84922897000797
+    },
+    {
+      "tool": "computer_click",
+      "arguments": {
+        "x": 407,
+        "y": 196
+      },
+      "result": {
+        "clicked": {
+          "x": 407,
+          "y": 196,
+          "units": "normalized"
+        }
+      }
+    }
+  ],
+  "agent_verified": false,
+  "enable_thinking": false,
+  "coordinate_system": "normalized",
+  "excluded_from_benchmark": false,
+  "note": "Computer use executes screenshot-driven mouse/keyboard actions in an isolated Chromium fixture, not an OS desktop app."
+}

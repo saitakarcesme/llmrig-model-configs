@@ -1,0 +1,183 @@
+{
+  "name": "ocr-live",
+  "status": 200,
+  "elapsed_seconds": 16.670371848973446,
+  "body": {
+    "model": "PaddleOCR-VL-1.6",
+    "task": "ocr",
+    "pages": [
+      {
+        "page": 1,
+        "text": "LLMRIG 262K",
+        "generated_tokens": 9,
+        "hit_output_limit": false,
+        "source_size": [
+          800,
+          500
+        ],
+        "submitted_image_size": [
+          800,
+          500
+        ]
+      }
+    ],
+    "pipeline": "transformers recognition; no layout detector",
+    "coordinates": "Spotting is raw model output; interpret coordinates against the submitted image and the model output format.",
+    "processing_seconds": 13.109982036054134
+  },
+  "memory_samples": [
+    {
+      "time": 1793343122.9451656,
+      "available_ram_mib": 5746,
+      "swap_used_mib": 18018,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          20686,
+          3491
+        ]
+      ]
+    },
+    {
+      "time": 1793343124.9661717,
+      "available_ram_mib": 9201,
+      "swap_used_mib": 17961,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343126.9899616,
+      "available_ram_mib": 8946,
+      "swap_used_mib": 17961,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343129.012675,
+      "available_ram_mib": 8790,
+      "swap_used_mib": 17961,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343131.0407033,
+      "available_ram_mib": 8781,
+      "swap_used_mib": 17961,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343133.0668092,
+      "available_ram_mib": 8741,
+      "swap_used_mib": 17961,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343135.094171,
+      "available_ram_mib": 8724,
+      "swap_used_mib": 17961,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ]
+    },
+    {
+      "time": 1793343137.1222432,
+      "available_ram_mib": 7824,
+      "swap_used_mib": 17960,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          2218,
+          21959
+        ]
+      ]
+    },
+    {
+      "time": 1793343139.1479502,
+      "available_ram_mib": 7780,
+      "swap_used_mib": 17969,
+      "gpus": [
+        [
+          0,
+          22916,
+          1253
+        ],
+        [
+          1,
+          2218,
+          21959
+        ]
+      ]
+    }
+  ]
+}

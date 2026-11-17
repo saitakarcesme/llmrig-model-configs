@@ -1,0 +1,677 @@
+{
+  "status": 200,
+  "elapsed_seconds": 28.067089052987285,
+  "body": {
+    "text": "Les mitochondries produisent de l'énergie dans les cellules. Nous étudions la biologie.",
+    "language": "fr",
+    "duration": 4.51375,
+    "segments": [
+      {
+        "id": 1,
+        "start": 0.0,
+        "end": 2.78,
+        "text": " Les mitochondries produisent de l'énergie dans les cellules.",
+        "avg_logprob": -0.05834960950804608,
+        "no_speech_prob": 0.00075531005859375
+      },
+      {
+        "id": 2,
+        "start": 3.1,
+        "end": 4.38,
+        "text": " Nous étudions la biologie.",
+        "avg_logprob": -0.05834960950804608,
+        "no_speech_prob": 0.00075531005859375
+      }
+    ],
+    "model": "whisper-large-v3",
+    "processing_seconds": 4.227521597058512
+  },
+  "samples": [
+    {
+      "time": 1793343476.377633,
+      "available_ram_mib": 8426,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22728,
+          1441
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343477.2147882,
+      "available_ram_mib": 12180,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22728,
+          1441
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343478.0603933,
+      "available_ram_mib": 11644,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22728,
+          1441
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ],
+      "media_worker_active": true,
+      "secondary_running": false
+    },
+    {
+      "time": 1793343478.90564,
+      "available_ram_mib": 9928,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22728,
+          1441
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ],
+      "media_worker_active": true,
+      "secondary_running": false
+    },
+    {
+      "time": 1793343479.7603354,
+      "available_ram_mib": 9667,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          266,
+          23911
+        ]
+      ],
+      "media_worker_active": true,
+      "secondary_running": false
+    },
+    {
+      "time": 1793343480.6133392,
+      "available_ram_mib": 10458,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          426,
+          23751
+        ]
+      ],
+      "media_worker_active": true,
+      "secondary_running": false
+    },
+    {
+      "time": 1793343481.4554312,
+      "available_ram_mib": 10199,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          2428,
+          21749
+        ]
+      ],
+      "media_worker_active": true,
+      "secondary_running": false
+    },
+    {
+      "time": 1793343482.2955978,
+      "available_ram_mib": 12109,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343483.1319196,
+      "available_ram_mib": 11816,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343483.9743118,
+      "available_ram_mib": 11791,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343484.819151,
+      "available_ram_mib": 11720,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343485.6640537,
+      "available_ram_mib": 11706,
+      "swap_used_mib": 15096,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343486.503563,
+      "available_ram_mib": 11684,
+      "swap_used_mib": 15095,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343487.357553,
+      "available_ram_mib": 9688,
+      "swap_used_mib": 15095,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          5,
+          24173
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343488.2013657,
+      "available_ram_mib": 8974,
+      "swap_used_mib": 15095,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          924,
+          23253
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343489.0673337,
+      "available_ram_mib": 8859,
+      "swap_used_mib": 15095,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          4236,
+          19941
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343489.947297,
+      "available_ram_mib": 8859,
+      "swap_used_mib": 15095,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          7950,
+          16227
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343490.815535,
+      "available_ram_mib": 8832,
+      "swap_used_mib": 15095,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          11740,
+          12437
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343491.7001722,
+      "available_ram_mib": 8889,
+      "swap_used_mib": 15111,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          15754,
+          8423
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343492.5460308,
+      "available_ram_mib": 8879,
+      "swap_used_mib": 15111,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          18366,
+          5811
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343493.3914344,
+      "available_ram_mib": 8700,
+      "swap_used_mib": 15111,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21650,
+          2527
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343494.233749,
+      "available_ram_mib": 8585,
+      "swap_used_mib": 15111,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21890,
+          2287
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343495.0793102,
+      "available_ram_mib": 8571,
+      "swap_used_mib": 15110,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21890,
+          2287
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343495.9224,
+      "available_ram_mib": 8553,
+      "swap_used_mib": 15104,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21890,
+          2287
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343496.7638557,
+      "available_ram_mib": 8526,
+      "swap_used_mib": 15104,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21890,
+          2287
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343497.6066082,
+      "available_ram_mib": 8512,
+      "swap_used_mib": 15104,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21890,
+          2287
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343498.4550867,
+      "available_ram_mib": 8507,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343499.295077,
+      "available_ram_mib": 8460,
+      "swap_used_mib": 15097,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343500.1417973,
+      "available_ram_mib": 8451,
+      "swap_used_mib": 15094,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343500.9893258,
+      "available_ram_mib": 8432,
+      "swap_used_mib": 15093,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343501.831622,
+      "available_ram_mib": 8435,
+      "swap_used_mib": 15093,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343502.6746895,
+      "available_ram_mib": 8376,
+      "swap_used_mib": 15091,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343503.5183728,
+      "available_ram_mib": 8377,
+      "swap_used_mib": 15091,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    },
+    {
+      "time": 1793343504.3609362,
+      "available_ram_mib": 8377,
+      "swap_used_mib": 15091,
+      "gpus": [
+        [
+          0,
+          22778,
+          1391
+        ],
+        [
+          1,
+          21914,
+          2263
+        ]
+      ],
+      "media_worker_active": false,
+      "secondary_running": true
+    }
+  ]
+}

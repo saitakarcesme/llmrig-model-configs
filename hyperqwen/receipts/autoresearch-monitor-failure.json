@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-10-05T07:38:21.935360+00:00",
+  "status": "research_duration_requirement_failed",
+  "automation_status": "PAUSED",
+  "latest_assistant_turn_utc": "2026-10-05T07:30:22.420Z",
+  "evidence": "Two successive bash tool waits with sleep 930 seconds, no project progress update since 07:14:30 UTC",
+  "three_hour_completion_verified": false,
+  "pi_interrupted": false
+}

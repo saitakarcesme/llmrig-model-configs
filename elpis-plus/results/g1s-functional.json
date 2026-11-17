@@ -1,0 +1,47 @@
+{
+ "seed_same": {
+  "equal": true,
+  "a": [
+   200,
+   "The lighthouse stood as a solitary sentinel of light, weaving a golden thread through the stormy night to guide lost ships home.",
+   "stop"
+  ],
+  "b": [
+   200,
+   "The lighthouse stood as a solitary sentinel of light, weaving a golden thread through the stormy night to guide lost ships home.",
+   "stop"
+  ]
+ },
+ "seed_diff": {
+  "differs": true,
+  "c": [
+   200,
+   "The lighthouse stood as a skeletal sentinel on the jagged cliffs, its beam slicing through the storm like a golden knife to stitch the scattered pieces of the dark sea back together.",
+   "stop"
+  ]
+ },
+ "unseeded_distinct_of_5": 5,
+ "stop_greedy": {
+  "content": "1, 2, 3, 4, 5, 6",
+  "finish": "stop",
+  "ok": true
+ },
+ "stop_sampled": {
+  "content": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ",
+  "finish": "stop"
+ },
+ "err_penalty_greedy": [
+  400,
+  "{\"error\": {\"message\": \"penalties require temperature > 0 (greedy decoding is served on the exact argmax path)\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request\"}}"
+ ],
+ "err_temp_range": [
+  400,
+  "{\"error\": {\"message\": \"temperature must be a number in [0, 2]\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request\"}}"
+ ],
+ "presence_penalty_ok": [
+  200,
+  "The lighthouse stood on the jagged edge of the world, sweeping its golden beam across the ocean like a slow, rhythmic heartbeat that refused to let the darkness swallow the coast whole.",
+  "stop"
+ ],
+ "greedy_seed_ignored": true
+}

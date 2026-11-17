@@ -1,0 +1,10 @@
+{
+  "DFLASH_TOKENS": "15",
+  "VLLM_DFLASH2_LOOKUP_ADAPTIVE": "0",
+  "MODEL": "/app/models/Qwen3.8-27B-W4A16-AutoRound-fast",
+  "DRAFT": "/app/models/Qwen3.8-27B-DFlash2-W4A16",
+  "HF_HUB_OFFLINE": "1",
+  "CTX": "fast",
+  "SPEC": "dflash2",
+  "VLLM_OFFLOAD_KEEP_SHM": "1"
+}

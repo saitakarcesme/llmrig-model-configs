@@ -1,0 +1,15 @@
+{
+  "task": "browser_use",
+  "context_capacity_tokens": 32768,
+  "initial_text_prompt_tokens": 24552,
+  "context_material": "synthetic repository excerpts",
+  "status": "failed",
+  "seconds": 42.141384197049774,
+  "error": "Interrupted by operator",
+  "trace": [],
+  "agent_verified": false,
+  "enable_thinking": false,
+  "coordinate_system": "normalized",
+  "excluded_from_benchmark": true,
+  "note": ""
+}

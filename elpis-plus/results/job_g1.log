@@ -1,0 +1,89 @@
++ cand_run ep-g1 1 18031 -- -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ local name=ep-g1 gpu=1 port=18031
++ shift 3
++ envs=()
++ local envs
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1/triton ']'
++ docker rm -f ep-g1
++ docker run -d --name ep-g1 --label elpis-plus=1 --device nvidia.com/gpu=1 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18031:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /opt/qwen/serve/exl3_server.py --target /models/qwen38-27b-exl3 --draft /models/dflash2-exl3 --model-name qwen3.8-27b --max-model-len 262144 --cache-tokens 270336 --cq 3 --host 0.0.0.0 --port 18020 --cpu-cache-gib 0
++ wait_ready 18031
++ local t=0
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=5
++ '[' 5 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=10
++ '[' 10 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=15
++ '[' 15 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ sleep 5
++ t=20
++ '[' 20 -gt 600 ']'
++ curl -sf -m 5 -H 'Authorization: Bearer REDACTED' http://127.0.0.1:18031/v1/models
++ return 0
++ log g1 ready
++ tee -a /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/window/events.log
+++ date +%FT%T
++ echo '2026-11-09T00:04:04 g1 ready'
+2026-11-09T00:04:04 g1 ready
++ gate 18031 g1-control-short short --repeat 1
++ local port=18031 out=g1-control-short suite=short
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py short --url http://127.0.0.1:18031/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g1-control-short --repeat 1
+{"ttft": 1.9, "wall": 16.121, "prompt_tokens": 215, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 143.94, "accept": 3.562, "finish": "length", "sha256": "ddcc565ad5e5a127248387038c2fe3be4c97f2c24e593dda7da9043f23ec8c55", "chars": 6025, "id": "pelican", "rep": 0}
+{"ttft": 0.324, "wall": 13.419, "prompt_tokens": 243, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 156.31, "accept": 3.857, "finish": "length", "sha256": "d0b8de9dcc686b66cc0ccad7a59ff430c8f112943814a690e2df7ebb416c0cbf", "chars": 6655, "id": "hexagon", "rep": 0}
+{"ttft": 0.322, "wall": 14.728, "prompt_tokens": 236, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 142.1, "accept": 3.519, "finish": "length", "sha256": "2a89567308a66a0e244c432888dd76b41fc851ba1ac683a7e54ec3814ca206bf", "chars": 6040, "id": "solar", "rep": 0}
+{"ttft": 0.324, "wall": 14.287, "prompt_tokens": 233, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 146.6, "accept": 3.625, "finish": "length", "sha256": "650a26ed8944ae3a99ea7b2f075bc86e43e7ce4febc2771b753ec5ad621c3143", "chars": 6354, "id": "island", "rep": 0}
+{"ttft": 0.324, "wall": 17.002, "prompt_tokens": 230, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 122.73, "accept": 3.043, "finish": "length", "sha256": "c134e22d60c8af28a131a071ea2e2619ff936e5659c6931a6d6d7e6dad01979a", "chars": 7875, "id": "snake", "rep": 0}
+{"ttft": 0.327, "wall": 16.156, "prompt_tokens": 240, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 129.33, "accept": 3.205, "finish": "length", "sha256": "840c8e8c483cbf3de196df60e6557f7f5e4592d196c8cfb8a448e76662f8a558", "chars": 7551, "id": "landing", "rep": 0}
+{"ttft": 0.327, "wall": 16.087, "prompt_tokens": 242, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 129.89, "accept": 3.235, "finish": "length", "sha256": "4b989ea0199fe2bb35d72364dd8c500887d8115201b8dcce540f40b316786a8f", "chars": 7187, "id": "pendulum", "rep": 0}
+{"ttft": 0.326, "wall": 16.758, "prompt_tokens": 236, "cached_tokens": 0, "completion_tokens": 2048, "decode_tps": 124.57, "accept": 3.089, "finish": "length", "sha256": "d7b05fc138c409274bd43984f9e5486f7f36882d1a902b8f80b363eeb9bb23d1", "chars": 7649, "id": "galaxy", "rep": 0}
+{
+ "n": 8,
+ "decode_tps_median": 135.995,
+ "ttft_median": 0.325,
+ "accept_median": 3.377,
+ "deterministic": true
+}
++ gate 18031 g1-control-long long --repeat 2 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
++ local port=18031 out=g1-control-long suite=long
++ shift 3
++ python3 /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/bench/gate/gate.py long --url http://127.0.0.1:18031/v1/chat/completions --busy-url '' --out /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/results/g1-control-long --repeat 2 --prompt-file /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/long-prompt.txt
+{"ttft": 264.738, "wall": 266.285, "prompt_tokens": 260962, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 82.1, "accept": 3.459, "finish": "length", "sha256": "071e777c1d3eef369397538fd09238d1d398da7bcd366d39fd5dae4c645167da", "chars": 544, "id": "long-acde2ff07925e109", "rep": 0}
+{"ttft": 264.803, "wall": 266.451, "prompt_tokens": 260964, "cached_tokens": 0, "completion_tokens": 128, "decode_tps": 77.07, "accept": 3.368, "finish": "length", "sha256": "d7d2b5b159012f2f937781f6186843e0592ed312bf5d95ad9ccf82a9061acbed", "chars": 538, "id": "long-a6545155072bc126", "rep": 0}
+{
+ "n": 2,
+ "decode_tps_median": 79.585,
+ "ttft_median": 264.77,
+ "accept_median": 3.413,
+ "deterministic": true
+}
++ docker rm -f ep-g1
++ cand_run ep-g1p 1 18031 -- -B /work/bench/gate/profile_prefill.py --text /work/long-prompt.txt --out /work/results/g1-profile --tokens 260000
++ local name=ep-g1p gpu=1 port=18031
++ shift 3
++ envs=()
++ local envs
++ '[' -- '!=' -- ']'
++ shift
++ mkdir -p /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1
++ '[' -d /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1/triton ']'
++ docker rm -f ep-g1p
++ docker run -d --name ep-g1p --label elpis-plus=1 --device nvidia.com/gpu=1 --user 1000:1000 --read-only --tmpfs /run:rw,nosuid,size=64m --tmpfs /tmp:rw,nosuid,size=2g --shm-size 4g --memory 11g --cap-drop ALL -p 127.0.0.1:18031:18020 -v /home/isa/models/elpis-262k:/models:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/cache-g1:/cache:rw -v /home/isa/.local/share/llmrig-elpis/api-key:/app/api_key.txt:ro -v /home/isa/Projects/llmrig/candidates/elpis-plus-20261108:/work:rw -e QWEN_PREFIX_PERSIST=0 --entrypoint /opt/venv/bin/python sha256:2446a45495af44611a5a3c4ee1986a1f79a6acb29d04619629484d6d4527486d -B /work/bench/gate/profile_prefill.py --text /work/long-prompt.txt --out /work/results/g1-profile --tokens 260000
++ docker wait ep-g1p
+0
++ docker logs ep-g1p
++ docker rm ep-g1p
++ log g1 done
++ tee -a /home/isa/Projects/llmrig/candidates/elpis-plus-20261108/window/events.log
+++ date +%FT%T
++ echo '2026-11-09T00:24:10 g1 done'
+2026-11-09T00:24:10 g1 done

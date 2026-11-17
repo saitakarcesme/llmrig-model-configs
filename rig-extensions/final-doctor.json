@@ -1,0 +1,140 @@
+{
+  "checks": [
+    {
+      "name": "router:11446",
+      "passed": true,
+      "details": {
+        "state": "ready",
+        "backend": "elpis",
+        "context": 262144,
+        "lanes": [
+          {
+            "port": 18020,
+            "healthy": true,
+            "busy": false,
+            "completed": 3
+          },
+          {
+            "port": 18021,
+            "healthy": true,
+            "busy": false,
+            "completed": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "router:11445",
+      "passed": true,
+      "details": {
+        "state": "ready",
+        "backend": "elpis",
+        "context": 262144,
+        "lanes": [
+          {
+            "port": 18020,
+            "healthy": true,
+            "busy": false,
+            "completed": 3
+          },
+          {
+            "port": 18021,
+            "healthy": true,
+            "busy": false,
+            "completed": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "router:11434",
+      "passed": true,
+      "details": {
+        "state": "ready",
+        "backend": "elpis",
+        "context": 262144,
+        "lanes": [
+          {
+            "port": 18020,
+            "healthy": true,
+            "busy": false,
+            "completed": 3
+          },
+          {
+            "port": 18021,
+            "healthy": true,
+            "busy": false,
+            "completed": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "engine:18020",
+      "passed": true,
+      "details": [
+        {
+          "id": "qwen3.8-27b",
+          "object": "model",
+          "created": 1793343843,
+          "owned_by": "local",
+          "max_model_len": 262144
+        }
+      ]
+    },
+    {
+      "name": "engine:18021",
+      "passed": true,
+      "details": [
+        {
+          "id": "qwen3.8-27b",
+          "object": "model",
+          "created": 1793343843,
+          "owned_by": "local",
+          "max_model_len": 262144
+        }
+      ]
+    },
+    {
+      "name": "llmrig-elpis",
+      "passed": true,
+      "details": "active"
+    },
+    {
+      "name": "contest-forge-worker",
+      "passed": true,
+      "details": "active"
+    },
+    {
+      "name": "contest-forge-scanner",
+      "passed": true,
+      "details": "active"
+    },
+    {
+      "name": "previous-engine-stopped",
+      "passed": true,
+      "details": "inactive"
+    },
+    {
+      "name": "llmrig-elpis-lane0",
+      "passed": true,
+      "details": "running false 0"
+    },
+    {
+      "name": "llmrig-elpis-lane1",
+      "passed": true,
+      "details": "running false 0"
+    },
+    {
+      "name": "contest-settings",
+      "passed": true,
+      "details": {
+        "model": "qwen3.8-27b",
+        "timeout": 7200,
+        "output_budget": 8192,
+        "parallel_jobs": 2
+      }
+    }
+  ],
+  "passed": true
+}

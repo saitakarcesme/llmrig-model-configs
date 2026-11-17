@@ -1,0 +1,27 @@
+{
+  "endpoint": "http://127.0.0.1:30260",
+  "contexts": "2048,4096,8192,16384,32768,65536",
+  "tasks": "coding,agentic,browser_use,computer_use",
+  "max_steps": 16,
+  "enable_thinking": false,
+  "server": {
+    "status": "ready",
+    "model": "flashnext",
+    "context": 65536,
+    "busy": false
+  },
+  "cache": {
+    "counters": {},
+    "gpu_cache_bytes": [
+      0,
+      0
+    ],
+    "host_cache_bytes": 0,
+    "gpu_caps": [
+      10737418240,
+      21474836480
+    ],
+    "host_cap": 1610612736
+  },
+  "started_unix": 1791327614.3065805
+}

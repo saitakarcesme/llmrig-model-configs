@@ -1,0 +1,457 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "expert": 0,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 0,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 3,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 1,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "down_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "down_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "down_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "gate_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "gate_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "gate_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "up_proj",
+      "rows": 1,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "up_proj",
+      "rows": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "expert": 2,
+      "projection": "up_proj",
+      "rows": 160,
+      "max_absolute_error": 0.0
+    }
+  ],
+  "cache": {
+    "counters": {
+      "expert_requests": 8,
+      "disk_reads": 5,
+      "disk_bytes": 9312060,
+      "io_seconds": 0.036946753738448024,
+      "host_hits": 2,
+      "gpu_hits": 1
+    },
+    "gpu_cache_bytes": [
+      1862412,
+      1862412
+    ],
+    "host_cache_bytes": 1862412,
+    "gpu_caps": [
+      2147483,
+      2147483
+    ],
+    "host_cap": 3221225
+  }
+}

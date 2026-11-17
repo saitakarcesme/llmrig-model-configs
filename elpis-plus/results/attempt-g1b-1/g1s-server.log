@@ -1,0 +1,2726 @@
+[serve] loading native EXL3 target, cache=270336, cq=3
+[serve] READY in 13s, VRAM=22.98 GB
+[serve] listening on http://0.0.0.0:18020; chat SSE streams as tokens arrive
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
+[serve] native worker failure: RuntimeError
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2595, in _run_job
+    raise RuntimeError(msg)
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+
+The above exception led to:
+
+Traceback (most recent call last):
+  File "/work/serve/exl3_server.py", line 2627, in _worker
+    pending.result = self._run_job(pending)
+                     ~~~~~~~~~~~~~^^^^^^^^^
+  File "/work/serve/exl3_server.py", line 2572, in _run_job
+    final = self._generate(pending)
+  File "/work/serve/exl3_server.py", line 2511, in _generate
+    raise RuntimeError(msg) from self.failure
+builtins.RuntimeError
+[http] 172.17.0.1 request complete
